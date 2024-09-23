@@ -21,19 +21,23 @@ Estas son algunas buenas prácticas para el control de versionado en git:
 - **Desarrollo mediante branches:** El Branching (uso de branches) organiza el desarrollo y distingue entre el trabajo en curso y el código estable y probado en la rama principal.
 La creación de branches garantiza que las vulnerabilidades y los errores no lleguen al código fuente y afecten a los usuarios, ya que son más fáciles de probar y encontrar en una branch.
 
-- **Identificar una estrategia de branching:** Crear e implementar una estrategia de branching es una de las mejores prácticas de Git para gestionar la caótica experiencia de desarrollo. Algunas de las estrategias más usadas son:
-    - **Bifurcación de funciones:** Su equipo podría utilizar una nueva rama para cada nueva característica sin comprometerse directamente a la rama principal.
+- **Identificar una estrategia de branching:** Crear e implementar una estrategia de branching es una de las mejores prácticas de Git para gestionar la experiencia de desarrollo. Algunas de las estrategias más usadas son:
+    - **Bifurcación de funciones:** Se utiliza una nueva rama para cada nueva característica sin comprometerse directamente a la rama principal.
     - **Branching personalizado:** En lugar de desarrollar en diferentes ramas por característica, es por desarrollador. Cada usuario se fusiona con la rama principal cuando termina su trabajo.
     - **Flujo de trabajo centralizado:** Tu equipo podría utilizar sólo un repositorio y confirmar directamente a la rama principal.
     - **GitFlow:** Se trata de una versión extrema de la bifurcación de características en la que el desarrollo tiene lugar en la rama de desarrollo, luego pasa a una rama de lanzamiento y finalmente se fusiona con la rama principal.
 
 - **Escribir mensajes de confirmación descriptivos:** Redactar correctamente los mensajes de confirmación ayuda a los equipos a comprender el valor que aporta una corrección o un añadido a la línea de código existente, un mensaje de confirmación descriptivo puede ser tan importante como un cambio real.
 
-https://aw.club/global/es/blog/git-version-control-best-practices
+**Fuentes de Informacion**
+
+[Buenas prácticas de control de versiones Git
+](https://aw.club/global/es/blog/git-version-control-best-practices).
+
 
 ### Evolución del proyecto
 
-Para esta entrega, nuestro equipo optó por una combinación de estrategias de branching personalizada y Gitflow. Cada miembro del equipo trabaja en su propia rama para implementar sus cambios. Además, hemos creado una rama de desarrollo para consolidar los cambios antes de fusionarlos. De esta manera, solo actualizaremos la rama principal (main) cuando tengamos versiones completamente finalizadas.
+Para esta entrega, nuestro equipo eligio usar una combinación de estrategias de branching personalizada y Gitflow. Cada miembro del equipo trabaja en su propia rama para implementar sus cambios. Además, hemos creado una rama de desarrollo para consolidar los cambios antes de fusionarlos. De esta manera, solo actualizaremos la rama principal (main) cuando tengamos versiones completamente finalizadas.
 
 A continuación, se enumeran algunos de los comandos que más utilizamos, sin un orden específico:
 
@@ -49,6 +53,34 @@ A continuación, se enumeran algunos de los comandos que más utilizamos, sin un
 ### Evidencia de actividades de investigación
 
 ### Referencias a fuentes de información
+
+**Investigación del Problema**
+
+Una buena planificación es fundamental para el proceso de enseñanza y aprendizaje. Los Programas de Educación Básica Integrada (EBI) de la ANEP son una clara referencia que permite a las maestras desarrollar propuestas educativas. Sin embargo, existen varios desafíos a la hora de planificar las clases:
+
+- **Falta de herramientas adecuadas:** Muchas maestras no cuentan con las herramientas necesarias para facilitar la planificación y el seguimiento de los temas dados. Esto puede resultar en un manejo ineficiente del tiempo y dificulta la evaluación del progreso de los alumnos.
+- **Carga administrativa:** La planificación suele se convierte en una tarea agotadora debido a la carga administrativa que conlleva fuera del horario de clases. Esta situación puede afectar la calidad de la enseñanza y generar estrés en las maestras.
+
+**Usuarios Afectados**
+- **Maestras:** Principales responsables de la planificación y ejecución de las clases.
+- **Alumnos:** Se ven directamente impactados por la calidad de la enseñanza.
+- **Padres de Alumnos:** Interesados en el progreso académico de sus hijos.
+- **Administradores Educativos:** Encargados de supervisar y evaluar la calidad de la educación.
+
+**Objetivos de la Investigación**
+
+- **Analizar las Dificultades:** Identificar las dificultades que enfrentan las maestras al planificar sus clases.
+- **Identificar Herramientas y Recursos:** Evaluar las herramientas y recursos actualmente utilizados para la planificación, sus beneficios y áreas de mejora.
+- **Proponer un Sistema de Software:** Desarrollar un sistema de software que permita una planificación de clases sencilla y eficiente, alineada con los planes establecidos por ANEP.
+
+**Fuentes de Información**
+
+**ANEP (2022).** Programas de Educación Básica Integrada. Este documento establece las bases para la planificación educativa.
+
+**ANEP (2022).** Marco Curricular Nacional. Proporciona información sobre las competencias generales y específicas que deben desarrollarse, así como las progresiones de aprendizaje.
+
+[ANEP - Programas EBI 2023](https://www.anep.edu.uy/programas-ebi-2023-2023).
+
 
 ### Caracterización de usuarios
 
