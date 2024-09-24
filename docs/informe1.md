@@ -2,9 +2,16 @@
 
 ## Repositorio Git
 
-### Repositorios locales y remotos
+Para esta entrega, nuestro equipo eligio usar una combinación de estrategias de branching personalizada y Gitflow. Cada miembro del equipo trabaja en su propia rama para implementar sus cambios. Además, hemos creado una rama de desarrollo para consolidar los cambios antes de fusionarlos. De esta manera, solo actualizaremos la rama principal (main) cuando tengamos versiones completamente finalizadas.
 
-### Aplicación de comandos Git
+A continuación, se enumeran algunos de los comandos que más utilizamos, sin un orden específico:
+
+- **git add [file] :**  Mueve los cambios del directorio de trabajo al área del entorno de ensayo.
+- **git commit -m “[descriptive message]” :** Captura una instantánea de los cambios preparados en ese momento del proyecto. 
+- **git pull :** Se emplea para extraer y descargar contenido desde un repositorio remoto y actualizar al instante el repositorio local para reflejar ese contenido.
+- **git branch :** Muestra una lista con tus ramas 
+- **git checkout :** Te permite desplazarte entre las ramas
+- **git push [alias] [branch] :** Se utiliza para comunicarte con otro repositorio, calcular lo que tu base de datos local tiene que la remota no tiene, y luego subir  la diferencia al otro repositorio.
 
 ## Versionado
 
@@ -37,17 +44,6 @@ La creación de branches garantiza que las vulnerabilidades y los errores no lle
 
 ### Evolución del proyecto
 
-Para esta entrega, nuestro equipo eligio usar una combinación de estrategias de branching personalizada y Gitflow. Cada miembro del equipo trabaja en su propia rama para implementar sus cambios. Además, hemos creado una rama de desarrollo para consolidar los cambios antes de fusionarlos. De esta manera, solo actualizaremos la rama principal (main) cuando tengamos versiones completamente finalizadas.
-
-A continuación, se enumeran algunos de los comandos que más utilizamos, sin un orden específico:
-
-- **git add [file] :**  Mueve los cambios del directorio de trabajo al área del entorno de ensayo.
-- **git commit -m “[descriptive message]” :** Captura una instantánea de los cambios preparados en ese momento del proyecto. 
-- **git pull :** Se emplea para extraer y descargar contenido desde un repositorio remoto y actualizar al instante el repositorio local para reflejar ese contenido.
-- **git branch :** Muestra una lista con tus ramas 
-- **git checkout :** Te permite desplazarte entre las ramas
-- **git push [alias] [branch] :** Se utiliza para comunicarte con otro repositorio, calcular lo que tu base de datos local tiene que la remota no tiene, y luego subir  la diferencia al otro repositorio.
-
 ## Elicitación
 
 ### Evidencia de actividades de investigación
@@ -59,7 +55,7 @@ A continuación, se enumeran algunos de los comandos que más utilizamos, sin un
 Una buena planificación es fundamental para el proceso de enseñanza y aprendizaje. Los Programas de Educación Básica Integrada (EBI) de la ANEP son una clara referencia que permite a las maestras desarrollar propuestas educativas. Sin embargo, existen varios desafíos a la hora de planificar las clases:
 
 - **Falta de herramientas adecuadas:** Muchas maestras no cuentan con las herramientas necesarias para facilitar la planificación y el seguimiento de los temas dados. Esto puede resultar en un manejo ineficiente del tiempo y dificulta la evaluación del progreso de los alumnos.
-- **Carga administrativa:** La planificación suele se convierte en una tarea agotadora debido a la carga administrativa que conlleva fuera del horario de clases. Esta situación puede afectar la calidad de la enseñanza y generar estrés en las maestras.
+- **Carga administrativa:** La planificación suele convertirse en una tarea agotadora debido a la carga administrativa que conlleva fuera del horario de clases. Esta situación puede afectar la calidad de la enseñanza y generar estrés en las maestras.
 
 **Usuarios Afectados**
 - **Maestras:** Principales responsables de la planificación y ejecución de las clases.
