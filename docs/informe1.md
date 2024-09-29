@@ -2,7 +2,7 @@
 
 ## Repositorio Git
 
-Para esta entrega, nuestro equipo eligio usar una combinación de estrategias de branching personalizada y Gitflow. Cada miembro del equipo trabaja en su propia rama para implementar sus cambios. Además, hemos creado una rama de desarrollo para consolidar los cambios antes de fusionarlos. De esta manera, solo actualizaremos la rama principal (main) cuando tengamos versiones completamente finalizadas.
+Para esta entrega, nuestro equipo eligio usar una combinación de estrategias de branching personalizada, bifurcacion de funciones y Gitflow. Cada miembro del equipo trabaja en su propia rama para implementar sus cambios y, posteriormente, sube estos cambios a la rama de la funcionalidad correspondiente. Finalmente, hemos establecido una rama de desarrollo para consolidar estos cambios. De este modo, solo actualizaremos la rama principal (main) cuando tengamos versiones completamente finalizadas.
 
 A continuación, se enumeran algunos de los comandos que más utilizamos, sin un orden específico:
 
@@ -86,9 +86,55 @@ Una buena planificación es fundamental para el proceso de enseñanza y aprendiz
 
 ### Requerimientos funcionales y no funcionales
 
+**Requerimientos funcionales:**
+- **Usuarios:** El sistema debe permitir la creacion, edicion y eliminacion de usuarios tanto para maestras como para alumnos.
+- **Planificación:** Los usuarios maestras deben poder crear, editar y eliminar planes de clase, vinculándolos a las unidades curriculares correspondientes y agregarlos a un calendario.
+- **Visualización:** Los usuarios deben poder visualizar sus planes de clase en un calendario.
+
+**Requerimientos no funcionales:**
+- **Usabilidad:** La interfaz del sistema debe ser intuitiva y permitir que los usuarios puedan realizar sus tareas sin necesidad de que este muy familiarizados con la tecnologia.
+- **Seguridad:** Los datos personales de los alumnos deberán ser accesibles únicamente por la maestra asignada a cada grupo.
+- **Compatibilidad:** La aplicación debe funcionar en las versiones más recientes de los navegadores Chrome, Firefox y Safari.
+
 ### User stories
 
+**Título:** Verificar el Plan de Clase
+
+**Como:** Alumno
+
+**Quiero:** Consultar el plan de una clase específica
+
+**Para:** Conocer los contenidos, objetivos y actividades programadas para esa clase, y así poder prepararme adecuadamente.
+
+**Criterios de aceptación:**
+
+- El alumno puede acceder al calendario con las clases programadas.
+- El sistema permite al alumno seleccionar una clase específica para ver el plan correspondiente.
+- El plan de clase muestra los contenidos, objetivos y actividades programadas para esa clase.
+
 ### Use cases
+
+**Título:** Verificar el Plan de Clase
+
+**Actor principal:** Alumno
+
+**Precondiciones:** El alumno ha iniciado sesión en la aplicación con un usuario del tipo alumno.
+
+**Flujo principal:**
+
+- El sistema muestra el calendario con las clases programadas.
+- El alumno selecciona una clase específica del calendario.
+- El sistema muestra el plan de clase correspondiente, incluyendo contenidos, objetivos y actividades programadas.
+- El alumno revisa la información del plan de clase.
+
+**Flujos alternativos:**
+
+- **Clase no encontrada:** Si el alumno selecciona una clase que no existe (por error), el sistema muestra un mensaje de error indicando que la clase no se encuentra.
+- **Sin conexión:** Si hay un problema de conexión al intentar recuperar el plan de clase, el sistema muestra un mensaje de error y le permite al alumno intentar nuevamente.
+
+**Postcondiciones:** El alumno ha revisado el plan de clase y tiene acceso a la información actualizada.
+
+
 
 ### Bocetos de IU
 
