@@ -92,7 +92,7 @@ Una buena planificación es fundamental para el proceso de enseñanza y aprendiz
 - **Visualización:** Los usuarios deben poder visualizar sus planes de clase en un calendario.
 
 **Requerimientos no funcionales:**
-- **Usabilidad:** La interfaz del sistema debe ser intuitiva y permitir que los usuarios puedan realizar sus tareas sin necesidad de que este muy familiarizados con la tecnologia.
+- **Usabilidad:** La interfaz del sistema debe ser intuitiva y permitir que los usuarios puedan realizar sus tareas sin necesidad de estar familiarizados con la tecnologia.
 - **Seguridad:** Los datos personales de los alumnos deberán ser accesibles únicamente por la maestra asignada a cada grupo.
 - **Compatibilidad:** La aplicación debe funcionar en las versiones más recientes de los navegadores Chrome, Firefox y Safari.
 
