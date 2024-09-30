@@ -44,6 +44,10 @@ La creación de branches garantiza que las vulnerabilidades y los errores no lle
 
 ### Evolución del proyecto
 
+<img src="ImagenesLogs\GitLog1.jpg" alt="Imagen GIT log 1">
+
+<img src="ImagenesLogs\GitLog2.jpg" alt="Imagen Git log 2">
+
 ## Elicitación
 
 ### Evidencia de actividades de investigación
