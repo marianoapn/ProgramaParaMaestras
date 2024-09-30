@@ -80,6 +80,8 @@ Una buena planificación es fundamental para el proceso de enseñanza y aprendiz
 
 ### Caracterización de usuarios
 
+[User Personas](https://github.com/IngSoft-FIS-2024-2/proyecto-n3a-danese-perez-perez/blob/documentacion/docs/User%20persona.pdf)
+
 ### Modelo conceptual del problema
 
 ## Especificación
