@@ -1,7 +1,7 @@
 # Relevamiento de herramientas del mercado.
 
 ## "GURI" (Local)
--  Link pagina web https://guri2.ceip.edu.uy/GuriFamiliaAppWeb/
+- [Pagina web](https://guri2.ceip.edu.uy/GuriFamiliaAppWeb/)
 -  Usuario Padres de alumno
 
 ## Imagenes del sistema 

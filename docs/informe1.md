@@ -44,6 +44,10 @@ La creación de branches garantiza que las vulnerabilidades y los errores no lle
 
 ### Evolución del proyecto
 
+<img src="ImagenesLogs\GitLog1.jpg" alt="Imagen GIT log 1">
+
+<img src="ImagenesLogs\GitLog2.jpg" alt="Imagen Git log 2">
+
 ## Elicitación
 
 ### Evidencia de actividades de investigación
@@ -79,6 +83,8 @@ Una buena planificación es fundamental para el proceso de enseñanza y aprendiz
 
 
 ### Caracterización de usuarios
+
+[User Personas](https://github.com/IngSoft-FIS-2024-2/proyecto-n3a-danese-perez-perez/blob/documentacion/docs/User%20persona.pdf)
 
 ### Modelo conceptual del problema
 
@@ -164,9 +170,9 @@ Elegimos trabajar con las siguientes técnicas:
 
 - Entrevistas: Que consiste en preguntas libres de contexto y con contexto. Elegimos esta técnica, ya que es la manera más eficiente para intercambiar ideas con los interesados/usuarios. Además, permiten obtener información más cualitativa y profunda, lo que ayuda a identificar necesidades no evidentes. También el alcance es menor y más realista a nuestras posibilidades de contactos.
 
-- Análisis de GUI (Ingeniería Reversa): Es una técnica de elicitación independiente que implica examinar un sistema en el cual ya tenga alguna de las soluciones para tu sistema. Elegimos esta técnica porque es fácil aplicarla en otros sistemas/app/sitios web e identificar requisitos que necesitaríamos para nuestra app. Aplicaríamos la misma en la página "Guri" https://guri2.ceip.edu.uy/GuriFamiliaAppWeb/ y en la página de la ORT https://aulas.ort.edu.uy/.
+- Análisis de GUI (Ingeniería Reversa): Es una técnica de elicitación independiente que implica examinar un sistema en el cual ya tenga alguna de las soluciones para tu sistema. Elegimos esta técnica porque es fácil aplicarla en otros sistemas/app/sitios web e identificar requisitos que necesitaríamos para nuestra app. Aplicaríamos la misma en la página ["Guri"](https://guri2.ceip.edu.uy/GuriFamiliaAppWeb/) y en la página de la [ORT](https://aulas.ort.edu.uy/).
 
-- Análisis de documentos: El análisis de la documentación implica examinar toda la documentación existente para detectar potenciales requerimientos. Elegimos esta técnica porque, al tener detallado el programa en la web https://www.anep.edu.uy/programas-ebi-2023-2023, permite identificar las normas, exigencias y pensar en posibles requerimientos para el software.
+- Análisis de documentos: El análisis de la documentación implica examinar toda la documentación existente para detectar potenciales requerimientos. Elegimos esta técnica porque, al tener detallado el programa en la web de [ANEP](https://www.anep.edu.uy/programas-ebi-2023-2023), permite identificar las normas, exigencias y pensar en posibles requerimientos para el software.
 
 - Tormenta de ideas:  La tormenta de ideas es una técnica grupal para generar ideas originales en un ambiente relajado. Es útil cuando se desea liberar la creatividad de los equipos, generar un número extenso de ideas, involucrar a un número importante de personas en el proceso. Esta técnica la elegimos ya que es necesario fomentar la creatividad para generar ideas sobre los requerimientos, el funcionamiento del sistema y el diseño del mismo. Además, esta técnica facilita la colaboración y ayuda a seleccionar las ideas más viables para su implementación.
 
