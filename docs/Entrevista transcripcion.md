@@ -1,4 +1,4 @@
-(Transcrito por TurboScribe.ai. Actualizar a Ilimitado para eliminar este mensaje.)
+Entrevista grabada con audio de whatsapp y transcrito por TurboScribe.ai.
 
 ¿Cuál es tu rol y experiencia en la enseñanza? Yo soy maestra de educación primaria y ejerzo esta profesión desde hace ya 20 años. ¿Cómo planificás actualmente tus clases? Actualmente planifico mis clases en formato digital, y lo hago de forma semanal. Me planteo metas y competencias que quiero lograr durante esa semana, y a partir de eso hago una secuencia de actividades para trabajar en la clase con los niños.
 
