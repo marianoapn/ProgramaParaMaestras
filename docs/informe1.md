@@ -52,6 +52,20 @@ La creación de branches garantiza que las vulnerabilidades y los errores no lle
 
 ### Evidencia de actividades de investigación
 
+Dentro de las técnicas dadas en clase: Entrevistas, Cuestionarios, Ingeniería inversa, Análisis de documentos, tormenta de ideas, User Personas, Observación, Workshops, entre otras.
+
+Elegimos trabajar con las siguientes técnicas:
+
+- Entrevistas: Que consiste en preguntas libres de contexto y con contexto. Elegimos esta técnica, ya que es la manera más eficiente para intercambiar ideas con los interesados/usuarios. Además, permiten obtener información más cualitativa y profunda, lo que ayuda a identificar necesidades no evidentes. También el alcance es menor y más realista a nuestras posibilidades de contactos.
+
+- Análisis de GUI (Ingeniería Reversa): Es una técnica de elicitación independiente que implica examinar un sistema en el cual ya tenga alguna de las soluciones para tu sistema. Elegimos esta técnica porque es fácil aplicarla en otros sistemas/app/sitios web e identificar requisitos que necesitaríamos para nuestra app. Aplicaríamos la misma en la página ["Guri"](https://guri2.ceip.edu.uy/GuriFamiliaAppWeb/) y en la página de la [ORT](https://aulas.ort.edu.uy/).
+
+- Análisis de documentos: El análisis de la documentación implica examinar toda la documentación existente para detectar potenciales requerimientos. Elegimos esta técnica porque, al tener detallado el programa en la web de [ANEP](https://www.anep.edu.uy/programas-ebi-2023-2023), permite identificar las normas, exigencias y pensar en posibles requerimientos para el software.
+
+- Tormenta de ideas:  La tormenta de ideas es una técnica grupal para generar ideas originales en un ambiente relajado. Es útil cuando se desea liberar la creatividad de los equipos, generar un número extenso de ideas, involucrar a un número importante de personas en el proceso. Esta técnica la elegimos ya que es necesario fomentar la creatividad para generar ideas sobre los requerimientos, el funcionamiento del sistema y el diseño del mismo. Además, esta técnica facilita la colaboración y ayuda a seleccionar las ideas más viables para su implementación.
+
+- User Persona: Consiste en crear usuarios ficticios a los cuales se les inventa una vida, habilidades y aptitudes. La idea es que esos usuarios se acerquen lo más posible a un usuario real que utilizaría el sistema. Esta técnica fue elegida ya que es una buena manera de imaginar al usuario y cómo podría utilizar el sistema con sus capacidades y necesidades, lo que ayuda a diseñar una interfaz y funcionalidades alineadas con sus expectativas y limitaciones.
+
 ### Referencias a fuentes de información
 
 **Investigación del Problema**
@@ -88,19 +102,68 @@ Una buena planificación es fundamental para el proceso de enseñanza y aprendiz
 
 ### Modelo conceptual del problema
 
+<img src="ImagenModeloConceptual\ModeloConceptual.png" alt="Modelo Conceptual App">
+
+
 ## Especificación
 
 ### Requerimientos funcionales y no funcionales
 
-**Requerimientos funcionales:**
-- **Usuarios:** El sistema debe permitir la creacion, edicion y eliminacion de usuarios tanto para maestras como para alumnos.
-- **Planificación:** Los usuarios maestras deben poder crear, editar y eliminar planes de clase, vinculándolos a las unidades curriculares correspondientes y agregarlos a un calendario.
-- **Visualización:** Los usuarios deben poder visualizar sus planes de clase en un calendario.
+#### Requerimientos funcionales:
 
-**Requerimientos no funcionales:**
-- **Usabilidad:** La interfaz del sistema debe ser intuitiva y permitir que los usuarios puedan realizar sus tareas sin necesidad de estar familiarizados con la tecnologia.
-- **Seguridad:** Los datos personales de los alumnos deberán ser accesibles únicamente por la maestra asignada a cada grupo.
-- **Compatibilidad:** La aplicación debe funcionar en las versiones más recientes de los navegadores Chrome, Firefox y Safari.
+- **Usuarios:**
+	- **Usu1:** El sistema debe permitir la creacion de Usuario Maestra.
+	- **Usu2:** El sistema debe permitir la creacion de Usuario Responsable de Alumno.
+	- **Usu3:** El sistema debe permitir modificar la contraseña.
+	- **Usu4:** El sistema debe permitir la eliminacion de Usuarios.
+	- **Usu5:** El sistema debe permitir la autenticación de los usuarios mediante correo electrónico.
+	- **Usu6:** El sistema debe permitir la recuperación de contraseñas en caso de olvido.
+	- **Usu7:** El sistema debe permitir cerrar usuario.
+
+- **Usuario Maestra:**
+	- **UsuMaestra1:** El sistema debe permitir a los usuarios maestra crear los planes de clase.
+	- **UsuMaestra2:** El sistema debe permitir a los usuarios maestra editar los planes de clase.
+	- **UsuMaestra3:** El sistema debe permitir a los usuarios maestra eliminar los planes de clase, 
+	- **UsuMaestra4:** El sistema debe permitir a los usuarios maestra vincular una clase a las unidades curriculares correspondientes de ANEP.
+	- **UsuMaestra5:** El sistema debe permitir a los usuarios maestra agregar a un calendario los planes de clase.
+	- **UsuMaestra6:** El sistema debe permitir a los usuarios maestra visualizar la informacion de los alumnos asignados.
+	- **UsuMaestra7:** El sistema debe permitir a los usuarios maestra asignar unidades personalizadas a los alumnos asignados.
+	- **UsuMaestra8:** El sistema debe permitir a los usuarios maestra visualizar su información personal.
+	
+
+- **Usuario Responsable del alumno :**
+	- **UsuRespons1:** El sistema debe permitir a los usuarios responsable del alumno visualizar su información personal
+	- **UsuRespons2:** El sistema debe permitir a los usuarios responsable del alumno visualizar el calendario de actividades asignadas por la maestra.
+	- **UsuRespons3:** El sistema debe permitir a los usuarios responsable del alumno recibir notificaciones sobre modificaciones en los planes de clase o actividades nuevas.
+
+ #### Requerimientos no funcionales:
+
+- **Seguridad:**
+	- **Seg1:** Los datos personales de los alumnos deberán ser accesibles únicamente por la maestra asignada a cada grupo, conforme a la Ley de Protección de Datos Personales.
+	- **Seg2:** Debe garantizarse que los usuarios puedan acceder y modificar solo la información que les corresponde, según su rol en el sistema.
+
+
+- **Responsive:**
+	- **Resp1:** La aplicación debe ser compatible con las versiones más recientes de los navegadores Chrome, Firefox y Safari.
+	- **Resp2:** La interfaz debe ser totalmente responsiva, adaptándose correctamente a dispositivos móviles como smartphones y tabletas.
+
+
+- **Rendimiento:**
+	- **Ren1:** El sistema debe ser capaz de manejar grandes cantidades de usuarios y planes de clase sin experimentar una disminución significativa en su rendimiento.
+
+
+- **Escalabilidad:**
+	- **Esc1:** El sistema debe estar diseñado para ser escalable, permitiendo la adición de nuevas funcionalidades o módulos sin una reestructuración significativa.
+
+
+- **Usabilidad:**
+	- **Usa1:** La aplicación debe seguir las heurísticas de usabilidad de Nielsen, asegurando una experiencia de usuario eficiente y agradable.
+
+
+- **Accesibilidad:**
+	- **Acc1:** La aplicación debe cumplir con las pautas de accesibilidad WCAG 2.2, para garantizar que personas con diferentes tipos de discapacidades puedan usar el sistema sin problemas.
+
+
 
 ### User stories
 
@@ -164,19 +227,7 @@ Incluir totales de esfuerzo
 
 ### Técnicas aplicadas y aprendizajes
 
-Dentro de las técnicas dadas en clase: Entrevistas, Cuestionarios, Ingeniería inversa, Análisis de documentos, tormenta de ideas, User Personas, Observación, Workshops, entre otras.
 
-Elegimos trabajar con las siguientes técnicas:
-
-- Entrevistas: Que consiste en preguntas libres de contexto y con contexto. Elegimos esta técnica, ya que es la manera más eficiente para intercambiar ideas con los interesados/usuarios. Además, permiten obtener información más cualitativa y profunda, lo que ayuda a identificar necesidades no evidentes. También el alcance es menor y más realista a nuestras posibilidades de contactos.
-
-- Análisis de GUI (Ingeniería Reversa): Es una técnica de elicitación independiente que implica examinar un sistema en el cual ya tenga alguna de las soluciones para tu sistema. Elegimos esta técnica porque es fácil aplicarla en otros sistemas/app/sitios web e identificar requisitos que necesitaríamos para nuestra app. Aplicaríamos la misma en la página ["Guri"](https://guri2.ceip.edu.uy/GuriFamiliaAppWeb/) y en la página de la [ORT](https://aulas.ort.edu.uy/).
-
-- Análisis de documentos: El análisis de la documentación implica examinar toda la documentación existente para detectar potenciales requerimientos. Elegimos esta técnica porque, al tener detallado el programa en la web de [ANEP](https://www.anep.edu.uy/programas-ebi-2023-2023), permite identificar las normas, exigencias y pensar en posibles requerimientos para el software.
-
-- Tormenta de ideas:  La tormenta de ideas es una técnica grupal para generar ideas originales en un ambiente relajado. Es útil cuando se desea liberar la creatividad de los equipos, generar un número extenso de ideas, involucrar a un número importante de personas en el proceso. Esta técnica la elegimos ya que es necesario fomentar la creatividad para generar ideas sobre los requerimientos, el funcionamiento del sistema y el diseño del mismo. Además, esta técnica facilita la colaboración y ayuda a seleccionar las ideas más viables para su implementación.
-
-- User Persona: Consiste en crear usuarios ficticios a los cuales se les inventa una vida, habilidades y aptitudes. La idea es que esos usuarios se acerquen lo más posible a un usuario real que utilizaría el sistema. Esta técnica fue elegida ya que es una buena manera de imaginar al usuario y cómo podría utilizar el sistema con sus capacidades y necesidades, lo que ayuda a diseñar una interfaz y funcionalidades alineadas con sus expectativas y limitaciones.
 
 
 
