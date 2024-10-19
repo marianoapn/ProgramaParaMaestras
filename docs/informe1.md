@@ -114,7 +114,7 @@ Una buena planificación es fundamental para el proceso de enseñanza y aprendiz
 
 ### Caracterización de usuarios
 
-[User Personas](/docs/User_persona_V2.pdf)
+[User Personas](/docs/User_persona_V3.pdf)
 
 ### Modelo conceptual del problema
 
