@@ -102,7 +102,7 @@ Una buena planificación es fundamental para el proceso de enseñanza y aprendiz
 
 ### Modelo conceptual del problema
 
-<img src="ImagenModeloConceptual\ModeloConceptual.png" alt="Modelo Conceptual App">
+<img src="ImagenModeloConceptual\ModeloConceptual1.png" alt="Modelo Conceptual App">
 
 
 ## Especificación
@@ -112,56 +112,63 @@ Una buena planificación es fundamental para el proceso de enseñanza y aprendiz
 #### Requerimientos funcionales:
 
 - **Usuarios:**
-	- **Usu1:** El sistema debe permitir la creacion de Usuario Maestra.
-	- **Usu2:** El sistema debe permitir la creacion de Usuario Responsable de Alumno.
-	- **Usu3:** El sistema debe permitir modificar la contraseña.
-	- **Usu4:** El sistema debe permitir la eliminacion de Usuarios.
-	- **Usu5:** El sistema debe permitir la autenticación de los usuarios mediante correo electrónico.
-	- **Usu6:** El sistema debe permitir la recuperación de contraseñas en caso de olvido.
-	- **Usu7:** El sistema debe permitir cerrar usuario.
+	- **Usu1:** El sistema debe permitir la creacion de Usuario Maestra. Prioridad ("Alta")
+	- **Usu2:** El sistema debe permitir la creacion de Usuario Responsable del Alumno. Prioridad ("Alta")
+	- **Usu3:** El sistema debe permitir modificar la contraseña. Prioridad ("Baja")
+	- **Usu4:** El sistema debe permitir la eliminacion de Usuarios. Prioridad ("Baja")
+	- **Usu5:** El sistema debe permitir la autenticación de los usuarios mediante correo electrónico. Prioridad ("Media")
+	- **Usu6:** El sistema debe permitir la recuperación de contraseñas en caso de olvido. Prioridad ("Media")
+	- **Usu7:** El sistema debe permitir cerrar usuario. Prioridad ("Baja")
+	- **Usu8:** El sistema debe permitir la creación de usuarios solo a personas autorizadas por ANEP, validando su autenticación. Prioridad ("Alta")
 
 - **Usuario Maestra:**
-	- **UsuMaestra1:** El sistema debe permitir a los usuarios maestra crear los planes de clase.
-	- **UsuMaestra2:** El sistema debe permitir a los usuarios maestra editar los planes de clase.
-	- **UsuMaestra3:** El sistema debe permitir a los usuarios maestra eliminar los planes de clase, 
-	- **UsuMaestra4:** El sistema debe permitir a los usuarios maestra vincular una clase a las unidades curriculares correspondientes de ANEP.
-	- **UsuMaestra5:** El sistema debe permitir a los usuarios maestra agregar a un calendario los planes de clase.
-	- **UsuMaestra6:** El sistema debe permitir a los usuarios maestra visualizar la informacion de los alumnos asignados.
-	- **UsuMaestra7:** El sistema debe permitir a los usuarios maestra asignar unidades personalizadas a los alumnos asignados.
-	- **UsuMaestra8:** El sistema debe permitir a los usuarios maestra visualizar su información personal.
+	- **UsuMaestra1:** El sistema debe permitir a los usuarios maestra crear los planes de clase. Prioridad ("Alta")
+	- **UsuMaestra2:** El sistema debe permitir a los usuarios maestra editar los planes de clase. Prioridad ("Alta")
+	- **UsuMaestra3:** El sistema debe permitir a los usuarios maestra eliminar los planes de clase. Prioridad ("Alta")
+	- **UsuMaestra4:** El sistema debe permitir a los usuarios maestra vincular una clase a las unidades curriculares correspondientes de ANEP. Prioridad ("Alta")
+	- **UsuMaestra5:** El sistema debe permitir a los usuarios maestra agregar a un calendario los planes de clase. Prioridad ("Alta")
+	- **UsuMaestra6:** El sistema debe permitir a los usuarios maestra visualizar la informacion de los alumnos asignados. Prioridad ("Media")
+	- **UsuMaestra7:** El sistema debe permitir a las maestras asignar unidades curriculares personalizadas para cada alumno. Prioridad ("Media")
+	- **UsuMaestra8:** El sistema debe permitir a los usuarios maestra visualizar su información personal. Prioridad ("Media")
 	
 
 - **Usuario Responsable del alumno :**
-	- **UsuRespons1:** El sistema debe permitir a los usuarios responsable del alumno visualizar su información personal
-	- **UsuRespons2:** El sistema debe permitir a los usuarios responsable del alumno visualizar el calendario de actividades asignadas por la maestra.
-	- **UsuRespons3:** El sistema debe permitir a los usuarios responsable del alumno recibir notificaciones sobre modificaciones en los planes de clase o actividades nuevas.
+	- **UsuRespons1:** El sistema debe permitir a los usuarios responsable del alumno visualizar su información personal. Prioridad ("Media")
+	- **UsuRespons2:** El sistema debe permitir a los usuarios responsable del alumno visualizar el calendario de actividades asignadas por la maestra. Prioridad ("Media")
+	- **UsuRespons3:** El sistema debe notificar a los responsables de los alumnos sobre modificaciones en los planes de clase o nuevas actividades. Prioridad ("Baja")
+
+- Dependencias Externas:
+	- **Dep1:** El sistema debe integrarse con la base de datos de ANEP para validar la creación de usuarios autorizados. Prioridad("Media")
+
+
 
  #### Requerimientos no funcionales:
 
 - **Seguridad:**
-	- **Seg1:** Los datos personales de los alumnos deberán ser accesibles únicamente por la maestra asignada a cada grupo, conforme a la Ley de Protección de Datos Personales.
-	- **Seg2:** Debe garantizarse que los usuarios puedan acceder y modificar solo la información que les corresponde, según su rol en el sistema.
+	- **Seg1:** Los datos personales de los alumnos deberán ser accesibles únicamente por la maestra asignada a cada grupo, conforme a la Ley de Protección de Datos Personales. Prioridad ("Alta")
+	- **Seg2:** Debe garantizarse que los usuarios puedan acceder y modificar solo la información que les corresponde, según su rol en el sistema. Prioridad ("Alta")
 
 
 - **Responsive:**
-	- **Resp1:** La aplicación debe ser compatible con las versiones más recientes de los navegadores Chrome, Firefox y Safari.
-	- **Resp2:** La interfaz debe ser totalmente responsiva, adaptándose correctamente a dispositivos móviles como smartphones y tabletas.
+	- **Resp1:** La aplicación debe ser compatible con las versiones más recientes de los navegadores Chrome, Firefox y Safari. Prioridad ("Alta")
+	- **Resp2:** La interfaz debe ser totalmente responsiva, adaptándose correctamente a dispositivos móviles como smartphones y tabletas. Prioridad ("Alta")
 
 
 - **Rendimiento:**
-	- **Ren1:** El sistema debe ser capaz de manejar grandes cantidades de usuarios y planes de clase sin experimentar una disminución significativa en su rendimiento.
+	- **Ren1:** El sistema debe ser capaz de manejar grandes cantidades de usuarios y planes de clase sin experimentar una disminución significativa en su rendimiento. Prioridad ("Media")
 
 
 - **Escalabilidad:**
-	- **Esc1:** El sistema debe estar diseñado para ser escalable, permitiendo la adición de nuevas funcionalidades o módulos sin una reestructuración significativa.
+	- **Esc1:** El sistema debe estar diseñado para ser escalable, permitiendo la adición de nuevas funcionalidades o módulos sin una reestructuración significativa. Prioridad ("Alta")
 
 
 - **Usabilidad:**
-	- **Usa1:** La aplicación debe seguir las heurísticas de usabilidad de Nielsen, asegurando una experiencia de usuario eficiente y agradable.
+	- **Usa1:** La aplicación debe seguir las heurísticas de usabilidad de Nielsen, asegurando una experiencia de usuario eficiente y agradable. Prioridad ("Alta")
 
 
 - **Accesibilidad:**
-	- **Acc1:** La aplicación debe cumplir con las pautas de accesibilidad WCAG 2.2, para garantizar que personas con diferentes tipos de discapacidades puedan usar el sistema sin problemas.
+	- **Acc1:** La aplicación debe cumplir con las pautas de accesibilidad WCAG 2.2, para garantizar que personas con diferentes tipos de discapacidades puedan usar el sistema sin problemas. Prioridad ("Alta")
+
 
 
 
