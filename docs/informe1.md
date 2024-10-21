@@ -52,6 +52,17 @@ La creación de branches garantiza que las vulnerabilidades y los errores no lle
 
 ### Evidencia de actividades de investigación
 
+Podemos acceder a la entrevista realizada, y a su resumen en los siguientes apartados:
+
+- [Transcripción](docs/Entrevista_transcripcion.md)
+- [Entrevista resumen](docs/Entrevista_resumen.md)
+
+Además se puede ver el relevamiento de la herramienta existente Guri en el siguiente apartado [Relevamiento Guri](docs/Relevamiento_Herramientas_Mercado.md)
+y las imágenes de esa aplicación en este otro
+[Imágenes Guri](docs/ImagenesRelevamientoMercado.md)
+
+### Técnicas aplicadas y aprendizajes
+
 Dentro de las técnicas dadas en clase: Entrevistas, Cuestionarios, Ingeniería inversa, Análisis de documentos, tormenta de ideas, User Personas, Observación, Workshops, entre otras.
 
 Elegimos trabajar con las siguientes técnicas:
@@ -67,6 +78,19 @@ Elegimos trabajar con las siguientes técnicas:
 - User Persona: Consiste en crear usuarios ficticios a los cuales se les inventa una vida, habilidades y aptitudes. La idea es que esos usuarios se acerquen lo más posible a un usuario real que utilizaría el sistema. Esta técnica fue elegida ya que es una buena manera de imaginar al usuario y cómo podría utilizar el sistema con sus capacidades y necesidades, lo que ayuda a diseñar una interfaz y funcionalidades alineadas con sus expectativas y limitaciones.
 
 ### Referencias a fuentes de información
+
+**Fuentes de Información**
+
+**ANEP (2022).** Programas de Educación Básica Integrada. Este documento establece las bases para la planificación educativa.
+
+**ANEP (2022).** Marco Curricular Nacional. Proporciona información sobre las competencias generales y específicas que deben desarrollarse, así como las progresiones de aprendizaje.
+
+[ANEP - Programas EBI 2023](https://www.anep.edu.uy/programas-ebi-2023-2023)
+
+[Guri Aplicación](https://guri2.ceip.edu.uy/GuriFamiliaAppWeb)
+
+[ORT Aulas](https://aulas.ort.edu.uy)
+
 
 **Investigación del Problema**
 
@@ -87,18 +111,10 @@ Una buena planificación es fundamental para el proceso de enseñanza y aprendiz
 - **Identificar Herramientas y Recursos:** Evaluar las herramientas y recursos actualmente utilizados para la planificación, sus beneficios y áreas de mejora.
 - **Proponer un Sistema de Software:** Desarrollar un sistema de software que permita una planificación de clases sencilla y eficiente, alineada con los planes establecidos por ANEP.
 
-**Fuentes de Información**
-
-**ANEP (2022).** Programas de Educación Básica Integrada. Este documento establece las bases para la planificación educativa.
-
-**ANEP (2022).** Marco Curricular Nacional. Proporciona información sobre las competencias generales y específicas que deben desarrollarse, así como las progresiones de aprendizaje.
-
-[ANEP - Programas EBI 2023](https://www.anep.edu.uy/programas-ebi-2023-2023).
-
 
 ### Caracterización de usuarios
 
-[User Personas](https://github.com/IngSoft-FIS-2024-2/proyecto-n3a-danese-perez-perez/blob/documentacion/docs/User%20persona.pdf)
+[User Personas](/docs/User_persona_V3.pdf)
 
 ### Modelo conceptual del problema
 
