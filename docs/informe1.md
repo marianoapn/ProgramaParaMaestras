@@ -370,7 +370,7 @@ Una buena planificación es fundamental para el proceso de enseñanza y aprendiz
 
 ### Bocetos de IU
 
-[Imágenes Figma](docs/ImagenesInterfaz.md)
+[Imágenes Figma](ImagenesInterfaz.md)
 
 ## Checkpoint obligatorio 1
 
