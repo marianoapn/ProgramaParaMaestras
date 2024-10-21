@@ -384,6 +384,7 @@ Se evaluará de acuerdo al grado de avance
 
 ## Validación y verificación
 
+En el siguiente link se encuentra el archivo excel con la validacion y verificacion [ValidacionYVerificacion](validacionyverificacion)
 
 
 ## Reflexión
@@ -391,6 +392,10 @@ Se evaluará de acuerdo al grado de avance
 **Manuel Perez:** Disfrute mucho hacer este trabajo con Mariano y Magui, ambos son muy buenos compañeros y muy responsables, nos dividimos de forma muy pareja las distintas tareas aprovechando siempre las virtudes de cada uno.
 Adquiri muchos conocimientos muy valiosos a lo largo de este proyecto que estoy seguro que me van a ayudar mucho en mi vida profesional como desarrollador.
 Si tengo que destacar algo de todo lo que aprendi seria el manejo de Git, ya habia trabajado con otras herramientas de control de version pero ahora tengo un mejor entendimiento de como funcionan y porque se usan. Sin ir mas lejos ya pude aplicar lo aprendido en un proyecto interno en mi trabajo asi que estoy muy contento de haber adquirido ese conocimiento.
+
+**Mariano Perez:** Aprendi mucho en este primer obligatorio, junto con Magui y Manuel, nos organizamos bien y disfrutamos haciendo la documentacion.
+Aplique tecnicas para los requerimientos aprendi mucho haciendolo tanto para nuestra app como para la ingenieria reversa de una app existente,  aprendi hacer un informe que jamas habia hecho sobre un software, aprendi a trabajar mucho con git y github, y trabajar sobre versiones, buenas practicas, tambien en validar y verificar cada requerimiento, Roxana e Isac gracias al checkpoint nos ayudaron a corregir cosas ya hechas, y a entender como se hacian otras.
+Espero que el segundo obligatorio nos de mas conocimientos como este.
 
 ### Detalle del trabajo individual
 
