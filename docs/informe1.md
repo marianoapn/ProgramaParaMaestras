@@ -57,9 +57,9 @@ Podemos acceder a la entrevista realizada, y a su resumen en los siguientes apar
 - [Transcripción](docs/Entrevista_transcripcion.md)
 - [Entrevista resumen](docs/Entrevista_resumen.md)
 
-Además se puede ver el relevamiento de la herramienta existente Guri en el siguiente apartado [Relevamiento Guri](docs/Relevamiento_Herramientas_Mercado.md)
+Además se puede ver el relevamiento de la herramienta existente Guri en el siguiente apartado [Relevamiento Guri](Relevamiento_Herramientas_Mercado.md)
 y las imágenes de esa aplicación en este otro
-[Imágenes Guri](docs/ImagenesRelevamientoMercado)
+[Imágenes Guri](ImagenesRelevamientoMercado)
 
 ### Técnicas aplicadas y aprendizajes
 
