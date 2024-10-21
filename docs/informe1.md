@@ -174,6 +174,8 @@ Una buena planificación es fundamental para el proceso de enseñanza y aprendiz
 
 ### Bocetos de IU
 
+[Imágenes Figma](docs/ImagenesInterfaz.md)
+
 ## Checkpoint obligatorio 1
 
 Incluir un resumen del avance en elicitación y especificación de requerimientos
