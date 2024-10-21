@@ -174,43 +174,190 @@ Una buena planificación es fundamental para el proceso de enseñanza y aprendiz
 
 ### User stories
 
-**Título:** Verificar el Plan de Clase
+1) 
+    **Título:** Verificar el Plan de Clase
 
-**Como:** Alumno
+    **Como:** Responsable del alumno
 
-**Quiero:** Consultar el plan de una clase específica
+    **Quiero:** Consultar el plan de una clase específica
 
-**Para:** Conocer los contenidos, objetivos y actividades programadas para esa clase, y así poder prepararme adecuadamente.
+    **Para:** Conocer los contenidos, objetivos y actividades programadas para esa clase, y así poder prepararme adecuadamente.
 
-**Criterios de aceptación:**
+    **Criterios de aceptación:**
 
-- El alumno puede acceder al calendario con las clases programadas.
-- El sistema permite al alumno seleccionar una clase específica para ver el plan correspondiente.
-- El plan de clase muestra los contenidos, objetivos y actividades programadas para esa clase.
+    - El responsable puede acceder al calendario con las clases programadas.
+    - El sistema permite al responsable seleccionar una clase específica para ver el plan correspondiente.
+    - El plan de clase muestra los contenidos, objetivos y actividades programadas para esa clase.
+
+2) 
+    **Título:** Crear un Plan de Clase
+
+    **Como:** Maestra
+
+    **Quiero:** Crear un nuevo plan de clase
+
+    **Para:** Establecer los objetivos, contenidos y actividades a desarrollar en una clase específica.
+
+    **Criterios de aceptación:**
+
+    - La maestra puede acceder a la sección de creación de planes de clase.
+    - El sistema permite a la maestra ingresar títulos, objetivos, contenidos y actividades.
+    - La maestra puede guardar el plan de clase y recibir una confirmación de que se ha creado correctamente.
+
+3) 
+    **Título:** Recibir Notificaciones de Cambios
+
+    **Como:** Responsable del alumno
+
+    **Quiero:** Recibir notificaciones sobre modificaciones en los planes de clase
+
+    **Para:** Estar al tanto de cualquier cambio que afecte a mi hijo.
+
+    **Criterios de aceptación:**
+
+    - El responsable puede recibir notificaciones a través de correo electrónico o en la aplicación.
+    - Las notificaciones incluyen detalles sobre el cambio realizado.
+    - El responsable puede acceder al plan de clase actualizado desde la notificación.
+
+4) 
+    **Título:** Editar Plan de Clase
+
+    **Como:** Maestra
+
+    **Quiero:** Editar un plan de clase existente
+
+    **Para:** Realizar ajustes según sea necesario, como añadir actividades o cambiar objetivos.
+
+    **Criterios de aceptación:**
+
+    - La maestra puede seleccionar un plan de clase existente para editar.
+    - El sistema permite modificar el contenido del plan y guardar los cambios.
+    - Se muestra un mensaje de confirmación una vez que se han guardado los cambios.
+
+5) 
+    **Título:** Ver Información de Alumnos
+
+    **Como:** Maestra
+
+    **Quiero:** Visualizar la información de los alumnos asignados a mi clase
+
+    **Para:** Conocer sus progresos y personalizar la enseñanza según sus necesidades.
+
+    **Criterios de aceptación:**
+
+    - La maestra puede acceder a una lista de los alumnos asignados a su clase.
+    - El sistema muestra información relevante sobre cada alumno, como calificaciones y asistencia.
+    - La maestra puede filtrar la información por diferentes criterios.
+
 
 ### Use cases
 
-**Título:** Verificar el Plan de Clase
+1) 
+    **Título:** Verificar el Plan de Clase
 
-**Actor principal:** Alumno
+    **Actor principal:** Responsable del alumno
 
-**Precondiciones:** El alumno ha iniciado sesión en la aplicación con un usuario del tipo alumno.
+    **Precondiciones:** El responsable ha iniciado sesión en la aplicación con un usuario del tipo responsable.
 
-**Flujo principal:**
+    **Flujo principal:**
 
-- El sistema muestra el calendario con las clases programadas.
-- El alumno selecciona una clase específica del calendario.
-- El sistema muestra el plan de clase correspondiente, incluyendo contenidos, objetivos y actividades programadas.
-- El alumno revisa la información del plan de clase.
+    1) El sistema muestra el calendario con las clases programadas.
+    2) El responsable selecciona una clase específica del calendario.
+    3) El sistema muestra el plan de clase correspondiente, incluyendo contenidos, objetivos y actividades programadas.
+    4) El responsable revisa la información del plan de clase.
 
-**Flujos alternativos:**
+    **Flujos alternativos:**
 
-- **Clase no encontrada:** Si el alumno selecciona una clase que no existe (por error), el sistema muestra un mensaje de error indicando que la clase no se encuentra.
-- **Sin conexión:** Si hay un problema de conexión al intentar recuperar el plan de clase, el sistema muestra un mensaje de error y le permite al alumno intentar nuevamente.
+    - **Clase no encontrada:** Si el responsable selecciona una clase que no existe (por error), el sistema muestra un mensaje de error indicando que la clase no se encuentra.
+    - **Sin conexión:** Si hay un problema de conexión al intentar recuperar el plan de clase, el sistema muestra un mensaje de error y le permite al alumno intentar nuevamente.
 
-**Postcondiciones:** El alumno ha revisado el plan de clase y tiene acceso a la información actualizada.
+    **Postcondiciones:** El alumno ha revisado el plan de clase y tiene acceso a la información actualizada.
 
+2) 
+    **Título:** Crear un Plan de Clase
 
+    **Actor principal:** Maestra
+
+    **Precondiciones:** La maestra ha iniciado sesión en la aplicación.
+
+    **Flujo principal:**
+
+    1) La maestra selecciona el dia en el cual quiere crear un nuevo plan de clase
+    2) La maestra selecciona la opción de "Crear Plan de Clase".
+    3) El sistema presenta un formulario para ingresar los detalles del plan.
+    4) La maestra completa el formulario con el título, objetivos, contenidos y actividades.
+    5) La maestra guarda el plan de clase.
+    6) El sistema muestra un mensaje de confirmación de creación exitosa.
+
+    **Flujos alternativos:**
+
+    - **Error en el formulario:** Si la maestra no completa todos los campos obligatorios, el sistema muestra un mensaje de error indicando qué campos son necesarios.
+
+    **Postcondiciones:** El nuevo plan de clase está guardado en el sistema y disponible para su visualización.
+
+3) 
+    **Título:** Editar un Plan de Clase
+
+    **Actor principal:** Maestra
+
+    **Precondiciones:** La maestra ha iniciado sesión en la aplicación y tiene un plan de clase existente.
+
+    **Flujo principal:**
+
+    1) La maestra accede al calendario.
+    2) La maestra selecciona el dia con el plan que desea editar.
+    3) El sistema carga la información del plan.
+    4) La maestra selecciona editar plan.
+    5) La maestra realiza los cambios necesarios y guarda el plan.
+    6) El sistema muestra un mensaje de confirmación de que el plan ha sido editado.
+
+    **Flujos alternativos:**
+
+    - **No se pueden guardar los cambios:** Si hay un problema al guardar (por ejemplo, conexión a Internet), el sistema muestra un mensaje de error y sugiere intentar nuevamente.
+
+    **Postcondiciones:** El plan de clase editado está actualizado en el sistema.
+
+4) 
+    **Título:** Recuperar Contraseña
+
+    **Actor principal:** Maestra o Responsable del alumno
+
+    **Precondiciones:** El usuario ha olvidado su contraseña.
+
+    **Flujo principal:**
+
+    1) El usuario selecciona la opción "Recuperar Contraseña" en la pantalla de login.
+    2) El sistema solicita la dirección de correo electrónico asociada al usuario.
+    3) El usuario ingresa su correo electrónico y envía la solicitud.
+    4) El sistema envía un enlace de recuperación al correo electrónico proporcionado.
+    5) El usuario sigue el enlace y establece una nueva contraseña.
+
+    **Flujos alternativos:**
+
+    - **Correo electrónico no registrado:** Si el correo electrónico ingresado no está asociado a ningún usuario, el sistema muestra un mensaje de error.
+
+    **Postcondiciones:** El usuario ha recuperado su contraseña y puede iniciar sesión con la nueva contraseña.
+
+5) 
+    **Título:** Cerrar Sesión en la Aplicación
+
+    **Actor principal:** Maestra o Responsable del alumno
+
+    **Precondiciones:** El usuario ha iniciado sesión en la aplicación.
+
+    **Flujo principal:**
+
+    1) El usuario selecciona la opción "Cerrar Sesión" en el menú de la aplicación.
+    2) El sistema muestra un mensaje de confirmación para asegurarse de que el usuario desea cerrar sesión.
+    3) El usuario confirma que desea cerrar sesión.
+    4) El sistema cierra la sesión del usuario y redirige a la pantalla de inicio de sesión.
+    5) El sistema muestra un mensaje de confirmación de que la sesión ha sido cerrada exitosamente.
+
+    **Flujos alternativos:**
+
+    - **Cancelar cierre de sesión:** Si el usuario decide no cerrar sesión, el sistema vuelve a la pantalla anterior sin realizar cambios.
+
+    **Postcondiciones:** El usuario ha cerrado sesión y no tiene acceso a la aplicación hasta que inicie sesión nuevamente.
 
 ### Bocetos de IU
 
@@ -226,6 +373,10 @@ Se evaluará de acuerdo al grado de avance
 ### Validación
 
 ## Reflexión
+
+**Manuel Perez:** Disfrute mucho hacer este trabajo con Mariano y Magui, ambos son muy buenos compañeros y muy responsables, nos dividimos de forma muy pareja las distintas tareas aprovechando siempre las virtudes de cada uno.
+Adquiri muchos conocimientos muy valiosos a lo largo de este proyecto que estoy seguro que me van a ayudar mucho en mi vida profesional como desarrollador.
+Si tengo que destacar algo de todo lo que aprendi seria el manejo de Git, ya habia trabajado con otras herramientas de control de version pero ahora tengo un mejor entendimiento de como funcionan y porque se usan. Sin ir mas lejos ya pude aplicar lo aprendido en un proyecto interno en mi trabajo asi que estoy muy contento de haber adquirido ese conocimiento.
 
 ### Detalle del trabajo individual
 
