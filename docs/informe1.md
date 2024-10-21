@@ -120,7 +120,6 @@ Una buena planificación es fundamental para el proceso de enseñanza y aprendiz
 
 <img src="ImagenModeloConceptual\ModeloConceptual1.png" alt="Modelo Conceptual App">
 
-
 ## Especificación
 
 ### Requerimientos funcionales y no funcionales
@@ -379,15 +378,9 @@ Una buena planificación es fundamental para el proceso de enseñanza y aprendiz
 
 [Imagenes de la UI](BocetosUi.md)
 
-## Checkpoint obligatorio 1
-
-Incluir un resumen del avance en elicitación y especificación de requerimientos
-Se evaluará de acuerdo al grado de avance
-
 ## Validación y verificación
 
 En el siguiente link se encuentra el archivo excel con la validacion y verificacion [ValidacionYVerificacion](validacionyverificacion.md)
-
 
 ## Reflexión
 
@@ -401,13 +394,40 @@ Si tengo que destacar algo de todo lo que aprendi seria el manejo de Git, ya hab
 Aplique tecnicas para los requerimientos aprendi mucho haciendolo tanto para nuestra app como para la ingenieria reversa de una app existente,  aprendi hacer un informe que jamas habia hecho sobre un software, aprendi a trabajar mucho con git y github, y trabajar sobre versiones, buenas practicas, tambien en validar y verificar cada requerimiento, Roxana e Isac gracias al checkpoint nos ayudaron a corregir cosas ya hechas, y a entender como se hacian otras.
 Espero que el segundo obligatorio nos de mas conocimientos como este.
 
-
 ### Detalle del trabajo individual
 
-Detallar: fecha, actividad, horas, responsable
-Incluir totales de esfuerzo
+- **Buenas prácticas de versionado:** Manuel
+- **Resumen de commits y evolución del proyecto:** Manuel
+- **Elicitación Evidencia de actividades de investigación:** Manuel
+- **Referencias a fuentes de información:** Manuel
+- **Entrevistas:** Magdalena
+- **Ingenieria Inversa:** Mariano
+- **Caracterización de usuarios: User Personas:** Magdalena
+- **Modelo conceptual del problema:** Mariano
+- **Especificación Definición de requerimientos funcionales y no funcionales:** Manuel y Mariano
+- **User Stories / Use Cases detallados:** Manuel
+- **Bocetos de IU:** Magdalena
+- **Elicitación y especificación de requerimientos:** Mariano
+- **Validación y verificación:** Mariano
+- **Validar la solución con personas no involucradas en el proyecto:** Manuel y Mariano
+- **Detalle del trabajo individual:** Manuel
+- **Técnicas aplicadas y aprendizajes:** Manuel
 
 ### Técnicas aplicadas y aprendizajes
+
+A lo largo del proyecto, utilizamos varias técnicas para entender mejor lo que necesitábamos:
+
+- **Entrevistas:** Hicimos entrevistas con usuarios para conocer sus necesidades y problemas al planificar clases.
+
+- **Ingeniería inversa:** Miramos sistemas como Guri y la plataforma de ORT para ver qué funcionalidades tienen.
+
+- **Análisis de documentos:** Revisamos la documentación de la ANEP para identificar requisitos y normas importantes.
+
+- **Tormenta de ideas:** Hicimos sesiones de brainstorming para generar ideas sobre cómo debería funcionar y verse el sistema.
+
+- **User Personas:** Creamos perfiles de usuarios ficticios para asegurarnos de que el diseño y las funciones sean realmente útiles para quienes usarán la aplicación.
+
+**Aprendizajes:** A lo largo del proyecto, mejoramos mucho en el uso de Git y cómo gestionar versiones, lo que hizo que trabajar en equipo fuera más fácil. También ganamos experiencia en crear prototipos y diseñar interfaces, lo que nos dio una mejor perspectiva del desarrollo de software. Usar diferentes técnicas nos permitió abordar el problema desde varias direcciones, asegurando que nuestra solución fuera más completa y útil.
 
 
 
