@@ -382,6 +382,16 @@ Una buena planificación es fundamental para el proceso de enseñanza y aprendiz
 
 En el siguiente link se encuentra el archivo excel con la validacion y verificacion [ValidacionYVerificacion](validacionyverificacion.md)
 
+## Validar la solución con personas no involucradas en el proyecto
+
+**Francisca Picorel (maestra de primaria):**
+"Me parece genial esta aplicacion para planificar clases. Poder personalizar los planes para cada alumno es clave, así podemos atender sus necesidades mejor. Ojalá sea fácil de usar; a veces las nuevas tecnologias son complicadas y terminan restando mas de lo que aportan.
+Sería buenísimo que incluyera plantillas ya adaptadas al currículo y algunos tutoriales para quienes no manejan bien la tecnología."
+
+**Carla Martirene (madre):**
+"Me encanta la idea. Poder ver lo que las maestras les enseñan a mis hijos me daría mucha tranquilidad y me ayudaría a estar mas pendiente de su aprendizaje.
+Recibir notificaciones de las clases sería muy bueno. Así evitamos esos momentos de estrés cuando los chicos avisan a último minuto que tienen deberes para el día siguiente."
+
 ## Reflexión
 
 **Manuel Perez:** Disfrute mucho hacer este trabajo con Mariano y Magui, ambos son muy buenos compañeros y muy responsables, nos dividimos de forma muy pareja las distintas tareas aprovechando siempre las virtudes de cada uno.
@@ -409,7 +419,7 @@ Espero que el segundo obligatorio nos de mas conocimientos como este.
 - **Bocetos de IU:** Magdalena
 - **Elicitación y especificación de requerimientos:** Mariano
 - **Validación y verificación:** Mariano
-- **Validar la solución con personas no involucradas en el proyecto:** Manuel y Mariano
+- **Validar la solución con personas no involucradas en el proyecto:** Manuel
 - **Detalle del trabajo individual:** Manuel
 - **Técnicas aplicadas y aprendizajes:** Manuel
 
