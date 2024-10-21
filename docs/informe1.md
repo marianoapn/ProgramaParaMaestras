@@ -386,7 +386,7 @@ Se evaluará de acuerdo al grado de avance
 
 ## Validación y verificación
 
-En el siguiente link se encuentra el archivo excel con la validacion y verificacion [ValidacionYVerificacion](validacionyverificacion.xlsx)
+En el siguiente link se encuentra el archivo excel con la validacion y verificacion [ValidacionYVerificacion](validacionyverificacion)
 
 
 ## Reflexión
