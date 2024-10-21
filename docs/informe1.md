@@ -132,12 +132,12 @@ Una buena planificación es fundamental para el proceso de enseñanza y aprendiz
 	- **UsuMaestra8:** El sistema debe permitir a los usuarios maestra visualizar su información personal. Prioridad ("Media")
 	
 
-- **Usuario Responsable del alumno :**
+- **Usuario Responsable del alumno:**
 	- **UsuRespons1:** El sistema debe permitir a los usuarios responsable del alumno visualizar su información personal. Prioridad ("Media")
 	- **UsuRespons2:** El sistema debe permitir a los usuarios responsable del alumno visualizar el calendario de actividades asignadas por la maestra. Prioridad ("Media")
 	- **UsuRespons3:** El sistema debe notificar a los responsables de los alumnos sobre modificaciones en los planes de clase o nuevas actividades. Prioridad ("Baja")
 
-- Dependencias Externas:
+- **Dependencias Externas:**
 	- **Dep1:** El sistema debe integrarse con la base de datos de ANEP para validar la creación de usuarios autorizados. Prioridad("Media")
 
 
@@ -368,9 +368,7 @@ Se evaluará de acuerdo al grado de avance
 
 ## Validación y verificación
 
-### Verificación
 
-### Validación
 
 ## Reflexión
 
