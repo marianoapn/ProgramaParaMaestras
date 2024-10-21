@@ -382,7 +382,6 @@ Una buena planificación es fundamental para el proceso de enseñanza y aprendiz
 
 En el siguiente link se encuentra el archivo excel con la validacion y verificacion [ValidacionYVerificacion](validacionyverificacion.xlsx)
 
-
 ## Reflexión
 
 **Manuel Perez:** Disfrute mucho hacer este trabajo con Mariano y Magui, ambos son muy buenos compañeros y muy responsables, nos dividimos de forma muy pareja las distintas tareas aprovechando siempre las virtudes de cada uno.
@@ -394,7 +393,6 @@ Si tengo que destacar algo de todo lo que aprendi seria el manejo de Git, ya hab
 **Mariano Perez:** Aprendi mucho en este primer obligatorio, junto con Magui y Manuel, nos organizamos bien y disfrutamos haciendo la documentacion.
 Aplique tecnicas para los requerimientos aprendi mucho haciendolo tanto para nuestra app como para la ingenieria reversa de una app existente,  aprendi hacer un informe que jamas habia hecho sobre un software, aprendi a trabajar mucho con git y github, y trabajar sobre versiones, buenas practicas, tambien en validar y verificar cada requerimiento, Roxana e Isac gracias al checkpoint nos ayudaron a corregir cosas ya hechas, y a entender como se hacian otras.
 Espero que el segundo obligatorio nos de mas conocimientos como este.
-
 
 ### Detalle del trabajo individual
 
