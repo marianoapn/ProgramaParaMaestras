@@ -375,7 +375,9 @@ Una buena planificación es fundamental para el proceso de enseñanza y aprendiz
 
     **Postcondiciones:** El usuario ha cerrado sesión y no tiene acceso a la aplicación hasta que inicie sesión nuevamente.
 
-### Bocetos de IU
+### Bocetos de UI
+
+[Imagenes de la UI](BocetosUi.md)
 
 ## Checkpoint obligatorio 1
 
@@ -391,6 +393,8 @@ Se evaluará de acuerdo al grado de avance
 **Manuel Perez:** Disfrute mucho hacer este trabajo con Mariano y Magui, ambos son muy buenos compañeros y muy responsables, nos dividimos de forma muy pareja las distintas tareas aprovechando siempre las virtudes de cada uno.
 Adquiri muchos conocimientos muy valiosos a lo largo de este proyecto que estoy seguro que me van a ayudar mucho en mi vida profesional como desarrollador.
 Si tengo que destacar algo de todo lo que aprendi seria el manejo de Git, ya habia trabajado con otras herramientas de control de version pero ahora tengo un mejor entendimiento de como funcionan y porque se usan. Sin ir mas lejos ya pude aplicar lo aprendido en un proyecto interno en mi trabajo asi que estoy muy contento de haber adquirido ese conocimiento.
+
+**Magdalena Danese** Fue muy interesante la realización del trabajo, creo que donde más aprendi fue en el uso de git, que gracias al ejercicio pusimos mucho en práctica. Estuvo también interesante la parte de prototipar y pensar las diferentes pantallas y agarrar algo de experiencia en figma. Por otro lado creo que armamos un buen grupo de trabajo donde nos complementamos y aprendí también de mis compañeros.
 
 ### Detalle del trabajo individual
 
