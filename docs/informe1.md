@@ -380,7 +380,7 @@ Una buena planificación es fundamental para el proceso de enseñanza y aprendiz
 
 ## Validación y verificación
 
-En el siguiente link se encuentra el archivo excel con la validacion y verificacion [ValidacionYVerificacion](validacionyverificacion.md)
+En el siguiente link se encuentra el archivo markdown con la validacion y verificacion [ValidacionYVerificacion](validacionyverificacion.md)
 
 ## Validar la solución con personas no involucradas en el proyecto
 
