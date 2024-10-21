@@ -54,12 +54,12 @@ La creación de branches garantiza que las vulnerabilidades y los errores no lle
 
 Podemos acceder a la entrevista realizada, y a su resumen en los siguientes apartados:
 
-- [Transcripción](docs/Entrevista_transcripcion.md)
-- [Entrevista resumen](docs/Entrevista_resumen.md)
+- [Transcripción](Entrevista_transcripcion.md)
+- [Entrevista resumen](Entrevista_resumen.md)
 
-Además se puede ver el relevamiento de la herramienta existente Guri en el siguiente apartado [Relevamiento Guri](docs/Relevamiento_Herramientas_Mercado.md)
+Además se puede ver el relevamiento de la herramienta existente Guri en el siguiente apartado [Relevamiento Guri](Relevamiento_Herramientas_Mercado.md)
 y las imágenes de esa aplicación en este otro
-[Imágenes Guri](docs/ImagenesRelevamientoMercado.md)
+[Imágenes Guri](ImagenesRelevamientoMercado)
 
 ### Técnicas aplicadas y aprendizajes
 
