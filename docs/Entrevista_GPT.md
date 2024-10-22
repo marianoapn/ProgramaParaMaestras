@@ -93,40 +93,40 @@ Se debe identificar el problema, usuario y objetivo principal. La investigación
 
 Entrevistador: ¿Cuál es tu rol y experiencia en la enseñanza?
 
-Maestra: Soy docente de educación primaria en ANEP, y llevo trabajando como maestra hace ya 15 años. He tenido la oportunidad de trabajar en diferentes contextos educativos y con grupos muy diversos, lo que me ha dado una perspectiva amplia de las necesidades educativas y de cómo la planificación puede variar según el grupo de alumnos.
+Maestra: Soy maestra de primaria en ANEP y llevo 15 años enseñando. He trabajado en distintas escuelas y niveles, lo que me ha permitido conocer diversas realidades y adaptar mis estrategias a diferentes contextos educativos.
 
 Entrevistador: ¿Cómo planificás actualmente tus clases?
 
-Maestra: Planifico mis clases semanalmente. Utilizo herramientas digitales como Google Drive, específicamente Google Sheets, para poder organizar las actividades y los objetivos. Cada semana establezco metas a corto plazo, tanto para el grupo como para cada niño de manera individual, y diseño actividades que se alineen con esas metas.
+Maestra: Planifico mis clases por bloques mensuales, pero con una revisión semanal para ajustar los contenidos según el progreso de los estudiantes. Prefiero hacerlo de esta manera porque me permite tener una visión más a largo plazo y, al mismo tiempo, ser flexible con los ajustes necesarios durante la semana.
 
 Entrevistador: ¿Qué cosas te parecen indispensables para planificar la semana?
 
-Maestra: Lo más importante es tener bien claros los objetivos de aprendizaje que quiero alcanzar con los estudiantes. A partir de esos objetivos, pienso en actividades que puedan involucrar a todos los niños, teniendo en cuenta sus diferentes niveles y necesidades. También es indispensable tener un plan flexible, ya que cada semana puede tener sus desafíos y no siempre se puede seguir exactamente lo que se planificó.
+Maestra: Lo esencial es establecer los objetivos de aprendizaje claros, tanto para el grupo como para cada alumno. También considero clave diseñar actividades que se adapten a las diferentes habilidades de los estudiantes. Además, siempre trato de incluir un margen de flexibilidad en mi planificación, ya que nunca se sabe cómo puede avanzar cada niño en un tema específico.
 
 Entrevistador: ¿Con qué frecuencia revisás y ajustás tu planificación?
 
-Maestra: Hago ajustes todos los días. Si bien tengo una planificación semanal, reviso día a día cómo han avanzado los niños y si han logrado cumplir con los objetivos planteados. Si no se logra algo en el tiempo estimado, replanifico para retomar el tema al día siguiente o la semana siguiente, según sea necesario.
+Maestra: Hago una revisión semanal general, pero todos los días me detengo a revisar si los alumnos lograron avanzar en lo que planifiqué. En base a eso, ajusto la planificación del día siguiente o incluso reestructuro la semana si es necesario. Siempre trato de mantener un equilibrio entre lo planificado y lo que efectivamente logramos.
 
 Entrevistador: ¿Cómo elegís los contenidos a enseñar en clase?
 
-Maestra: Siempre me baso en los programas de ANEP, que establecen las competencias y contenidos que debemos abordar en cada grado. A partir de ahí, selecciono aquellos contenidos que considero que van a ser más relevantes para los niños, y siempre busco adaptar esos contenidos a las necesidades específicas de cada uno.
+Maestra: Me baso en los programas de ANEP, que son la guía principal para definir los contenidos y competencias que deben aprender los estudiantes. A partir de esos lineamientos, adapto los contenidos de acuerdo a las necesidades del grupo y, sobre todo, de cada alumno en particular.
 
 Entrevistador: ¿Cuáles son las principales dificultades al momento de planificar la semana?
 
-Maestra: La mayor dificultad es personalizar las actividades para cada alumno. Con grupos grandes, es difícil llegar a cada niño de la manera más adecuada. A veces, se puede tener una idea clara de lo que necesita cada uno, pero el tiempo y los recursos no siempre son suficientes para poder implementar todo lo que se planifica.
+Maestra: La mayor dificultad es asegurarme de que todas las actividades estén alineadas con las capacidades y necesidades de cada niño. Siempre es un desafío encontrar el balance entre avanzar con el grupo y, al mismo tiempo, dar el apoyo necesario a quienes van a un ritmo más lento o tienen necesidades especiales.
 
 Entrevistador: ¿Qué te gustaría que tuviera un sistema de planificación?
 
-Maestra: Me gustaría que fuera más intuitivo y personalizado. Un sistema que permita llevar un seguimiento individual de cada alumno de manera más fácil sería ideal. Además, que incluya opciones para ajustar rápidamente actividades y objetivos, según las necesidades que van surgiendo en el día a día.
+Maestra: Me gustaría que fuera un sistema dinámico, que no solo me permitiera crear actividades para el grupo, sino también gestionar el seguimiento individual de cada estudiante de manera automática. Además, sería ideal que ofreciera sugerencias basadas en el progreso de cada niño para que yo pudiera ajustar mi planificación de forma más eficiente.
 
 Entrevistador: ¿Estás familiarizada con el uso de herramientas tecnológicas para la planificación? ¿Cuáles?
 
-Maestra: Sí, además de Google Drive y Sheets, utilizo herramientas como Canva para hacer presentaciones y actividades más visuales. También trabajamos con la plataforma Crea del Plan Ceibal, que permite incorporar aplicaciones como Matific, que usamos mucho en clase.
+Maestra: Sí, utilizo herramientas como Google Sheets y Docs para organizar mis planificaciones. También he utilizado plataformas como Matific para actividades en línea, aunque más orientadas a los alumnos. Me gustaría que todas estas herramientas estuvieran más conectadas entre sí para facilitar el proceso de planificación.
 
 Entrevistador: ¿Hay algo que te gustaría mejorar en las herramientas que se usan actualmente?
 
-Maestra: Creo que las herramientas tecnológicas están en constante evolución, lo cual es positivo. Lo que sí me gustaría es que fueran más integradas, que todo estuviera en una sola plataforma en lugar de tener que usar varias herramientas distintas.
+Maestra: Creo que las herramientas actuales cumplen con muchas funciones, pero me gustaría que tuvieran más opciones para personalizar las actividades de acuerdo a las características de cada grupo o incluso de cada niño. Además, sería útil que incluyeran análisis automáticos del progreso de los alumnos, para poder ajustar las actividades de forma más efectiva.
 
 Entrevistador: ¿Hay algo más que te gustaría agregar sobre cómo se podría mejorar la planificación de las clases?
 
-Maestra: Me gustaría que la planificación pudiera ser más individualizada, que las herramientas me permitan diseñar un plan de aprendizaje específico para cada niño, sin perder de vista el grupo. Eso ayudaría a atender mejor las diferencias que existen entre los alumnos y mejorar su proceso de aprendizaje.
+Maestra: Sí, sería excelente que la planificación no solo pudiera ser personalizada para cada alumno, sino que también fuera colaborativa, permitiendo que otros docentes o incluso los propios padres pudieran tener un rol activo en el seguimiento y ajuste del aprendizaje de los niños.
