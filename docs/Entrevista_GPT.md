@@ -1,4 +1,10 @@
+## Prompt a chatGPT
 
+Te voy a pedir que generes una entrevista te voy a pasar las preguntas, quien deberias ser, una entrevista que ya hicimos y tambien el resumen para que entiendas, es para un proyecto la primera parte 
+
+Primero sos una maestra de ANEP de primaria, con todos los conocimientos correspondientes.
+
+Esta es la transcripcion de la entrevista con la pregunta que le hicimos:
 ¿Cuál es tu rol y experiencia en la enseñanza? 
 
 Yo soy maestra de educación primaria y ejerzo esta profesión desde hace ya 20 años. ¿Cómo planificás actualmente tus clases? Actualmente planifico mis clases en formato digital, y lo hago de forma semanal. Me planteo metas y competencias que quiero lograr durante esa semana, y a partir de eso hago una secuencia de actividades para trabajar en la clase con los niños.
@@ -32,3 +38,95 @@ Entonces cuando yo planifico, incluyo también estas otras aplicaciones para que
 Y después la última, ¿hay algo que te gustaría agregar sobre cómo se podría mejorar la planificación de las clases? Y sí, creo que mediante planillas digitales, volviendo a esa respuesta que te di hoy de que me gustaría planificar no tanto para el grupo, sino para el niño, para tener una planificación personal de cada niño mediante algún tipo de planilla digital que se pudiese tener.
 
 (Transcrito por TurboScribe.ai. Actualizar a Ilimitado para eliminar este mensaje.)
+
+El resumen de la misma:
+ Guión entrevista
+
+#### Preguntas Generales
+
+¿Cuál es tu rol y experiencia en la enseñanza?
+
+¿Cómo planificas actualmente tus clases?
+
+Sobre la Planificación
+
+¿Qué cosas te parecen indispensables para planificar la semana?
+
+¿Con qué frecuencia revisas y ajustas tu planificación?
+
+¿Cómo elegís los contenidos a enseñar en clase?
+
+#### Desafíos y Necesidades
+
+¿Cuáles son las principales dificultades al momento de planificar la semana?
+
+¿Qué te gustaría que tuviera un sistema de planificación?
+
+#### Uso de Tecnología
+
+¿Estás familiarizada con el uso de herramientas tecnológicas para la planificación? ¿Cuáles?
+
+¿Hay algo que te gustaría mejorar en las herramientas que se usan actualmente?
+
+#### Cierre
+
+¿Hay algo más que te gustaría agregar sobre cómo se podría mejorar la planificación de las clases?
+
+
+Su planificación principal la realiza de forma semanal ajustándola diariamente según se vaya cumpliendo.
+Como herramientas para su planificación usa mucho Google Sheets porque le permite personalizar el contenido tanto al maestro como los alumnos y ajustar acorde. También usa Canva, Matific y la plataforma Crea.
+Basa su planificación en los objetivos a corto plazo que propone para el grupo y cada alumno.
+Elige los contenidos dependiendo de lo que quiere enseñar, siempre basada en el marco curricular nacional y de las necesidades de cada niño y las competencias a desarrollar según sus posibilidades.
+Expresa que al momento de planificar la dificultad más grande es cómo llegar a todos.
+La mejora que le haría a la forma de planificar actual es encontrar una manera en las distintas herramientas para que la planificación sea mas personalizada por niño y no general para toda la clase.
+
+Te paso el problema planteado por los docentes para este proyecto:
+EVALUACIÓN	Obligatorio
+MATERIA	Fundamentos de Ingeniería de Software
+CONDICIONES	- Puntaje máximo: 15 puntos      
+- Puntaje mínimo: 1 puntos
+- Fecha de entrega: 22/10/24 hasta las 21:00 horas en gestion.ort.edu.uy (max. 40Mb en formato zip, rar o pdf) 
+PROBLEMA OBJETIVO	Se deberá investigar y desarrollar un sistema que permita gestionar la planificación semanal de las maestras, estableciendo la alineación con los programas de ANEP (Administración Nacional de Educación Pública) que refieren a unidades curriculares, competencias generales, competencias específicas, contenidos, criterios de logro, plan de aprendizaje, etc.  
+Se debe identificar el problema, usuario y objetivo principal. La investigación del problema y delimitación del alcance es responsabilidad de los estudiantes. Se deben especificar en forma detallada los requerimientos que permitan alcanzar los objetivos identificados. 
+
+## Respuesta ChatGPT
+
+Entrevistador: ¿Cuál es tu rol y experiencia en la enseñanza?
+
+Maestra: Soy maestra de primaria en ANEP y llevo 15 años enseñando. He trabajado en distintas escuelas y niveles, lo que me ha permitido conocer diversas realidades y adaptar mis estrategias a diferentes contextos educativos.
+
+Entrevistador: ¿Cómo planificás actualmente tus clases?
+
+Maestra: Planifico mis clases por bloques mensuales, pero con una revisión semanal para ajustar los contenidos según el progreso de los estudiantes. Prefiero hacerlo de esta manera porque me permite tener una visión más a largo plazo y, al mismo tiempo, ser flexible con los ajustes necesarios durante la semana.
+
+Entrevistador: ¿Qué cosas te parecen indispensables para planificar la semana?
+
+Maestra: Lo esencial es establecer los objetivos de aprendizaje claros, tanto para el grupo como para cada alumno. También considero clave diseñar actividades que se adapten a las diferentes habilidades de los estudiantes. Además, siempre trato de incluir un margen de flexibilidad en mi planificación, ya que nunca se sabe cómo puede avanzar cada niño en un tema específico.
+
+Entrevistador: ¿Con qué frecuencia revisás y ajustás tu planificación?
+
+Maestra: Hago una revisión semanal general, pero todos los días me detengo a revisar si los alumnos lograron avanzar en lo que planifiqué. En base a eso, ajusto la planificación del día siguiente o incluso reestructuro la semana si es necesario. Siempre trato de mantener un equilibrio entre lo planificado y lo que efectivamente logramos.
+
+Entrevistador: ¿Cómo elegís los contenidos a enseñar en clase?
+
+Maestra: Me baso en los programas de ANEP, que son la guía principal para definir los contenidos y competencias que deben aprender los estudiantes. A partir de esos lineamientos, adapto los contenidos de acuerdo a las necesidades del grupo y, sobre todo, de cada alumno en particular.
+
+Entrevistador: ¿Cuáles son las principales dificultades al momento de planificar la semana?
+
+Maestra: La mayor dificultad es asegurarme de que todas las actividades estén alineadas con las capacidades y necesidades de cada niño. Siempre es un desafío encontrar el balance entre avanzar con el grupo y, al mismo tiempo, dar el apoyo necesario a quienes van a un ritmo más lento o tienen necesidades especiales.
+
+Entrevistador: ¿Qué te gustaría que tuviera un sistema de planificación?
+
+Maestra: Me gustaría que fuera un sistema dinámico, que no solo me permitiera crear actividades para el grupo, sino también gestionar el seguimiento individual de cada estudiante de manera automática. Además, sería ideal que ofreciera sugerencias basadas en el progreso de cada niño para que yo pudiera ajustar mi planificación de forma más eficiente.
+
+Entrevistador: ¿Estás familiarizada con el uso de herramientas tecnológicas para la planificación? ¿Cuáles?
+
+Maestra: Sí, utilizo herramientas como Google Sheets y Docs para organizar mis planificaciones. También he utilizado plataformas como Matific para actividades en línea, aunque más orientadas a los alumnos. Me gustaría que todas estas herramientas estuvieran más conectadas entre sí para facilitar el proceso de planificación.
+
+Entrevistador: ¿Hay algo que te gustaría mejorar en las herramientas que se usan actualmente?
+
+Maestra: Creo que las herramientas actuales cumplen con muchas funciones, pero me gustaría que tuvieran más opciones para personalizar las actividades de acuerdo a las características de cada grupo o incluso de cada niño. Además, sería útil que incluyeran análisis automáticos del progreso de los alumnos, para poder ajustar las actividades de forma más efectiva.
+
+Entrevistador: ¿Hay algo más que te gustaría agregar sobre cómo se podría mejorar la planificación de las clases?
+
+Maestra: Sí, sería excelente que la planificación no solo pudiera ser personalizada para cada alumno, sino que también fuera colaborativa, permitiendo que otros docentes o incluso los propios padres pudieran tener un rol activo en el seguimiento y ajuste del aprendizaje de los niños.

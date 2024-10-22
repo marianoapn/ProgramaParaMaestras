@@ -54,9 +54,20 @@ La creación de branches garantiza que las vulnerabilidades y los errores no lle
 
 Podemos acceder a la entrevista realizada, y a su resumen en los siguientes apartados:
 
+<<<<<<< HEAD
 - [Transcripción](Entrevista_transcripcion.md)
 - [Entrevista resumen](Entrevista_resumen.md)
 
+=======
+- [Transcripción Entrevista Maestra](Entrevista_transcripcion.md)
+
+- [Entrevista Maestra resumen](Entrevista_resumen.md)
+
+- [Entrevista ChatGPT](Entrevista_GPT.md)
+
+- [Entrevista ChatGPT resumen](Entrevista_GPT_resumen.md)
+
+>>>>>>> 5a5bdd4a035bc5949026dbeb7ae5919bfbf71cad
 Además se puede ver el relevamiento de la herramienta existente Guri en el siguiente apartado [Relevamiento Guri](Relevamiento_Herramientas_Mercado.md)
 y las imágenes de esa aplicación en este otro
 [Imágenes Guri](ImagenesRelevamientoMercado)
@@ -118,79 +129,326 @@ Una buena planificación es fundamental para el proceso de enseñanza y aprendiz
 
 ### Modelo conceptual del problema
 
+<img src="ImagenModeloConceptual\ModeloConceptual1.png" alt="Modelo Conceptual App">
+
 ## Especificación
 
 ### Requerimientos funcionales y no funcionales
 
-**Requerimientos funcionales:**
-- **Usuarios:** El sistema debe permitir la creacion, edicion y eliminacion de usuarios tanto para maestras como para alumnos.
-- **Planificación:** Los usuarios maestras deben poder crear, editar y eliminar planes de clase, vinculándolos a las unidades curriculares correspondientes y agregarlos a un calendario.
-- **Visualización:** Los usuarios deben poder visualizar sus planes de clase en un calendario.
+#### Requerimientos funcionales:
 
-**Requerimientos no funcionales:**
-- **Usabilidad:** La interfaz del sistema debe ser intuitiva y permitir que los usuarios puedan realizar sus tareas sin necesidad de estar familiarizados con la tecnologia.
-- **Seguridad:** Los datos personales de los alumnos deberán ser accesibles únicamente por la maestra asignada a cada grupo.
-- **Compatibilidad:** La aplicación debe funcionar en las versiones más recientes de los navegadores Chrome, Firefox y Safari.
+- **Usuarios:**
+	- **Usu1:** El sistema debe permitir la creacion de Usuario Maestra. Prioridad ("Alta")
+	- **Usu2:** El sistema debe permitir la creacion de Usuario Responsable del Alumno. Prioridad ("Alta")
+	- **Usu3:** El sistema debe permitir modificar la contraseña. Prioridad ("Baja")
+	- **Usu4:** El sistema debe permitir la eliminacion de Usuarios. Prioridad ("Baja")
+	- **Usu5:** El sistema debe permitir la autenticación de los usuarios mediante correo electrónico. Prioridad ("Media")
+	- **Usu6:** El sistema debe permitir la recuperación de contraseñas en caso de olvido. Prioridad ("Media")
+	- **Usu7:** El sistema debe permitir cerrar usuario. Prioridad ("Baja")
+	- **Usu8:** El sistema debe permitir la creación de usuarios solo a personas autorizadas por ANEP, validando su autenticación. Prioridad ("Alta")
+
+- **Usuario Maestra:**
+	- **UsuMaestra1:** El sistema debe permitir a los usuarios maestra crear los planes de clase. Prioridad ("Alta")
+	- **UsuMaestra2:** El sistema debe permitir a los usuarios maestra editar los planes de clase. Prioridad ("Alta")
+	- **UsuMaestra3:** El sistema debe permitir a los usuarios maestra eliminar los planes de clase. Prioridad ("Alta")
+	- **UsuMaestra4:** El sistema debe permitir a los usuarios maestra vincular una clase a las unidades curriculares correspondientes de ANEP. Prioridad ("Alta")
+	- **UsuMaestra5:** El sistema debe permitir a los usuarios maestra agregar a un calendario los planes de clase. Prioridad ("Alta")
+	- **UsuMaestra6:** El sistema debe permitir a los usuarios maestra visualizar la informacion de los alumnos asignados. Prioridad ("Media")
+	- **UsuMaestra7:** El sistema debe permitir a las maestras asignar unidades curriculares personalizadas para cada alumno. Prioridad ("Media")
+	- **UsuMaestra8:** El sistema debe permitir a los usuarios maestra visualizar su información personal. Prioridad ("Media")
+	
+
+- **Usuario Responsable del alumno:**
+	- **UsuRespons1:** El sistema debe permitir a los usuarios responsable del alumno visualizar su información personal. Prioridad ("Media")
+	- **UsuRespons2:** El sistema debe permitir a los usuarios responsable del alumno visualizar el calendario de actividades asignadas por la maestra. Prioridad ("Media")
+	- **UsuRespons3:** El sistema debe notificar a los responsables de los alumnos sobre modificaciones en los planes de clase o nuevas actividades. Prioridad ("Baja")
+
+- **Dependencias Externas:**
+	- **Dep1:** El sistema debe integrarse con la base de datos de ANEP para validar la creación de usuarios autorizados. Prioridad("Media")
+
+
+
+ #### Requerimientos no funcionales:
+
+- **Seguridad:**
+	- **Seg1:** Los datos personales de los alumnos deberán ser accesibles únicamente por la maestra asignada a cada grupo, conforme a la Ley de Protección de Datos Personales. Prioridad ("Alta")
+	- **Seg2:** Debe garantizarse que los usuarios puedan acceder y modificar solo la información que les corresponde, según su rol en el sistema. Prioridad ("Alta")
+
+
+- **Responsive:**
+	- **Resp1:** La aplicación debe ser compatible con las versiones más recientes de los navegadores Chrome, Firefox y Safari. Prioridad ("Alta")
+	- **Resp2:** La interfaz debe ser totalmente responsiva, adaptándose correctamente a dispositivos móviles como smartphones y tabletas. Prioridad ("Alta")
+
+
+- **Rendimiento:**
+	- **Ren1:** El sistema debe ser capaz de manejar grandes cantidades de usuarios y planes de clase sin experimentar una disminución significativa en su rendimiento. Prioridad ("Media")
+
+
+- **Escalabilidad:**
+	- **Esc1:** El sistema debe estar diseñado para ser escalable, permitiendo la adición de nuevas funcionalidades o módulos sin una reestructuración significativa. Prioridad ("Alta")
+
+
+- **Usabilidad:**
+	- **Usa1:** La aplicación debe seguir las heurísticas de usabilidad de Nielsen, asegurando una experiencia de usuario eficiente y agradable. Prioridad ("Alta")
+
+
+- **Accesibilidad:**
+	- **Acc1:** La aplicación debe cumplir con las pautas de accesibilidad WCAG 2.2, para garantizar que personas con diferentes tipos de discapacidades puedan usar el sistema sin problemas. Prioridad ("Alta")
+
+
+
 
 ### User stories
 
-**Título:** Verificar el Plan de Clase
+1) 
+    **Título:** Verificar el Plan de Clase
 
-**Como:** Alumno
+    **Como:** Responsable del alumno
 
-**Quiero:** Consultar el plan de una clase específica
+    **Quiero:** Consultar el plan de una clase específica
 
-**Para:** Conocer los contenidos, objetivos y actividades programadas para esa clase, y así poder prepararme adecuadamente.
+    **Para:** Conocer los contenidos, objetivos y actividades programadas para esa clase, y así poder prepararme adecuadamente.
 
-**Criterios de aceptación:**
+    **Criterios de aceptación:**
 
-- El alumno puede acceder al calendario con las clases programadas.
-- El sistema permite al alumno seleccionar una clase específica para ver el plan correspondiente.
-- El plan de clase muestra los contenidos, objetivos y actividades programadas para esa clase.
+    - El responsable puede acceder al calendario con las clases programadas.
+    - El sistema permite al responsable seleccionar una clase específica para ver el plan correspondiente.
+    - El plan de clase muestra los contenidos, objetivos y actividades programadas para esa clase.
+
+2) 
+    **Título:** Crear un Plan de Clase
+
+    **Como:** Maestra
+
+    **Quiero:** Crear un nuevo plan de clase
+
+    **Para:** Establecer los objetivos, contenidos y actividades a desarrollar en una clase específica.
+
+    **Criterios de aceptación:**
+
+    - La maestra puede acceder a la sección de creación de planes de clase.
+    - El sistema permite a la maestra ingresar títulos, objetivos, contenidos y actividades.
+    - La maestra puede guardar el plan de clase y recibir una confirmación de que se ha creado correctamente.
+
+3) 
+    **Título:** Recibir Notificaciones de Cambios
+
+    **Como:** Responsable del alumno
+
+    **Quiero:** Recibir notificaciones sobre modificaciones en los planes de clase
+
+    **Para:** Estar al tanto de cualquier cambio que afecte a mi hijo.
+
+    **Criterios de aceptación:**
+
+    - El responsable puede recibir notificaciones a través de correo electrónico o en la aplicación.
+    - Las notificaciones incluyen detalles sobre el cambio realizado.
+    - El responsable puede acceder al plan de clase actualizado desde la notificación.
+
+4) 
+    **Título:** Editar Plan de Clase
+
+    **Como:** Maestra
+
+    **Quiero:** Editar un plan de clase existente
+
+    **Para:** Realizar ajustes según sea necesario, como añadir actividades o cambiar objetivos.
+
+    **Criterios de aceptación:**
+
+    - La maestra puede seleccionar un plan de clase existente para editar.
+    - El sistema permite modificar el contenido del plan y guardar los cambios.
+    - Se muestra un mensaje de confirmación una vez que se han guardado los cambios.
+
+5) 
+    **Título:** Ver Información de Alumnos
+
+    **Como:** Maestra
+
+    **Quiero:** Visualizar la información de los alumnos asignados a mi clase
+
+    **Para:** Conocer sus progresos y personalizar la enseñanza según sus necesidades.
+
+    **Criterios de aceptación:**
+
+    - La maestra puede acceder a una lista de los alumnos asignados a su clase.
+    - El sistema muestra información relevante sobre cada alumno, como calificaciones y asistencia.
+    - La maestra puede filtrar la información por diferentes criterios.
+
 
 ### Use cases
 
-**Título:** Verificar el Plan de Clase
+1) 
+    **Título:** Verificar el Plan de Clase
 
-**Actor principal:** Alumno
+    **Actor principal:** Responsable del alumno
 
-**Precondiciones:** El alumno ha iniciado sesión en la aplicación con un usuario del tipo alumno.
+    **Precondiciones:** El responsable ha iniciado sesión en la aplicación con un usuario del tipo responsable.
 
-**Flujo principal:**
+    **Flujo principal:**
 
-- El sistema muestra el calendario con las clases programadas.
-- El alumno selecciona una clase específica del calendario.
-- El sistema muestra el plan de clase correspondiente, incluyendo contenidos, objetivos y actividades programadas.
-- El alumno revisa la información del plan de clase.
+    1) El sistema muestra el calendario con las clases programadas.
+    2) El responsable selecciona una clase específica del calendario.
+    3) El sistema muestra el plan de clase correspondiente, incluyendo contenidos, objetivos y actividades programadas.
+    4) El responsable revisa la información del plan de clase.
 
-**Flujos alternativos:**
+    **Flujos alternativos:**
 
-- **Clase no encontrada:** Si el alumno selecciona una clase que no existe (por error), el sistema muestra un mensaje de error indicando que la clase no se encuentra.
-- **Sin conexión:** Si hay un problema de conexión al intentar recuperar el plan de clase, el sistema muestra un mensaje de error y le permite al alumno intentar nuevamente.
+    - **Clase no encontrada:** Si el responsable selecciona una clase que no existe (por error), el sistema muestra un mensaje de error indicando que la clase no se encuentra.
+    - **Sin conexión:** Si hay un problema de conexión al intentar recuperar el plan de clase, el sistema muestra un mensaje de error y le permite al alumno intentar nuevamente.
 
-**Postcondiciones:** El alumno ha revisado el plan de clase y tiene acceso a la información actualizada.
+    **Postcondiciones:** El alumno ha revisado el plan de clase y tiene acceso a la información actualizada.
 
+2) 
+    **Título:** Crear un Plan de Clase
 
+    **Actor principal:** Maestra
 
-### Bocetos de IU
+    **Precondiciones:** La maestra ha iniciado sesión en la aplicación.
 
-## Checkpoint obligatorio 1
+    **Flujo principal:**
 
-Incluir un resumen del avance en elicitación y especificación de requerimientos
-Se evaluará de acuerdo al grado de avance
+    1) La maestra selecciona el dia en el cual quiere crear un nuevo plan de clase
+    2) La maestra selecciona la opción de "Crear Plan de Clase".
+    3) El sistema presenta un formulario para ingresar los detalles del plan.
+    4) La maestra completa el formulario con el título, objetivos, contenidos y actividades.
+    5) La maestra guarda el plan de clase.
+    6) El sistema muestra un mensaje de confirmación de creación exitosa.
+
+    **Flujos alternativos:**
+
+    - **Error en el formulario:** Si la maestra no completa todos los campos obligatorios, el sistema muestra un mensaje de error indicando qué campos son necesarios.
+
+    **Postcondiciones:** El nuevo plan de clase está guardado en el sistema y disponible para su visualización.
+
+3) 
+    **Título:** Editar un Plan de Clase
+
+    **Actor principal:** Maestra
+
+    **Precondiciones:** La maestra ha iniciado sesión en la aplicación y tiene un plan de clase existente.
+
+    **Flujo principal:**
+
+    1) La maestra accede al calendario.
+    2) La maestra selecciona el dia con el plan que desea editar.
+    3) El sistema carga la información del plan.
+    4) La maestra selecciona editar plan.
+    5) La maestra realiza los cambios necesarios y guarda el plan.
+    6) El sistema muestra un mensaje de confirmación de que el plan ha sido editado.
+
+    **Flujos alternativos:**
+
+    - **No se pueden guardar los cambios:** Si hay un problema al guardar (por ejemplo, conexión a Internet), el sistema muestra un mensaje de error y sugiere intentar nuevamente.
+
+    **Postcondiciones:** El plan de clase editado está actualizado en el sistema.
+
+4) 
+    **Título:** Recuperar Contraseña
+
+    **Actor principal:** Maestra o Responsable del alumno
+
+    **Precondiciones:** El usuario ha olvidado su contraseña.
+
+    **Flujo principal:**
+
+    1) El usuario selecciona la opción "Recuperar Contraseña" en la pantalla de login.
+    2) El sistema solicita la dirección de correo electrónico asociada al usuario.
+    3) El usuario ingresa su correo electrónico y envía la solicitud.
+    4) El sistema envía un enlace de recuperación al correo electrónico proporcionado.
+    5) El usuario sigue el enlace y establece una nueva contraseña.
+
+    **Flujos alternativos:**
+
+    - **Correo electrónico no registrado:** Si el correo electrónico ingresado no está asociado a ningún usuario, el sistema muestra un mensaje de error.
+
+    **Postcondiciones:** El usuario ha recuperado su contraseña y puede iniciar sesión con la nueva contraseña.
+
+5) 
+    **Título:** Cerrar Sesión en la Aplicación
+
+    **Actor principal:** Maestra o Responsable del alumno
+
+    **Precondiciones:** El usuario ha iniciado sesión en la aplicación.
+
+    **Flujo principal:**
+
+    1) El usuario selecciona la opción "Cerrar Sesión" en el menú de la aplicación.
+    2) El sistema muestra un mensaje de confirmación para asegurarse de que el usuario desea cerrar sesión.
+    3) El usuario confirma que desea cerrar sesión.
+    4) El sistema cierra la sesión del usuario y redirige a la pantalla de inicio de sesión.
+    5) El sistema muestra un mensaje de confirmación de que la sesión ha sido cerrada exitosamente.
+
+    **Flujos alternativos:**
+
+    - **Cancelar cierre de sesión:** Si el usuario decide no cerrar sesión, el sistema vuelve a la pantalla anterior sin realizar cambios.
+
+    **Postcondiciones:** El usuario ha cerrado sesión y no tiene acceso a la aplicación hasta que inicie sesión nuevamente.
+
+### Bocetos de UI
+
+[Imagenes de la UI](BocetosUi.md)
 
 ## Validación y verificación
 
-### Verificación
+En el siguiente link se encuentra el archivo markdown con la validacion y verificacion [ValidacionYVerificacion](validacionyverificacion.md)
 
-### Validación
+## Validar la solución con personas no involucradas en el proyecto
+
+**Francisca Picorel (maestra de primaria):**
+"Me parece genial esta aplicacion para planificar clases. Poder personalizar los planes para cada alumno es clave, así podemos atender sus necesidades mejor. Ojalá sea fácil de usar; a veces las nuevas tecnologias son complicadas y terminan restando mas de lo que aportan.
+Sería buenísimo que incluyera plantillas ya adaptadas al currículo y algunos tutoriales para quienes no manejan bien la tecnología."
+
+**Carla Martirene (madre):**
+"Me encanta la idea. Poder ver lo que las maestras les enseñan a mis hijos me daría mucha tranquilidad y me ayudaría a estar mas pendiente de su aprendizaje.
+Recibir notificaciones de las clases sería muy bueno. Así evitamos esos momentos de estrés cuando los chicos avisan a último minuto que tienen deberes para el día siguiente."
 
 ## Reflexión
 
+**Manuel Perez:** Disfrute mucho hacer este trabajo con Mariano y Magui, ambos son muy buenos compañeros y muy responsables, nos dividimos de forma muy pareja las distintas tareas aprovechando siempre las virtudes de cada uno.
+Adquiri muchos conocimientos muy valiosos a lo largo de este proyecto que estoy seguro que me van a ayudar mucho en mi vida profesional como desarrollador.
+Si tengo que destacar algo de todo lo que aprendi seria el manejo de Git, ya habia trabajado con otras herramientas de control de version pero ahora tengo un mejor entendimiento de como funcionan y porque se usan. Sin ir mas lejos ya pude aplicar lo aprendido en un proyecto interno en mi trabajo asi que estoy muy contento de haber adquirido ese conocimiento.
+
+**Magdalena Danese** Fue muy interesante la realización del trabajo, creo que donde más aprendi fue en el uso de git, que gracias al ejercicio pusimos mucho en práctica. Estuvo también interesante la parte de prototipar y pensar las diferentes pantallas y agarrar algo de experiencia en figma. Por otro lado creo que armamos un buen grupo de trabajo donde nos complementamos y aprendí también de mis compañeros.
+
+**Mariano Perez:** Aprendi mucho en este primer obligatorio, junto con Magui y Manuel, nos organizamos bien y disfrutamos haciendo la documentacion.
+Aplique tecnicas para los requerimientos aprendi mucho haciendolo tanto para nuestra app como para la ingenieria reversa de una app existente,  aprendi hacer un informe que jamas habia hecho sobre un software, aprendi a trabajar mucho con git y github, y trabajar sobre versiones, buenas practicas, tambien en validar y verificar cada requerimiento, Roxana e Isac gracias al checkpoint nos ayudaron a corregir cosas ya hechas, y a entender como se hacian otras.
+Espero que el segundo obligatorio nos de mas conocimientos como este.
+
 ### Detalle del trabajo individual
 
-Detallar: fecha, actividad, horas, responsable
-Incluir totales de esfuerzo
+- **Buenas prácticas de versionado:** Manuel - 2 horas
+- **Resumen de commits y evolución del proyecto:** Manuel - 30 minutos
+- **Elicitación Evidencia de actividades de investigación:** Manuel - 3 horas
+- **Referencias a fuentes de información:** Manuel - 1 hora
+- **Entrevistas:** Magdalena - 3 horas
+- **Ingenieria Inversa:** Mariano - 3 horas
+- **Caracterización de usuarios: User Personas:** Magdalena - 2 horas
+- **Modelo conceptual del problema:** Mariano - 1 hora y media
+- **Especificación Definición de requerimientos funcionales y no funcionales:** Manuel y Mariano - 3 horas y media
+- **User Stories / Use Cases detallados:** Manuel - 2 horas
+- **Bocetos de IU:** Magdalena - 3 horas
+- **Elicitación y especificación de requerimientos:** Mariano - 3 horas
+- **Validación y verificación:** Mariano - 4 horas
+- **Validar la solución con personas no involucradas en el proyecto:** Manuel - 2 horas
+- **Detalle del trabajo individual:** Manuel - 1 horas
+- **Técnicas aplicadas y aprendizajes:** Manuel - 30 minutos
+
+### Técnicas aplicadas y aprendizajes
+
+A lo largo del proyecto, utilizamos varias técnicas para entender mejor lo que necesitábamos:
+
+- **Entrevistas:** Hicimos entrevistas con usuarios para conocer sus necesidades y problemas al planificar clases.
+
+- **Ingeniería inversa:** Miramos sistemas como Guri y la plataforma de ORT para ver qué funcionalidades tienen.
+
+- **Análisis de documentos:** Revisamos la documentación de la ANEP para identificar requisitos y normas importantes.
+
+- **Tormenta de ideas:** Hicimos sesiones de brainstorming para generar ideas sobre cómo debería funcionar y verse el sistema.
+
+- **User Personas:** Creamos perfiles de usuarios ficticios para asegurarnos de que el diseño y las funciones sean realmente útiles para quienes usarán la aplicación.
+
+**Aprendizajes:** A lo largo del proyecto, mejoramos mucho en el uso de Git y cómo gestionar versiones, lo que hizo que trabajar en equipo fuera más fácil. También ganamos experiencia en crear prototipos y diseñar interfaces, lo que nos dio una mejor perspectiva del desarrollo de software. Usar diferentes técnicas nos permitió abordar el problema desde varias direcciones, asegurando que nuestra solución fuera más completa y útil.
 
 
 
