@@ -55,8 +55,12 @@ La creación de branches garantiza que las vulnerabilidades y los errores no lle
 Podemos acceder a la entrevista realizada, y a su resumen en los siguientes apartados:
 
 - [Transcripción Entrevista Maestra](Entrevista_transcripcion.md)
+
 - [Entrevista Maestra resumen](Entrevista_resumen.md)
+
 - [Entrevista ChatGPT](Entrevista_GPT.md)
+
+- [Entrevista ChatGPT resumen](Entrevista_GPT_resumen.md)
 
 Además se puede ver el relevamiento de la herramienta existente Guri en el siguiente apartado [Relevamiento Guri](Relevamiento_Herramientas_Mercado.md)
 y las imágenes de esa aplicación en este otro
