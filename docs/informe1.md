@@ -411,22 +411,22 @@ Espero que el segundo obligatorio nos de mas conocimientos como este.
 
 ### Detalle del trabajo individual
 
-- **Buenas prácticas de versionado:** Manuel
-- **Resumen de commits y evolución del proyecto:** Manuel
-- **Elicitación Evidencia de actividades de investigación:** Manuel
-- **Referencias a fuentes de información:** Manuel
-- **Entrevistas:** Magdalena
-- **Ingenieria Inversa:** Mariano
-- **Caracterización de usuarios: User Personas:** Magdalena
-- **Modelo conceptual del problema:** Mariano
-- **Especificación Definición de requerimientos funcionales y no funcionales:** Manuel y Mariano
-- **User Stories / Use Cases detallados:** Manuel
-- **Bocetos de IU:** Magdalena
-- **Elicitación y especificación de requerimientos:** Mariano
-- **Validación y verificación:** Mariano
-- **Validar la solución con personas no involucradas en el proyecto:** Manuel
-- **Detalle del trabajo individual:** Manuel
-- **Técnicas aplicadas y aprendizajes:** Manuel
+- **Buenas prácticas de versionado:** Manuel - 2 horas
+- **Resumen de commits y evolución del proyecto:** Manuel - 30 minutos
+- **Elicitación Evidencia de actividades de investigación:** Manuel - 3 horas
+- **Referencias a fuentes de información:** Manuel - 1 hora
+- **Entrevistas:** Magdalena - 3 horas
+- **Ingenieria Inversa:** Mariano - 3 horas
+- **Caracterización de usuarios: User Personas:** Magdalena - 2 horas
+- **Modelo conceptual del problema:** Mariano - 1 hora y media
+- **Especificación Definición de requerimientos funcionales y no funcionales:** Manuel y Mariano - 3 horas y media
+- **User Stories / Use Cases detallados:** Manuel - 2 horas
+- **Bocetos de IU:** Magdalena - 3 horas
+- **Elicitación y especificación de requerimientos:** Mariano - 3 horas
+- **Validación y verificación:** Mariano - 4 horas
+- **Validar la solución con personas no involucradas en el proyecto:** Manuel - 2 horas
+- **Detalle del trabajo individual:** Manuel - 1 horas
+- **Técnicas aplicadas y aprendizajes:** Manuel - 30 minutos
 
 ### Técnicas aplicadas y aprendizajes
 
