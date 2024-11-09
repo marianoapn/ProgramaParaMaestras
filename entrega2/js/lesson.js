@@ -5,6 +5,7 @@ class Lesson {
         this.topic = topic;
         this.description = description;
         this.curriculumUnit = curriculumUnit;
+        this.studentAsignado = studentAsignado;
     }
 
     // Método para editar una lección
@@ -12,6 +13,7 @@ class Lesson {
         this.topic = topic;
         this.description = description;
         this.curriculumUnit = curriculumUnit;
+        this.studentAsignado = studentAsignado;
     }
 
     // Método para eliminar una lección
