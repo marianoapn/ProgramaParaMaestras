@@ -1,7 +1,6 @@
 // Instanciación de elementos de la UI
 const calendarElement = document.getElementById('calendar');
 const selectedDateElement = document.getElementById('selected-date');
-//const lessonItemsElement = document.getElementById('lesson-items');
 const classForm = document.getElementById('class-form');
 const editForm = document.getElementById('edit-form');
 const editModal = document.getElementById('edit-modal');
@@ -57,7 +56,7 @@ function loadAlumnos(){
 //returna
 function getSelectedStudents(id){
     // Obtener IDs de estudiantes seleccionados
-    return selectedStudents = Array.from(document.querySelectorAll('#'+id+' input[type="checkbox"]:checked'))
+    return selectedStudents = Array.from(document.querySelectorAll('#'+ id + ' input[type="checkbox"]:checked'))
     .map(checkbox => checkbox.value);                                                                                                                                                                                                                                
 }
 
@@ -107,11 +106,10 @@ function populateLessonsList(day) {
         })
         .join(', ');
 
-        const div = createElemento('div', 'lesson-list', 'container', 'mt-5', 'bg-white', 'p-3', 'shadow-sm', 'rounded');
-
-        const ul = createElemento('ul','lesson-items','list-group', 'mt-3');
-
+        const div = createElemento('div', 'lesson-list', ['container', 'mt-5', 'bg-white', 'p-3', 'shadow-sm', 'rounded']);
+        const ul = createElemento('ul','lesson-items',['list-group', 'mt-3']);
         const li = createElemento('li');
+        
         li.style.listStyleType = 'none';
         li.innerHTML = `
             <strong>Tema:</strong> ${lesson.topic} <br>
@@ -162,18 +160,29 @@ function populateStudentsDropdown(id) {
 
     // Crear los checkboxes para los estudiantes
     studentList.forEach(student => {
-        const li = document.createElement('li');
-        li.classList.add('dropdown-item'); // Clase para formato del item
+        const li = createElemento('li',
+            id ='',
+            ['dropdown-item']);
+        //li.classList.add('dropdown-item'); // Clase para formato del item
 
-        const checkbox = document.createElement('input');
-        checkbox.type = 'checkbox';
-        checkbox.id = `student-${student.id}`;
-        checkbox.name = 'students';
-        checkbox.value = student.id;
+        const checkbox = createElemento('input',
+            `student-${student.id}`,
+            [], 
+            {type : 'checkbox',name : 'students', value : student.id}
+        );
+        //checkbox.type = 'checkbox';
+        //checkbox.id = `student-${student.id}`;
+        //checkbox.name = 'students';
+        //checkbox.value = student.id;
 
-        const label = document.createElement('label');
-        label.htmlFor = `student-${student.id}`;
-        label.textContent = student.name;
+        const label = createElemento('label',
+            id='',
+            [],
+            {htmlFor : `student-${student.id}`, textContent : student.name}
+
+        );
+        //label.htmlFor = `student-${student.id}`;
+        //label.textContent = student.name;
 
         // Añadir el checkbox y el label al li
         li.appendChild(checkbox);
@@ -265,13 +274,16 @@ function handleDeleteLesson(id) {
     }
 }
 
-function createElemento(tagElem, id = "", ...clas) {
+function createElemento(tagElem, id = '', clas = [], atributos = {}) {
     const element = document.createElement(tagElem)
     if(id){
         element.id = id
     }
     if(clas.length > 0){
         element.classList.add(...clas)
+    }
+    for (const [key, value] of Object.entries(atributos)) {
+        element.setAttribute(key, value);
     }
     return element
 }
