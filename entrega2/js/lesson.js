@@ -1,5 +1,5 @@
 class Lesson {
-    constructor(id, date, topic, description, curriculumUnit) {
+    constructor(id, date, topic, description, curriculumUnit, studentAsignado) {
         this.id = id;
         this.date = date;
         this.topic = topic;

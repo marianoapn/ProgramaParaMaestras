@@ -209,7 +209,7 @@ function populateEditForm(id) {
         document.getElementById('edit-topic').value = lesson.topic;
         document.getElementById('edit-description').value = lesson.description;
         document.getElementById('edit-curriculum-unit').value = lesson.curriculumUnit;
-        selectedStudents;
+        //selectedStudents
         editModal.style.display = 'flex';
         editModal.dataset.id = id;
     }
@@ -232,6 +232,7 @@ editForm.onsubmit = (event) => {
             document.getElementById('edit-topic').value,
             document.getElementById('edit-description').value,
             document.getElementById('edit-curriculum-unit').value,
+            document.getElementById('dropdownMenuButton').value,
             selectedStudents
         );
         populateLessonsList(calendar.selectedDay);
