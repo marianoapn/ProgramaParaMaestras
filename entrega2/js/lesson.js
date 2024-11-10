@@ -1,5 +1,5 @@
 class Lesson {
-    constructor(id, date, topic, description, curriculumUnit) {
+    constructor(id, date, topic, description, curriculumUnit, studentAsignado) {
         this.id = id;
         this.date = date;
         this.topic = topic;
@@ -9,7 +9,7 @@ class Lesson {
     }
 
     // Método para editar una lección
-    editLesson(topic, description, curriculumUnit) {
+    editLesson(topic, description, curriculumUnit, studentAsignado) {
         this.topic = topic;
         this.description = description;
         this.curriculumUnit = curriculumUnit;

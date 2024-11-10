@@ -1,11 +1,12 @@
 // Instanciación de elementos de la UI
 const calendarElement = document.getElementById('calendar');
 const selectedDateElement = document.getElementById('selected-date');
-const lessonItemsElement = document.getElementById('lesson-items');
+//const lessonItemsElement = document.getElementById('lesson-items');
 const classForm = document.getElementById('class-form');
 const editForm = document.getElementById('edit-form');
 const editModal = document.getElementById('edit-modal');
 const closeButton = document.querySelector('.close-button');
+const containerLesson = document.getElementById('container-lesson')
 
 // Variables de estado
 let lessons = []; // Array de instancias de lecciones
@@ -41,14 +42,24 @@ fetch('data/curriculum_units.json')
     .catch(error => console.error('Error al cargar las unidades:', error));
 
 // Cargar alumnos desde un archivo JSON
-fetch('data/students.json')
-.then(response => response.json())
-.then(data => {
-    studentList = data;
-    populateStudentsDropdown();
-})
-.catch(error => console.error('Error al cargar los estudiantes', error));
+function loadAlumnos(){
+    fetch('data/students.json')
+    .then(response => response.json())
+    .then(data => {
+        studentList = data;
+        populateStudentsDropdown('students-asignados')
+        populateStudentsDropdown('edit-students-asignados');
 
+    })
+    .catch(error => console.error('Error al cargar los estudiantes', error));
+}
+
+//returna
+function getSelectedStudents(id){
+    // Obtener IDs de estudiantes seleccionados
+    return selectedStudents = Array.from(document.querySelectorAll('#'+id+' input[type="checkbox"]:checked'))
+    .map(checkbox => checkbox.value);                                                                                                                                                                                                                                
+}
 
 // Función para llenar los menús de unidades
 function populateCurriculumDropdown() {
@@ -78,7 +89,7 @@ function populateCurriculumDropdown() {
 
 // Función para cargar las lecciones del día seleccionado
 function populateLessonsList(day) {
-    lessonItemsElement.innerHTML = ''; // Limpiar lista de lecciones
+    containerLesson.innerHTML = ''; // Limpiar lista de lecciones
 
     const filteredLessons = lessons.filter(lesson => lesson.date === day);
     const maxDescriptionLength = 50;
@@ -96,23 +107,30 @@ function populateLessonsList(day) {
         })
         .join(', ');
 
-        const li = document.createElement('li');
+        const div = createElemento('div', 'lesson-list', 'container', 'mt-5', 'bg-white', 'p-3', 'shadow-sm', 'rounded');
+
+        const ul = createElemento('ul','lesson-items','list-group', 'mt-3');
+
+        const li = createElemento('li');
+        li.style.listStyleType = 'none';
         li.innerHTML = `
             <strong>Tema:</strong> ${lesson.topic} <br>
             <strong>Descripción:</strong> ${truncatedDescription} <br>
             <strong>Unidad Curricular:</strong> ${curriculumUnits.find(unit => unit.id == lesson.curriculumUnit).name}<br>
             <strong>Estudiante/s:</strong> ${studentNames} <br>
-            <button onclick="populateEditForm(${lesson.id})">Editar</button>
-            <button onclick="handleDeleteLesson(${lesson.id})">Eliminar</button>
+            <button onclick= "populateEditForm(${lesson.id})" class= "btn btn-primary p-2">Editar</button>
+            <button onclick= "handleDeleteLesson(${lesson.id})" class= "btn btn-primary p-2">Eliminar</button>
         `;
-        lessonItemsElement.appendChild(li);
+
+        div.appendChild(ul)
+        ul.appendChild(li);
+        containerLesson.appendChild(div);
     });
-    console.log;
 }
 
 // Función para llenar el menú de estudiantes
-function populateStudentsDropdown() {
-    const studentSelect = document.getElementById('students-asignados');
+function populateStudentsDropdown(id) {
+    const studentSelect = document.getElementById(id);
     
     // Limpiar el dropdown antes de agregar los nuevos elementos
     studentSelect.innerHTML = '';
@@ -122,7 +140,7 @@ function populateStudentsDropdown() {
     const selectAllCheckbox = document.createElement('input');
     selectAllCheckbox.type = 'checkbox';
     selectAllCheckbox.id = 'select-all';
-    selectAllCheckbox.addEventListener('change', () => toggleSelectAll(selectAllCheckbox.checked));
+    selectAllCheckbox.addEventListener('change', () => toggleSelectAll(selectAllCheckbox.checked, id));
     const selectAllLabel = document.createElement('label');
     selectAllLabel.setAttribute('for', 'select-all');
     selectAllLabel.textContent = 'Seleccionar Todos';
@@ -167,8 +185,8 @@ function populateStudentsDropdown() {
 }
 
 // Función para manejar el comportamiento de "Seleccionar Todos"
-function toggleSelectAll(selectAllChecked) {
-    const checkboxes = document.querySelectorAll('#students-asignados input[type="checkbox"]');
+function toggleSelectAll(selectAllChecked , id) {
+    const checkboxes = document.querySelectorAll('#' + id + ' input[type="checkbox"]');
     checkboxes.forEach(checkbox => {
         checkbox.checked = selectAllChecked;
     });
@@ -183,18 +201,14 @@ classForm.onsubmit = (event) => {
         alert('Por favor, seleccione un día en el calendario.');
         return;
     }
-
-    // Obtener IDs de estudiantes seleccionados
-    const selectedStudents = Array.from(document.querySelectorAll('#students-asignados input[type="checkbox"]:checked'))
-    .map(checkbox => checkbox.value);
-    
+       
     const newLesson = new Lesson(
         lessons.length + 1,
         calendar.selectedDay,
         document.getElementById('topic').value,
         document.getElementById('description').value,
         document.getElementById('curriculum-unit').value,
-        selectedStudents
+        getSelectedStudents('students-asignados')
     );
 
     lessons.push(newLesson);
@@ -209,7 +223,7 @@ function populateEditForm(id) {
         document.getElementById('edit-topic').value = lesson.topic;
         document.getElementById('edit-description').value = lesson.description;
         document.getElementById('edit-curriculum-unit').value = lesson.curriculumUnit;
-        selectedStudents;
+        getSelectedStudents('edit-students-asignados');
         editModal.style.display = 'flex';
         editModal.dataset.id = id;
     }
@@ -232,7 +246,7 @@ editForm.onsubmit = (event) => {
             document.getElementById('edit-topic').value,
             document.getElementById('edit-description').value,
             document.getElementById('edit-curriculum-unit').value,
-            selectedStudents
+            getSelectedStudents('edit-students-asignados')
         );
         populateLessonsList(calendar.selectedDay);
         editModal.style.display = 'none';
@@ -250,3 +264,16 @@ function handleDeleteLesson(id) {
         }
     }
 }
+
+function createElemento(tagElem, id = "", ...clas) {
+    const element = document.createElement(tagElem)
+    if(id){
+        element.id = id
+    }
+    if(clas.length > 0){
+        element.classList.add(...clas)
+    }
+    return element
+}
+
+loadAlumnos();
