@@ -30,7 +30,6 @@
 
 **¿Hay algo más que te gustaría agregar sobre cómo se podría mejorar la planificación de las clases?**
 
-
 # Entrevista 1
 
 **Entrevistamos a Francisca Picorel, maestra de la ciudad de las piedras desde hace 20 años.**

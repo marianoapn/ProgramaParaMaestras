@@ -1,17 +1,17 @@
 ## Prompt a chatGPT
 
-Te voy a pedir que generes una entrevista te voy a pasar las preguntas, quien deberias ser, una entrevista que ya hicimos y tambien el resumen para que entiendas, es para un proyecto la primera parte 
+Te voy a pedir que generes una entrevista te voy a pasar las preguntas, quien deberias ser, una entrevista que ya hicimos y tambien el resumen para que entiendas, es para un proyecto la primera parte
 
 Primero sos una maestra de ANEP de primaria, con todos los conocimientos correspondientes.
 
 Esta es la transcripcion de la entrevista con la pregunta que le hicimos:
-¿Cuál es tu rol y experiencia en la enseñanza? 
+¿Cuál es tu rol y experiencia en la enseñanza?
 
 Yo soy maestra de educación primaria y ejerzo esta profesión desde hace ya 20 años. ¿Cómo planificás actualmente tus clases? Actualmente planifico mis clases en formato digital, y lo hago de forma semanal. Me planteo metas y competencias que quiero lograr durante esa semana, y a partir de eso hago una secuencia de actividades para trabajar en la clase con los niños.
 
 ¿Y qué herramientas usás para eso? ¿De forma digital o con alguna herramienta en particular?
 
- Sí, utilizo Drive para la planificación y algunas veces también Canva. Sí, en realidad tengo planillas de Drive, donde generalmente las voy enlazando unas con otras y voy clickeando, y si tengo que hacer algo específico para un niño, voy enlazando las actividades o las observaciones de ese niño, de la actividad, o lo que necesite. ¿Qué cosas te parecen indispensables para planificar la semana? Cuando voy a planificar lo que necesito trabajar esa semana, lo primero que tengo que tener bien claro son los objetivos, que tienen que ser objetivos a corto plazo.
+Sí, utilizo Drive para la planificación y algunas veces también Canva. Sí, en realidad tengo planillas de Drive, donde generalmente las voy enlazando unas con otras y voy clickeando, y si tengo que hacer algo específico para un niño, voy enlazando las actividades o las observaciones de ese niño, de la actividad, o lo que necesite. ¿Qué cosas te parecen indispensables para planificar la semana? Cuando voy a planificar lo que necesito trabajar esa semana, lo primero que tengo que tener bien claro son los objetivos, que tienen que ser objetivos a corto plazo.
 
 Trato de pensar también en actividades con adaptaciones curriculares para que me pueda adaptar lo que quiero enseñar a todos los niños y para poder llegar a todos. Lo hago desde un enfoque donde pongo al estudiante como centro, me fijo en las necesidades de cada uno de ellos y a partir de eso voy pensando las actividades que les voy a plantear. Ahí lo que hago es valorar la trayectoria personal de cada niño y generar una protección de esa trayectoria que va haciendo el niño en su proceso de aprendizaje.
 
@@ -40,7 +40,7 @@ Y después la última, ¿hay algo que te gustaría agregar sobre cómo se podrí
 (Transcrito por TurboScribe.ai. Actualizar a Ilimitado para eliminar este mensaje.)
 
 El resumen de la misma:
- Guión entrevista
+Guión entrevista
 
 #### Preguntas Generales
 
@@ -72,7 +72,6 @@ Sobre la Planificación
 
 ¿Hay algo más que te gustaría agregar sobre cómo se podría mejorar la planificación de las clases?
 
-
 Su planificación principal la realiza de forma semanal ajustándola diariamente según se vaya cumpliendo.
 Como herramientas para su planificación usa mucho Google Sheets porque le permite personalizar el contenido tanto al maestro como los alumnos y ajustar acorde. También usa Canva, Matific y la plataforma Crea.
 Basa su planificación en los objetivos a corto plazo que propone para el grupo y cada alumno.
@@ -81,13 +80,14 @@ Expresa que al momento de planificar la dificultad más grande es cómo llegar a
 La mejora que le haría a la forma de planificar actual es encontrar una manera en las distintas herramientas para que la planificación sea mas personalizada por niño y no general para toda la clase.
 
 Te paso el problema planteado por los docentes para este proyecto:
-EVALUACIÓN	Obligatorio
-MATERIA	Fundamentos de Ingeniería de Software
-CONDICIONES	- Puntaje máximo: 15 puntos      
+EVALUACIÓN Obligatorio
+MATERIA Fundamentos de Ingeniería de Software
+CONDICIONES - Puntaje máximo: 15 puntos
+
 - Puntaje mínimo: 1 puntos
-- Fecha de entrega: 22/10/24 hasta las 21:00 horas en gestion.ort.edu.uy (max. 40Mb en formato zip, rar o pdf) 
-PROBLEMA OBJETIVO	Se deberá investigar y desarrollar un sistema que permita gestionar la planificación semanal de las maestras, estableciendo la alineación con los programas de ANEP (Administración Nacional de Educación Pública) que refieren a unidades curriculares, competencias generales, competencias específicas, contenidos, criterios de logro, plan de aprendizaje, etc.  
-Se debe identificar el problema, usuario y objetivo principal. La investigación del problema y delimitación del alcance es responsabilidad de los estudiantes. Se deben especificar en forma detallada los requerimientos que permitan alcanzar los objetivos identificados. 
+- Fecha de entrega: 22/10/24 hasta las 21:00 horas en gestion.ort.edu.uy (max. 40Mb en formato zip, rar o pdf)
+  PROBLEMA OBJETIVO Se deberá investigar y desarrollar un sistema que permita gestionar la planificación semanal de las maestras, estableciendo la alineación con los programas de ANEP (Administración Nacional de Educación Pública) que refieren a unidades curriculares, competencias generales, competencias específicas, contenidos, criterios de logro, plan de aprendizaje, etc.  
+  Se debe identificar el problema, usuario y objetivo principal. La investigación del problema y delimitación del alcance es responsabilidad de los estudiantes. Se deben especificar en forma detallada los requerimientos que permitan alcanzar los objetivos identificados.
 
 ## Respuesta ChatGPT
 

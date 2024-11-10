@@ -1,11 +1,10 @@
-
-¿Cuál es tu rol y experiencia en la enseñanza? 
+¿Cuál es tu rol y experiencia en la enseñanza?
 
 Yo soy maestra de educación primaria y ejerzo esta profesión desde hace ya 20 años. ¿Cómo planificás actualmente tus clases? Actualmente planifico mis clases en formato digital, y lo hago de forma semanal. Me planteo metas y competencias que quiero lograr durante esa semana, y a partir de eso hago una secuencia de actividades para trabajar en la clase con los niños.
 
 ¿Y qué herramientas usás para eso? ¿De forma digital o con alguna herramienta en particular?
 
- Sí, utilizo Drive para la planificación y algunas veces también Canva. Sí, en realidad tengo planillas de Drive, donde generalmente las voy enlazando unas con otras y voy clickeando, y si tengo que hacer algo específico para un niño, voy enlazando las actividades o las observaciones de ese niño, de la actividad, o lo que necesite. ¿Qué cosas te parecen indispensables para planificar la semana? Cuando voy a planificar lo que necesito trabajar esa semana, lo primero que tengo que tener bien claro son los objetivos, que tienen que ser objetivos a corto plazo.
+Sí, utilizo Drive para la planificación y algunas veces también Canva. Sí, en realidad tengo planillas de Drive, donde generalmente las voy enlazando unas con otras y voy clickeando, y si tengo que hacer algo específico para un niño, voy enlazando las actividades o las observaciones de ese niño, de la actividad, o lo que necesite. ¿Qué cosas te parecen indispensables para planificar la semana? Cuando voy a planificar lo que necesito trabajar esa semana, lo primero que tengo que tener bien claro son los objetivos, que tienen que ser objetivos a corto plazo.
 
 Trato de pensar también en actividades con adaptaciones curriculares para que me pueda adaptar lo que quiero enseñar a todos los niños y para poder llegar a todos. Lo hago desde un enfoque donde pongo al estudiante como centro, me fijo en las necesidades de cada uno de ellos y a partir de eso voy pensando las actividades que les voy a plantear. Ahí lo que hago es valorar la trayectoria personal de cada niño y generar una protección de esa trayectoria que va haciendo el niño en su proceso de aprendizaje.
 
