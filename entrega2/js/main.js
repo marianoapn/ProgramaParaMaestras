@@ -107,15 +107,11 @@ function populateLessonsList(day) {
         })
         .join(', ');
 
-        const div = document.createElement('div');
-        div.id = 'lesson-list';
-        div.classList.add('container', 'mt-5', 'bg-white', 'p-4', 'shadow-sm', 'rounded');
+        const div = createElemento('div', 'lesson-list', 'container', 'mt-5', 'bg-white', 'p-3', 'shadow-sm', 'rounded');
 
-        const ul = document.createElement('ul');
-        ul.id = 'lesson-items';
-        ul.classList.add('list-group', 'mt-3');
+        const ul = createElemento('ul','lesson-items','list-group', 'mt-3');
 
-        const li = document.createElement('li');
+        const li = createElemento('li');
         li.style.listStyleType = 'none';
         li.innerHTML = `
             <strong>Tema:</strong> ${lesson.topic} <br>
@@ -125,12 +121,11 @@ function populateLessonsList(day) {
             <button onclick= "populateEditForm(${lesson.id})" class= "btn btn-primary p-2">Editar</button>
             <button onclick= "handleDeleteLesson(${lesson.id})" class= "btn btn-primary p-2">Eliminar</button>
         `;
-        
+
         div.appendChild(ul)
         ul.appendChild(li);
         containerLesson.appendChild(div);
     });
-    console.log;
 }
 
 // Función para llenar el menú de estudiantes
@@ -268,6 +263,17 @@ function handleDeleteLesson(id) {
             populateLessonsList(calendar.selectedDay);
         }
     }
+}
+
+function createElemento(tagElem, id = "", ...clas) {
+    const element = document.createElement(tagElem)
+    if(id){
+        element.id = id
+    }
+    if(clas.length > 0){
+        element.classList.add(...clas)
+    }
+    return element
 }
 
 loadAlumnos();
