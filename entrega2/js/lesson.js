@@ -9,7 +9,7 @@ class Lesson {
     }
 
     // Método para editar una lección
-    editLesson(topic, description, curriculumUnit) {
+    editLesson(topic, description, curriculumUnit, studentAsignado) {
         this.topic = topic;
         this.description = description;
         this.curriculumUnit = curriculumUnit;
