@@ -16,10 +16,13 @@ class Lesson {
 
   // Método para eliminar una lección
   deleteLesson(lessonsArray) {
-    if (confirm("¿Estás seguro de que quieres eliminar este plan de clase?")) {
+    if (confirm('¿Estás seguro de que quieres eliminar este plan de clase?')) {
       return lessonsArray.filter((lesson) => lesson.id !== this.id);
     }
     // Retornar el mismo array si se cancela
     return lessonsArray;
   }
 }
+
+// Exporta la clase Lesson para poder usarla en otro archivo
+export default Lesson;
