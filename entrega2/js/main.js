@@ -1,5 +1,4 @@
-import Calendar from "./calendar.js";
-import Lesson from "./lesson.js";
+
 
 // Instanciación de elementos de la UI
 const calendarElement = document.getElementById("calendar");
