@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 class Lesson {
   constructor(id, date, topic, description, curriculumUnit) {
     this.id = id;

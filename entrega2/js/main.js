@@ -120,6 +120,7 @@ classForm.onsubmit = (event) => {
 };
 
 // Función para llenar el formulario de edición
+// eslint-disable-next-line no-unused-vars
 function populateEditForm(id) {
   const lesson = lessons.find((l) => l.id === id);
   if (lesson) {
