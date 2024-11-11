@@ -1,7 +1,7 @@
 [
-    { "id": 1, "name": "Matemáticas" },
-    { "id": 2, "name": "Ciencias" },
-    { "id": 3, "name": "Lengua" },
-    { "id": 4, "name": "Historia" },
-    { "id": 5, "name": "Geografía" }
+  { "id": 1, "name": "Matemáticas" },
+  { "id": 2, "name": "Ciencias" },
+  { "id": 3, "name": "Lengua" },
+  { "id": 4, "name": "Historia" },
+  { "id": 5, "name": "Geografía" }
 ]
