@@ -5,7 +5,7 @@ import prettier from 'eslint-plugin-prettier';
 
 export default [
   // Configuración recomendada de ESLint para proyectos en JavaScript
-  js.configs.recommended,  // Usamos la configuración recomendada por ESLint
+  js.configs.recommended, // Usamos la configuración recomendada por ESLint
 
   {
     // Definimos las opciones para el lenguaje y el entorno global de las pruebas

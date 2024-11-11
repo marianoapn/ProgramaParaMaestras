@@ -25,4 +25,4 @@ class Lesson {
 }
 
 // Exporta la clase Lesson para poder usarla en otro archivo
-module.exports = Lesson;
+export default Lesson;

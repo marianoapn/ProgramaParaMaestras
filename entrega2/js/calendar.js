@@ -48,4 +48,4 @@ class Calendar {
 }
 
 // Exporta la clase Calendar para poder usarla en otro archivo
-module.exports = Calendar;
+export default Calendar;

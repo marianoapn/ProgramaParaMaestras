@@ -1,5 +1,5 @@
 // Importamos el módulo `Lesson` desde su archivo correspondiente
-const Lesson = require('../lesson');
+import Lesson from '../lesson';
 
 describe('Lesson', () => {
   let lesson; // Declaramos la variable `lesson`, que representará una instancia de la clase `Lesson`
@@ -9,11 +9,11 @@ describe('Lesson', () => {
   beforeEach(() => {
     // Creamos una nueva instancia de `Lesson` con valores iniciales
     lesson = new Lesson(
-      1, // ID de la lección
-      '2024-11-11', // Fecha de la lección
-      'Matemáticas', // Tema de la lección
-      'Descripción de la lección', // Descripción de la lección
-      'Unidad 1' // Unidad curricular de la lección
+      1,
+      '2024-11-11',
+      'Matemáticas',
+      'Descripción de la lección',
+      'Unidad 1'
     );
 
     // Inicializamos el array `lessonsArray` con la lección creada
