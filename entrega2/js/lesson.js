@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 class Lesson {
   constructor(id, date, topic, description, curriculumUnit) {
     this.id = id;
@@ -26,4 +25,4 @@ class Lesson {
 }
 
 // Exporta la clase Lesson para poder usarla en otro archivo
-export default Lesson;
+module.exports = Lesson;

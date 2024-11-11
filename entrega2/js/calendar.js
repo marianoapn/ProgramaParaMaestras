@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 class Calendar {
   constructor(calendarElement, selectedDateElement, renderCallback) {
     this.calendarElement = calendarElement;
@@ -49,4 +48,4 @@ class Calendar {
 }
 
 // Exporta la clase Calendar para poder usarla en otro archivo
-export default Calendar;
+module.exports = Calendar;
