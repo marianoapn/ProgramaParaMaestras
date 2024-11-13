@@ -7,4 +7,3 @@ Mariana organiza su planificación mensual, ajustándola semanalmente según el 
 Destaca que la mayor dificultad al planificar es cómo equilibrar las necesidades individuales de los alumnos con los objetivos grupales. También menciona que le gustaría contar con un sistema que no solo le permitiera organizar su planificación, sino que también facilitara el seguimiento personalizado de cada estudiante y ofreciera sugerencias basadas en su progreso.
 
 Además, sugiere que las herramientas tecnológicas actuales podrían mejorar si integraran funciones automáticas de análisis y personalización, permitiendo una mayor colaboración entre docentes y padres.
-
