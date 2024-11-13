@@ -1,11 +1,13 @@
 # Relevamiento de herramientas del mercado.
 
 ## "GURI" (Local)
+
 - [Pagina web](https://guri2.ceip.edu.uy/GuriFamiliaAppWeb/)
--  Usuario Padres de alumno
+- Usuario Padres de alumno
 
-## Imagenes del sistema 
+## Imagenes del sistema
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <img src="ImagenesRelevamientoMercado\guri1.jpg" alt="Imagen web GURI" width="150"> <img src="ImagenesRelevamientoMercado\guri2.jpg" alt="Imagen web GURI" width="150"> <img src="ImagenesRelevamientoMercado\guri3.jpg" alt="Imagen web GURI" width="150">
 -
@@ -17,45 +19,41 @@
 =======
 <img src="ImagenesRelevamientoMercado/guri1.jpg" alt="Imagen web GURI" width="150"> <img src="ImagenesRelevamientoMercado/guri2.jpg" alt="Imagen web GURI" width="150"> <img src="ImagenesRelevamientoMercado/guri3.jpg" alt="Imagen web GURI" width="150">
 -
+=======
+## <img src="ImagenesRelevamientoMercado/guri1.jpg" alt="Imagen web GURI" width="150"> <img src="ImagenesRelevamientoMercado/guri2.jpg" alt="Imagen web GURI" width="150"> <img src="ImagenesRelevamientoMercado/guri3.jpg" alt="Imagen web GURI" width="150">
+>>>>>>> b34a63dfe6c58edcb8a44a7aae63965cfebd08dc
 
-<img src="ImagenesRelevamientoMercado/guri4.jpg" alt="Imagen web GURI" width="150"> <img src="ImagenesRelevamientoMercado/guri5.jpg" alt="Imagen web GURI" width="150"> <img src="ImagenesRelevamientoMercado/guri6.jpg" alt="Imagen web GURI" width="150">
--
+## <img src="ImagenesRelevamientoMercado/guri4.jpg" alt="Imagen web GURI" width="150"> <img src="ImagenesRelevamientoMercado/guri5.jpg" alt="Imagen web GURI" width="150"> <img src="ImagenesRelevamientoMercado/guri6.jpg" alt="Imagen web GURI" width="150">
 
+<<<<<<< HEAD
 <img src="ImagenesRelevamientoMercado/guri7.jpg" alt="Imagen web GURI" width="150"> <img src="ImagenesRelevamientoMercado/guri8.jpg" alt="Imagen web GURI" width="150"> <img src="ImagenesRelevamientoMercado/guri9.jpg" alt="Imagen web GURI" width="150">
 >>>>>>> 5a5bdd4a035bc5949026dbeb7ae5919bfbf71cad
 -
+=======
+## <img src="ImagenesRelevamientoMercado/guri7.jpg" alt="Imagen web GURI" width="150"> <img src="ImagenesRelevamientoMercado/guri8.jpg" alt="Imagen web GURI" width="150"> <img src="ImagenesRelevamientoMercado/guri9.jpg" alt="Imagen web GURI" width="150">
+>>>>>>> b34a63dfe6c58edcb8a44a7aae63965cfebd08dc
 
 ### Requerimientos Funcionales.
 
-- Modificaciones en campos.
-    - Mod.1
-El sistema permite cambiar el correo electrónico del usuario.
-    - Mod.2
-El sistema permite cambiar la contraseña de acceso.
+- Modificaciones en campos. - Mod.1
+  El sistema permite cambiar el correo electrónico del usuario. - Mod.2
+  El sistema permite cambiar la contraseña de acceso.
 
-- Actuacion.
-    - Act.1
-El sistema tiene un sector para cada niño en el caso de que tenga mas de un hijo. 
-    - Act.2
-El sistema tiene un informe con detalles sobre la actuación del alumno, visible para los padres o tutores..
+- Actuacion. - Act.1
+  El sistema tiene un sector para cada niño en el caso de que tenga mas de un hijo. - Act.2
+  El sistema tiene un informe con detalles sobre la actuación del alumno, visible para los padres o tutores..
 
-- Inasistenacias.
-    - Ina.1
-El sistema tiene un sector de inasistencias para los alumnos.
-    - Ina.2
-El sistema marca las inasistencias y asistencias en un calendario con colores que indican si asistió (verde), faltó (rojo), justificó la falta (amarillo), o si no se pasó lista (gris).
+- Inasistenacias. - Ina.1
+  El sistema tiene un sector de inasistencias para los alumnos. - Ina.2
+  El sistema marca las inasistencias y asistencias en un calendario con colores que indican si asistió (verde), faltó (rojo), justificó la falta (amarillo), o si no se pasó lista (gris).
 
-- Datos Personales.
-    - DatosP.1
-Tiene un sector para datos personales.
-    - DatosP.2
-En datos personales tiene los datos personales del alumno y padres.
+- Datos Personales. - DatosP.1
+  Tiene un sector para datos personales. - DatosP.2
+  En datos personales tiene los datos personales del alumno y padres.
 
-- Maestros a cargo.
-    - MaestrosaC.1
-Tiene un sector de maestro a cargo.
-    - MaestrosaC.2
-En el sector maestros a cargo muestra el nombre, escuela y el grupo.
+- Maestros a cargo. - MaestrosaC.1
+  Tiene un sector de maestro a cargo. - MaestrosaC.2
+  En el sector maestros a cargo muestra el nombre, escuela y el grupo.
 
 ### Requerimientos no funcionales.
 
@@ -68,10 +66,5 @@ En el sector maestros a cargo muestra el nombre, escuela y el grupo.
 - El sistema está operativo la mayor parte del tiempo, con mínimas interrupciones.
 
 ## Conclusion
+
 GURI no cubre la necesidad específica de planificación semanal de las maestras en relación con los programas de ANEP. Aunque es una excelente herramienta para la gestión de datos y rendimiento académico, no ofrece un sistema dedicado a la gestión curricular en detalle.
-
-
-
-
-
-
