@@ -90,18 +90,21 @@ tarea del usuario y listar los pasos concretos a seguir.
 
 ### Accesibilidad
 
+captura de wave, texto introductorio
+
 ## Codificación
 
-### Estándares de codificación
+clases del domi, con mas introduccion
+
+### Estándares de codificación -- juntar
+
+
 
 ### Buenas prácticas de OOP
 
-### Análisis estático de código
+separar interfaz, explicarlo
 
-## Checkpoint obligatorio 2
-
-Incluir un resumen del avance en **codificación de la IU y clases del dominio**
-Se evaluará de acuerdo al grado de avance
+### Análisis estático de código --juntar
 
 ## Test unitario
 
