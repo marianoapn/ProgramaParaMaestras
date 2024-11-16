@@ -54,10 +54,11 @@ function loadAlumnos() {
     .then((data) => {
       studentList = data;
       populateStudentsDropdown("students-asignados");
-      populateStudentsDropdown("edit-students-asignados");
     })
     .catch((error) => console.error("Error al cargar los estudiantes", error));
 }
+
+
 
 //returna
 function getSelectedStudents(id) {
@@ -75,24 +76,15 @@ function populateCurriculumDropdown() {
   curriculumSelect.innerHTML = "";
   editCurriculumSelect.innerHTML = "";
 
-  const emptyOption = createElemento("option", {
-    value: "",
-    textContent: "Seleccione una unidad curricular",
-  });
+  const emptyOption = createElemento("option", {value: "",textContent: "Seleccione una unidad curricular",});
   curriculumSelect.appendChild(emptyOption);
 
   curriculumUnits.forEach((unit) => {
-    const option = createElemento("option", {
-      value: unit.id,
-      textContent: unit.name,
-    });
+    const option = createElemento("option", { value: unit.id, textContent: unit.name});
 
     curriculumSelect.appendChild(option);
 
-    const editOption = createElemento("option", {
-      value: unit.id,
-      textContent: unit.name,
-    });
+    const editOption = createElemento("option", { value: unit.id, textContent: unit.name});
 
     editCurriculumSelect.appendChild(editOption);
   });
@@ -119,18 +111,8 @@ function populateLessonsList(day) {
       })
       .join(", ");
 
-    const div = createElemento("div", { id: "lesson-list" }, [
-      "container",
-      "mt-5",
-      "bg-white",
-      "p-3",
-      "shadow-sm",
-      "rounded",
-    ]);
-    const ul = createElemento("ul", { id: "lesson-items" }, [
-      "list-group",
-      "mt-3",
-    ]);
+    const div = createElemento("div", { id: "lesson-list" }, ["container","mt-5","bg-white","p-3","shadow-sm","rounded"]);
+    const ul = createElemento("ul", { id: "lesson-items" }, ["list-group","mt-3"]);
     const li = createElemento("li");
 
     li.style.listStyleType = "none";
@@ -158,14 +140,9 @@ function populateStudentsDropdown(id) {
 
   //checkbox de seleccion todos
   const selectAllLi = createElemento("li");
-  const selectAllCheckbox = createElemento("input", {
-    type: "checkbox",
-    id: "select-all",
-  });
-  const selectAllLabel = createElemento("label", {
-    for: "select-all",
-    textContent: "Seleccionar Todos",
-  });
+  const selectAllCheckbox = createElemento("input", { type: "checkbox", id: "select-all"});
+  const selectAllLabel = createElemento("label", { for: "select-all", textContent: "Seleccionar Todos"});
+
   allCheckStudents(selectAllCheckbox, id);
 
   const selectAllContainer = createElemento("a", {}, ["dropdown-item"]);
@@ -179,9 +156,9 @@ function populateStudentsDropdown(id) {
   studentSelect.appendChild(selectAllLi);
 
   // Crear un separador
-  const hr = createElemento("li");
+  /*const hr = createElemento("hr");
   hr.innerHTML = '<hr class="dropdown-divider" />';
-  studentSelect.appendChild(hr);
+  studentSelect.appendChild(hr);*/
 
   // Crear los checkboxes para los estudiantes
   const liElements = checkboxeStudents();
@@ -278,9 +255,20 @@ function populateEditForm(id) {
   if (lesson) {
     document.getElementById("edit-topic").value = lesson.topic;
     document.getElementById("edit-description").value = lesson.description;
-    document.getElementById("edit-curriculum-unit").value =
-      lesson.curriculumUnit;
+    document.getElementById("edit-curriculum-unit").value =lesson.curriculumUnit;
+    populateStudentsDropdown("edit-students-asignados");
+    const assignedStudents = lesson.studentAsignado;
 
+    // Obtener todos los checkboxes en el dropdown de edición
+    const checkboxes = document.querySelectorAll(
+      "#edit-students-asignados input[type='checkbox']",
+    );
+
+    // Marcar los checkboxes correspondientes
+    checkboxes.forEach((checkbox) => {
+      checkbox.checked = assignedStudents.includes(parseInt(checkbox.value));
+    });
+    
     editModal.style.display = "flex";
     editModal.dataset.id = id;
   }
