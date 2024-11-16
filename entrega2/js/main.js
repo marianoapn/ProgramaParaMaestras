@@ -5,6 +5,9 @@ const classForm = document.getElementById('class-form');
 const editForm = document.getElementById('edit-form');
 const editModal = document.getElementById('edit-modal');
 const closeButton = document.querySelector('.close-button');
+const closeButtonError = document.querySelector('.close-button-error');
+const ContErrorOConfirm = document.getElementById('container-error-confirm')
+const errorOConfirm = document.getElementById('error-confirm');
 const containerLesson = document.getElementById('container-lesson')
 
 // Variables de estado
@@ -157,17 +160,18 @@ function populateStudentsDropdown(id) {
 
     // Crear los checkboxes para los estudiantes
     const liElements = checkboxeStudents()
-    console.log(liElements)
 
     liElements.forEach(li => {
       studentSelect.appendChild(li);  
     });
     
 }
+
 //funcion para seleccionar todos los estudiantes
 function allCheckStudents(elementbox, id){
   elementbox.addEventListener('change', () => toggleSelectAll(elementbox.checked, id));
 }
+
 // Crear los checkboxes para los estudiantes
 function checkboxeStudents(){
   return studentList.map(student => {
@@ -177,9 +181,9 @@ function checkboxeStudents(){
 
     // Añadir el checkbox y el label al li
     li.appendChild(checkbox);
-    li.appendChild(label); 
+    li.appendChild(label);
 
-    return li 
+    return li;
   });
 }
 
@@ -194,25 +198,36 @@ function toggleSelectAll(selectAllChecked , id) {
 
 // Manejar el envío del formulario de nueva lección
 classForm.onsubmit = (event) => {
+  
     event.preventDefault();
-
+    const div = createElemento('div', {}, ['container','w-50', 'mt-5' , 'bg-white' ,'p-3', 'shadow-sm','rounded', 'text-center']);
+    
     if (!calendar.selectedDay) {
-        alert('Por favor, seleccione un día en el calendario.');
+        showErrorMessage('Por favor, seleccione un día en el calendario.');
         return;
     }
-       
-    const newLesson = new Lesson(
-        lessons.length + 1,
-        calendar.selectedDay,
-        document.getElementById('topic').value,
-        document.getElementById('description').value,
-        document.getElementById('curriculum-unit').value,
-        getSelectedStudents('students-asignados')
-    );
 
-    lessons.push(newLesson);
-    classForm.reset();
-    populateLessonsList(calendar.selectedDay);
+    const selectedStudents = getSelectedStudents('students-asignados');
+
+    if(selectedStudents.length > 0){
+      div.style.display = 'none'
+
+      const newLesson = new Lesson(
+          lessons.length + 1,
+          calendar.selectedDay,
+          document.getElementById('topic').value,
+          document.getElementById('description').value,
+          document.getElementById('curriculum-unit').value,
+          selectedStudents
+      );
+       
+      lessons.push(newLesson);
+      classForm.reset();
+      populateLessonsList(calendar.selectedDay);
+    }else{
+        showErrorMessage('Error, por favor seleccione al menos un estudiante');
+      
+    }
 };
 
 // Función para llenar el formulario de edición
@@ -222,16 +237,21 @@ function populateEditForm(id) {
         document.getElementById('edit-topic').value = lesson.topic;
         document.getElementById('edit-description').value = lesson.description;
         document.getElementById('edit-curriculum-unit').value = lesson.curriculumUnit;
-        getSelectedStudents('students-asignados') 
+        
         editModal.style.display = 'flex';
         editModal.dataset.id = id;
     }
 }
 
+
 // Cerrar modal de edición
 closeButton.onclick = () => {
     editModal.style.display = 'none';
 };
+//cerrar error
+closeButtonError.onclick = () => {
+  ContErrorOConfirm.style.display ='none';
+}
 
 // Manejar el envío del formulario de edición
 editForm.onsubmit = (event) => {
@@ -240,15 +260,21 @@ editForm.onsubmit = (event) => {
     const id = parseInt(editModal.dataset.id);
     const lessonIndex = lessons.findIndex(l => l.id === id);
 
-    if (lessonIndex !== -1) {
-        lessons[lessonIndex].editLesson(
-            document.getElementById('edit-topic').value,
-            document.getElementById('edit-description').value,
-            document.getElementById('edit-curriculum-unit').value,
-            getSelectedStudents('edit-students-asignados')
-        );
-        populateLessonsList(calendar.selectedDay);
-        editModal.style.display = 'none';
+    const selectedStudents = getSelectedStudents('edit-students-asignados');
+
+    if (selectedStudents.length > 0) {
+      if (lessonIndex !== -1) {
+          lessons[lessonIndex].editLesson(
+              document.getElementById('edit-topic').value,
+              document.getElementById('edit-description').value,
+              document.getElementById('edit-curriculum-unit').value,
+              getSelectedStudents('edit-students-asignados')
+          );
+          populateLessonsList(calendar.selectedDay);
+          editModal.style.display = 'none';
+      }
+    }else{
+    showErrorMessage('Error, por favor seleccione al menos un estudiante');
     }
 };
 
@@ -262,6 +288,11 @@ function handleDeleteLesson(id) {
             populateLessonsList(calendar.selectedDay);
         }
     }
+}
+
+function showErrorMessage(message) {
+  ContErrorOConfirm.style.display = 'flex'
+  errorOConfirm.innerHTML = message;
 }
 
 function createElemento(tagElem,atributos = {}, clas = [] ) {
