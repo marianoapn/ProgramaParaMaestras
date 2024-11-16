@@ -1,3 +1,6 @@
+import Calendar from './calendar.js'; // Importa la clase Calendar desde calendar.js
+import Lesson from './lesson.js'; // Importa la clase Lesson desde lesson.js
+
 // Instanciación de elementos de la UI
 const calendarElement = document.getElementById("calendar");
 const selectedDateElement = document.getElementById("selected-date");
@@ -22,6 +25,7 @@ const calendar = new Calendar(
   (selectedDay) => {
     populateLessonsList(selectedDay);
   },
+
 );
 
 // Inicializar el calendario
@@ -29,6 +33,7 @@ calendar.renderCalendar();
 
 // Controladores de los botones de navegación de mes
 document.getElementById("prev-month").onclick = () => {
+
   calendar.currentDate.setMonth(calendar.currentDate.getMonth() - 1);
   calendar.renderCalendar();
 };
@@ -40,6 +45,7 @@ document.getElementById("next-month").onclick = () => {
 
 // Cargar unidades curriculares desde un archivo JSON
 fetch("data/curriculum_units.json")
+
   .then((response) => response.json())
   .then((data) => {
     curriculumUnits = data;
@@ -85,10 +91,12 @@ function populateCurriculumDropdown() {
     curriculumSelect.appendChild(option);
 
     const editOption = createElemento("option", { value: unit.id, textContent: unit.name});
-
     editCurriculumSelect.appendChild(editOption);
-  });
-}
+  })
+};
+  
+
+   
 
 // Función para cargar las lecciones del día seleccionado
 function populateLessonsList(day) {
@@ -278,9 +286,11 @@ function populateEditForm(id) {
 closeButton.onclick = () => {
   editModal.style.display = "none";
 };
+
 //cerrar error
 closeButtonError.onclick = () => {
   ContErrorOConfirm.style.display = "none";
+
 };
 
 // Manejar el envío del formulario de edición
@@ -308,6 +318,7 @@ editForm.onsubmit = (event) => {
   }
 };
 
+// Función para eliminar una lección
 function handleDeleteLesson(id) {
   const lesson = lessons.find((lesson) => lesson.id === id);
   if (lesson) {
@@ -342,3 +353,4 @@ function createElemento(tagElem, atributos = {}, clas = []) {
 }
 
 loadAlumnos();
+

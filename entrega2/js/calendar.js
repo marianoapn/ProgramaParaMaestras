@@ -37,6 +37,7 @@ class Calendar {
   // Método para seleccionar un día
   selectDay(day) {
     this.selectedDay = day;
+
     this.selectedDateElement.innerText = `Planes para el ${day} de ${this.currentDate.toLocaleString("es-ES", { month: "long" })} de ${this.currentDate.getFullYear()}`;
 
     // Mostrar el formulario para agregar un nuevo plan
@@ -46,3 +47,6 @@ class Calendar {
     this.renderCalendar(); // Renderizar el calendario para mostrar el día seleccionado
   }
 }
+
+// Exporta la clase Calendar para poder usarla en otro archivo
+export default Calendar;
