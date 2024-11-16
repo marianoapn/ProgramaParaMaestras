@@ -106,7 +106,8 @@ function populateLessonsList(day) {
         })
         .join(', ');
 
-        const div = createElemento('div', 'lesson-list', ['container', 'mt-5', 'bg-white', 'p-3', 'shadow-sm', 'rounded']);
+        const div = createElemento('div', 'lesson-list',
+           ['container', 'mt-5', 'bg-white', 'p-3', 'shadow-sm', 'rounded']);
         const ul = createElemento('ul','lesson-items',['list-group', 'mt-3']);
         const li = createElemento('li');
         
@@ -129,7 +130,7 @@ function populateLessonsList(day) {
 // Función para llenar el menú de estudiantes
 function populateStudentsDropdown(id) {
     const studentSelect = document.getElementById(id);
-    
+   
     // Limpiar el dropdown antes de agregar los nuevos elementos
     studentSelect.innerHTML = '';
 
@@ -166,9 +167,9 @@ function populateStudentsDropdown(id) {
         //li.classList.add('dropdown-item'); // Clase para formato del item
 
         const checkbox = createElemento('input',
-            `student-${student.id}`,
+            '',
             [], 
-            {type : 'checkbox',name : 'students', value : student.id}
+            { id : `student-${student.id}`, type : 'checkbox',name : 'students', value : student.id}
         );
         //checkbox.type = 'checkbox';
         //checkbox.id = `student-${student.id}`;
