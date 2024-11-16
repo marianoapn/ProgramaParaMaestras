@@ -177,6 +177,7 @@
     "natural-compare": "^1.4.0",
     "node-int64": "^0.4.0",
     "node-releases": "^2.0.18",
+    "node.js": "^0.0.1-security",
     "normalize-path": "^3.0.0",
     "npm-run-path": "^4.0.1",
     "once": "^1.4.0",
