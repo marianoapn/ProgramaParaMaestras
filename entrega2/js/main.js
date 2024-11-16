@@ -68,10 +68,11 @@ function loadAlumnos() {
 
 //returna
 function getSelectedStudents(id) {
-  // Obtener IDs de estudiantes seleccionados
-  return (selectedStudents = Array.from(
-    document.querySelectorAll("#" + id + ' input[type="checkbox"]:checked'),
-  ).map((checkbox) => checkbox.value));
+  const selectedStudents = Array.from(
+    document.querySelectorAll("#" + id + ' input[type="checkbox"]:checked')
+  ).map((checkbox) => checkbox.value);
+
+  return selectedStudents;
 }
 
 // Función para llenar los menús de unidades
@@ -163,11 +164,6 @@ function populateStudentsDropdown(id) {
   selectAllLi.appendChild(selectAllContainer);
   studentSelect.appendChild(selectAllLi);
 
-  // Crear un separador
-  /*const hr = createElemento("hr");
-  hr.innerHTML = '<hr class="dropdown-divider" />';
-  studentSelect.appendChild(hr);*/
-
   // Crear los checkboxes para los estudiantes
   const liElements = checkboxeStudents();
 
@@ -235,9 +231,8 @@ classForm.onsubmit = (event) => {
     return;
   }
 
-  const selectedStudents = getSelectedStudents("students-asignados");
 
-  if (selectedStudents.length > 0) {
+  if ((getSelectedStudents("students-asignados")).length > 0) {
     div.style.display = "none";
 
     const newLesson = new Lesson(
@@ -246,7 +241,7 @@ classForm.onsubmit = (event) => {
       document.getElementById("topic").value,
       document.getElementById("description").value,
       document.getElementById("curriculum-unit").value,
-      selectedStudents,
+      (getSelectedStudents("students-asignados")),
     );
 
     lessons.push(newLesson);
@@ -265,17 +260,6 @@ function populateEditForm(id) {
     document.getElementById("edit-description").value = lesson.description;
     document.getElementById("edit-curriculum-unit").value =lesson.curriculumUnit;
     populateStudentsDropdown("edit-students-asignados");
-    const assignedStudents = lesson.studentAsignado;
-
-    // Obtener todos los checkboxes en el dropdown de edición
-    const checkboxes = document.querySelectorAll(
-      "#edit-students-asignados input[type='checkbox']",
-    );
-
-    // Marcar los checkboxes correspondientes
-    checkboxes.forEach((checkbox) => {
-      checkbox.checked = assignedStudents.includes(parseInt(checkbox.value));
-    });
     
     editModal.style.display = "flex";
     editModal.dataset.id = id;
@@ -354,3 +338,5 @@ function createElemento(tagElem, atributos = {}, clas = []) {
 
 loadAlumnos();
 
+window.populateEditForm = populateEditForm;
+window.handleDeleteLesson = handleDeleteLesson;
