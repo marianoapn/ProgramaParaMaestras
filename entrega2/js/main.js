@@ -53,6 +53,7 @@ function loadAlumnos(){
     .catch(error => console.error('Error al cargar los estudiantes', error));
 }
 
+
 //returna
 function getSelectedStudents(id){
     // Obtener IDs de estudiantes seleccionados
@@ -106,9 +107,8 @@ function populateLessonsList(day) {
         })
         .join(', ');
 
-        const div = createElemento('div', 'lesson-list',
-           ['container', 'mt-5', 'bg-white', 'p-3', 'shadow-sm', 'rounded']);
-        const ul = createElemento('ul','lesson-items',['list-group', 'mt-3']);
+        const div = createElemento('div',{id :'lesson-list'},['container', 'mt-5', 'bg-white', 'p-3', 'shadow-sm', 'rounded']);
+        const ul = createElemento('ul',{id :'lesson-items'},['list-group', 'mt-3']);
         const li = createElemento('li');
         
         li.style.listStyleType = 'none';
@@ -134,20 +134,16 @@ function populateStudentsDropdown(id) {
     // Limpiar el dropdown antes de agregar los nuevos elementos
     studentSelect.innerHTML = '';
 
-    // Opción "Seleccionar Todos"
-    const selectAllLi = document.createElement('li');
-    const selectAllCheckbox = document.createElement('input');
-    selectAllCheckbox.type = 'checkbox';
-    selectAllCheckbox.id = 'select-all';
-    selectAllCheckbox.addEventListener('change', () => toggleSelectAll(selectAllCheckbox.checked, id));
-    const selectAllLabel = document.createElement('label');
-    selectAllLabel.setAttribute('for', 'select-all');
-    selectAllLabel.textContent = 'Seleccionar Todos';
-    
-    const selectAllContainer = document.createElement('a');
-    selectAllContainer.classList.add('dropdown-item');
-    const selectAllFormCheck = document.createElement('div');
-    selectAllFormCheck.classList.add('form-check');
+    //checkbox de seleccion todos
+    const selectAllLi = createElemento('li');
+    const selectAllCheckbox = createElemento('input',{type : 'checkbox', id : 'select-all'});
+    const selectAllLabel = createElemento('label',{for: 'select-all' ,textContent : 'Seleccionar Todos'});
+    allCheckStudents(selectAllCheckbox, id);
+
+    const selectAllContainer = createElemento('a',{},['dropdown-item']);
+
+    const selectAllFormCheck = createElemento('div',{},['form-check']);
+
     selectAllFormCheck.appendChild(selectAllCheckbox);
     selectAllFormCheck.appendChild(selectAllLabel);
     selectAllContainer.appendChild(selectAllFormCheck);
@@ -155,43 +151,36 @@ function populateStudentsDropdown(id) {
     studentSelect.appendChild(selectAllLi);
 
     // Crear un separador
-    const hr = document.createElement('li');
+    const hr = createElemento('li');
     hr.innerHTML = '<hr class="dropdown-divider" />';
     studentSelect.appendChild(hr);
 
     // Crear los checkboxes para los estudiantes
-    studentList.forEach(student => {
-        const li = createElemento('li',
-            id ='',
-            ['dropdown-item']);
-        //li.classList.add('dropdown-item'); // Clase para formato del item
+    const liElements = checkboxeStudents()
+    console.log(liElements)
 
-        const checkbox = createElemento('input',
-            '',
-            [], 
-            { id : `student-${student.id}`, type : 'checkbox',name : 'students', value : student.id}
-        );
-        //checkbox.type = 'checkbox';
-        //checkbox.id = `student-${student.id}`;
-        //checkbox.name = 'students';
-        //checkbox.value = student.id;
-
-        const label = createElemento('label',
-            id='',
-            [],
-            {htmlFor : `student-${student.id}`, textContent : student.name}
-
-        );
-        //label.htmlFor = `student-${student.id}`;
-        //label.textContent = student.name;
-
-        // Añadir el checkbox y el label al li
-        li.appendChild(checkbox);
-        li.appendChild(label);
-
-        // Añadir el li al dropdown
-        studentSelect.appendChild(li);
+    liElements.forEach(li => {
+      studentSelect.appendChild(li);  
     });
+    
+}
+//funcion para seleccionar todos los estudiantes
+function allCheckStudents(elementbox, id){
+  elementbox.addEventListener('change', () => toggleSelectAll(elementbox.checked, id));
+}
+// Crear los checkboxes para los estudiantes
+function checkboxeStudents(){
+  return studentList.map(student => {
+    const li = createElemento('li',{},['dropdown-item']);
+    const checkbox = createElemento('input',{id: `student-${student.id}`, type : 'checkbox', name : 'students', value : student.id});
+    const label = createElemento('label', {for: `student-${student.id}`, textContent: student.name });
+
+    // Añadir el checkbox y el label al li
+    li.appendChild(checkbox);
+    li.appendChild(label); 
+
+    return li 
+  });
 }
 
 // Función para manejar el comportamiento de "Seleccionar Todos"
@@ -233,7 +222,7 @@ function populateEditForm(id) {
         document.getElementById('edit-topic').value = lesson.topic;
         document.getElementById('edit-description').value = lesson.description;
         document.getElementById('edit-curriculum-unit').value = lesson.curriculumUnit;
-        getSelectedStudents('edit-students-asignados');
+        getSelectedStudents('students-asignados') 
         editModal.style.display = 'flex';
         editModal.dataset.id = id;
     }
@@ -275,17 +264,19 @@ function handleDeleteLesson(id) {
     }
 }
 
-function createElemento(tagElem, id = '', clas = [], atributos = {}) {
+function createElemento(tagElem,atributos = {}, clas = [] ) {
     const element = document.createElement(tagElem)
-    if(id){
-        element.id = id
-    }
     if(clas.length > 0){
         element.classList.add(...clas)
     }
     for (const [key, value] of Object.entries(atributos)) {
         element.setAttribute(key, value);
     }
+
+    if (atributos.textContent) {
+      element.textContent = atributos.textContent;
+    }
+
     return element
 }
 
