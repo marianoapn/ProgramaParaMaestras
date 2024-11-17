@@ -24,7 +24,11 @@ const calendar = new Calendar(
   selectedDateElement,
   (selectedDay) => {
     populateLessonsList(selectedDay);
+<<<<<<< HEAD
   },
+=======
+  }
+>>>>>>> marianoextra
 );
 
 // Inicializar el calendario
@@ -64,7 +68,11 @@ function loadAlumnos() {
 //returna
 function getSelectedStudents(id) {
   const selectedStudents = Array.from(
+<<<<<<< HEAD
     document.querySelectorAll('#' + id + ' input[type="checkbox"]:checked'),
+=======
+    document.querySelectorAll('#' + id + ' input[type="checkbox"]:checked')
+>>>>>>> marianoextra
   ).map((checkbox) => checkbox.value);
 
   return selectedStudents;
@@ -192,7 +200,11 @@ function populateStudentsDropdown(id) {
 //funcion para seleccionar todos los estudiantes
 function allCheckStudents(elementbox, id) {
   elementbox.addEventListener('change', () =>
+<<<<<<< HEAD
     toggleSelectAll(elementbox.checked, id),
+=======
+    toggleSelectAll(elementbox.checked, id)
+>>>>>>> marianoextra
   );
 }
 
@@ -257,7 +269,11 @@ classForm.onsubmit = (event) => {
       document.getElementById('topic').value,
       document.getElementById('description').value,
       document.getElementById('curriculum-unit').value,
+<<<<<<< HEAD
       getSelectedStudents('students-asignados'),
+=======
+      getSelectedStudents('students-asignados')
+>>>>>>> marianoextra
     );
 
     lessons.push(newLesson);
@@ -308,7 +324,11 @@ editForm.onsubmit = (event) => {
         document.getElementById('edit-topic').value,
         document.getElementById('edit-description').value,
         document.getElementById('edit-curriculum-unit').value,
+<<<<<<< HEAD
         getSelectedStudents('edit-students-asignados'),
+=======
+        getSelectedStudents('edit-students-asignados')
+>>>>>>> marianoextra
       );
       populateLessonsList(calendar.selectedDay);
       editModal.style.display = 'none';
