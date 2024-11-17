@@ -162,10 +162,18 @@ function populateStudentsDropdown(id) {
   const selectAllLi = createElemento("li");
   const selectAllCheckbox = createElemento("input", {
     type: "checkbox",
+<<<<<<< HEAD
     id: "select-all",
   });
   const selectAllLabel = createElemento("label", {
     for: "select-all",
+=======
+    id: `selectAll-${id}`,
+    name: `selectAll-${id}`,
+  });
+  const selectAllLabel = createElemento("label", {
+    for: `selectAll-${id}`,
+>>>>>>> entrega3
     textContent: "Seleccionar Todos",
   });
 
@@ -203,7 +211,7 @@ function checkboxeStudents() {
     const checkbox = createElemento("input", {
       id: `student-${student.id}`,
       type: "checkbox",
-      name: "students",
+      name: `student-${student.id}`,
       value: student.id,
     });
     const label = createElemento("label", {
