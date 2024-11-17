@@ -7,11 +7,31 @@
 
 ## Imagenes del sistema
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<img src="ImagenesRelevamientoMercado\guri1.jpg" alt="Imagen web GURI" width="150"> <img src="ImagenesRelevamientoMercado\guri2.jpg" alt="Imagen web GURI" width="150"> <img src="ImagenesRelevamientoMercado\guri3.jpg" alt="Imagen web GURI" width="150">
+-
+
+<img src="ImagenesRelevamientoMercado\guri4.jpg" alt="Imagen web GURI" width="150"> <img src="ImagenesRelevamientoMercado\guri5.jpg" alt="Imagen web GURI" width="150"> <img src="ImagenesRelevamientoMercado\guri6.jpg" alt="Imagen web GURI" width="150">
+-
+
+<img src="ImagenesRelevamientoMercado\guri7.jpg" alt="Imagen web GURI" width="150"> <img src="ImagenesRelevamientoMercado\guri8.jpg" alt="Imagen web GURI" width="150"> <img src="ImagenesRelevamientoMercado\guri9.jpg" alt="Imagen web GURI" width="150">
+=======
+<img src="ImagenesRelevamientoMercado/guri1.jpg" alt="Imagen web GURI" width="150"> <img src="ImagenesRelevamientoMercado/guri2.jpg" alt="Imagen web GURI" width="150"> <img src="ImagenesRelevamientoMercado/guri3.jpg" alt="Imagen web GURI" width="150">
+-
+=======
 ## <img src="ImagenesRelevamientoMercado/guri1.jpg" alt="Imagen web GURI" width="150"> <img src="ImagenesRelevamientoMercado/guri2.jpg" alt="Imagen web GURI" width="150"> <img src="ImagenesRelevamientoMercado/guri3.jpg" alt="Imagen web GURI" width="150">
+>>>>>>> b34a63dfe6c58edcb8a44a7aae63965cfebd08dc
 
 ## <img src="ImagenesRelevamientoMercado/guri4.jpg" alt="Imagen web GURI" width="150"> <img src="ImagenesRelevamientoMercado/guri5.jpg" alt="Imagen web GURI" width="150"> <img src="ImagenesRelevamientoMercado/guri6.jpg" alt="Imagen web GURI" width="150">
 
+<<<<<<< HEAD
+<img src="ImagenesRelevamientoMercado/guri7.jpg" alt="Imagen web GURI" width="150"> <img src="ImagenesRelevamientoMercado/guri8.jpg" alt="Imagen web GURI" width="150"> <img src="ImagenesRelevamientoMercado/guri9.jpg" alt="Imagen web GURI" width="150">
+>>>>>>> 5a5bdd4a035bc5949026dbeb7ae5919bfbf71cad
+-
+=======
 ## <img src="ImagenesRelevamientoMercado/guri7.jpg" alt="Imagen web GURI" width="150"> <img src="ImagenesRelevamientoMercado/guri8.jpg" alt="Imagen web GURI" width="150"> <img src="ImagenesRelevamientoMercado/guri9.jpg" alt="Imagen web GURI" width="150">
+>>>>>>> b34a63dfe6c58edcb8a44a7aae63965cfebd08dc
 
 ### Requerimientos Funcionales.
 
