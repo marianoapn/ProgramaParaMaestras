@@ -322,12 +322,32 @@ editForm.onsubmit = (event) => {
 function handleDeleteLesson(id) {
   const lesson = lessons.find((lesson) => lesson.id === id);
   if (lesson) {
-    const updatedLessons = lesson.deleteLesson(lessons);
-    // Solo actualiza la lista si la longitud cambia, lo que indica que se eliminó un elemento
-    if (updatedLessons.length !== lessons.length) {
-      lessons = updatedLessons;
-      populateLessonsList(calendar.selectedDay);
-    }
+    showErrorMessage('¿Estás seguro de que quieres eliminar este plan de clase?');
+    const buttonCancelar = createElemento('button' , {type: 'button', textContent: 'CANCELAR'} , ['btn', 'btn-primary']);
+    const buttonDelete = createElemento('button' , {type: 'button', textContent: 'ACEPTAR'} , ['btn', 'btn-primary']);
+    const divButton = createElemento('div', {}, ['d-flex' , 'justify-content-between' ,'mt-4']);
+    errorOConfirm.appendChild(divButton);
+    divButton.appendChild(buttonCancelar);
+    divButton.appendChild(buttonDelete);
+
+    buttonCancelar.onclick = () => {
+      ContErrorOConfirm.style.display = 'none';
+    };
+    buttonDelete.onclick = () => {
+      const updatedLessons = lesson.deleteLesson(lessons);
+      // Solo actualiza la lista si la longitud cambia, lo que indica que se eliminó un elemento
+      if (updatedLessons.length !== lessons.length) {
+        lessons = updatedLessons;
+        populateLessonsList(calendar.selectedDay);
+      }
+      ContErrorOConfirm.style.display = 'none';
+      /*const updatedLessons = lesson.deleteLesson(lessons);
+      // Solo actualiza la lista si la longitud cambia, lo que indica que se eliminó un elemento
+      if (updatedLessons.length !== lessons.length) {
+        lessons = updatedLessons;
+        populateLessonsList(calendar.selectedDay);
+      }*/
+    };
   }
 }
 
