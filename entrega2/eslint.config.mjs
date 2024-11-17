@@ -45,12 +45,8 @@ export default [
     // Definimos las reglas de ESLint
     rules: {
       // Configuraciones recomendadas para el análisis de calidad de código
-
       "no-unused-vars": "warn", // Advertencia si hay variables definidas pero no usadas
       "no-undef": "warn", // Advertencia si se hace referencia a una variable no definida
-      semi: ["error", "always"], // Exige el uso de punto y coma al final de las declaraciones
-      quotes: ["error", "single"], // Exige el uso de comillas simples para las cadenas
-
       curly: ["error", "all"], // Exige el uso de llaves en todas las estructuras de control (if, for, while, etc.)
       "no-console": ["warn"], // Advertencia si se usa `console.log` (evitar en producción)
       "no-debugger": "warn", // Advertencia si se usa `debugger` (evitar en producción)
