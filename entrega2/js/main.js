@@ -1,5 +1,7 @@
 import Calendar from './calendar.js'; // Importa la clase Calendar
 import Controller from './uiController.js'; // Importa el Controller
+import Calendar from './calendar.js'; // Importa la clase Calendar
+import Controller from './uiController.js'; // Importa el Controller
 
 // Instanciación de elementos de la UI
 <<<<<<< HEAD
@@ -27,15 +29,31 @@ const containerLesson = document.getElementById('container-lesson');
 const uiController = new Controller();
 
 // Inicializar el calendario
+// Instanciación del Controller
+const uiController = new Controller();
+
+// Inicializar el calendario
 const calendar = new Calendar(
   calendarElement,
   selectedDateElement,
   (selectedDay) => {
     populateLessonsList(selectedDay); // Poblar la lista de lecciones al seleccionar un día
+    populateLessonsList(selectedDay); // Poblar la lista de lecciones al seleccionar un día
   }
 >>>>>>> entrega3
 );
 calendar.renderCalendar();
+
+// Cargar datos de unidades curriculares y alumnos
+async function init() {
+  await uiController.loadUnits(); // Cargar unidades curriculares
+  populateCurriculumDropdown(); // Llenar el dropdown de unidades curriculares
+
+  await uiController.loadAlumnos(); // Cargar estudiantes
+  populateStudentsDropdown('students-asignados'); // Llenar el dropdown de estudiantes
+}
+
+init();
 
 // Cargar datos de unidades curriculares y alumnos
 async function init() {
@@ -54,6 +72,7 @@ document.getElementById("prev-month").onclick = () => {
 =======
 document.getElementById('prev-month').onclick = () => {
   calendar.currentDate.setMonth(calendar.currentDate.getMonth() - 1); // Retroceder un mes
+  calendar.currentDate.setMonth(calendar.currentDate.getMonth() - 1); // Retroceder un mes
   calendar.renderCalendar();
 };
 
@@ -62,11 +81,15 @@ document.getElementById("next-month").onclick = () => {
 =======
 document.getElementById('next-month').onclick = () => {
   calendar.currentDate.setMonth(calendar.currentDate.getMonth() + 1); // Avanzar un mes
+  calendar.currentDate.setMonth(calendar.currentDate.getMonth() + 1); // Avanzar un mes
   calendar.renderCalendar();
 };
 
 // Función para obtener los estudiantes seleccionados
+// Función para obtener los estudiantes seleccionados
 function getSelectedStudents(id) {
+  return Array.from(
+    document.querySelectorAll(`#${id} input[type="checkbox"]:checked`)
   return Array.from(
     document.querySelectorAll(`#${id} input[type="checkbox"]:checked`)
   ).map((checkbox) => checkbox.value);
@@ -95,22 +118,61 @@ function populateDropdown(selectId, items, getItemLabel, getItemValue) {
 
 // Función para poblar el dropdown de unidades curriculares
 function populateCurriculumDropdown() {
-  const curriculumSelect = document.getElementById('curriculum-unit');
-  const editCurriculumSelect = document.getElementById('edit-curriculum-unit');
+  const curriculumUnits = uiController.getCurriculumUnits();
+  populateDropdown(
+    'curriculum-unit',
+    curriculumUnits,
+    (unit) => unit.name,
+    (unit) => unit.id
+  );
+  populateDropdown(
+    'edit-curriculum-unit',
+    curriculumUnits,
+    (unit) => unit.name,
+    (unit) => unit.id
+  );
+}
 
-  curriculumSelect.innerHTML = '';
-  editCurriculumSelect.innerHTML = '';
+// Función para poblar el dropdown de estudiantes
+function populateStudentsDropdown(id) {
+  const students = uiController.getStudentsList();
 
-  const emptyOption = createElemento('option', {
-    value: '',
-    textContent: 'Seleccione una unidad curricular'
+  // Crear checkbox para "Seleccionar Todos"
+  const selectAllCheckbox = createElement('input', {
+    type: 'checkbox',
+    id: `${id}-select-all`,
   });
-  curriculumSelect.appendChild(emptyOption);
+  const selectAllLabel = createElement('label', {
+    for: `${id}-select-all`,
+    textContent: 'Toda la clase',
+  });
 
-  curriculumUnits.forEach((unit) => {
-    const option = createElemento('option', {
-      value: unit.id,
-      textContent: unit.name,
+  const selectAllContainer = createElement('div', {}, [
+    'checkbox-dropdown-item',
+  ]);
+  selectAllContainer.appendChild(selectAllCheckbox);
+  selectAllContainer.appendChild(selectAllLabel);
+
+  const studentSelect = document.getElementById(id);
+  studentSelect.innerHTML = '';
+  studentSelect.appendChild(selectAllContainer);
+
+  // Evento para manejar "Seleccionar Todos"
+  selectAllCheckbox.addEventListener('change', () => {
+    const checkboxes = studentSelect.querySelectorAll(
+      'input[type="checkbox"]:not(#' + `${id}-select-all` + ')'
+    );
+    checkboxes.forEach((checkbox) => {
+      checkbox.checked = selectAllCheckbox.checked;
+    });
+  });
+
+  // Crear checkbox para cada estudiante
+  students.forEach((student) => {
+    const studentCheckbox = createElement('input', {
+      id: `${id}-student-${student.id}`,
+      type: 'checkbox',
+      value: student.id,
     });
     const studentLabel = createElement('label', {
       for: `${id}-student-${student.id}`,
@@ -189,6 +251,8 @@ classForm.onsubmit = (event) => {
   if (getSelectedStudents('students-asignados').length > 0) {
     uiController.createLesson(
       uiController.getLessons().length + 1,
+    uiController.createLesson(
+      uiController.getLessons().length + 1,
       calendar.selectedDay,
       document.getElementById('topic').value,
       document.getElementById('description').value,
@@ -206,10 +270,12 @@ classForm.onsubmit = (event) => {
 // Función para llenar el formulario de edición
 function populateEditForm(id) {
   const lesson = uiController.getLessonsById(id);
+  const lesson = uiController.getLessonsById(id);
   if (lesson) {
-    document.getElementById('edit-topic').value = lesson.topic;
-    document.getElementById('edit-description').value = lesson.description;
-    document.getElementById('edit-curriculum-unit').value = lesson.curriculumUnit;
+    document.getElementById('edit-topic').value = lesson.getTopic();
+    document.getElementById('edit-description').value = lesson.getDescription();
+    document.getElementById('edit-curriculum-unit').value =
+      lesson.getCurriculumUnit();
     populateStudentsDropdown('edit-students-asignados');
 
     editModal.style.display = 'flex';
@@ -227,6 +293,7 @@ closeButton.onclick = () => {
 };
 
 // Cerrar error
+// Cerrar error
 closeButtonError.onclick = () => {
   ContErrorOConfirm.style.display = 'none';
 >>>>>>> entrega3
@@ -238,9 +305,19 @@ editForm.onsubmit = (event) => {
 
   const id = parseInt(editModal.dataset.id);
   const lessonIndex = uiController.getLessonIndexById(id);
+  const lessonIndex = uiController.getLessonIndexById(id);
 
   const selectedStudents = getSelectedStudents('edit-students-asignados');
   if (selectedStudents.length > 0) {
+    uiController.editLessonByIndex(
+      lessonIndex,
+      document.getElementById('edit-topic').value,
+      document.getElementById('edit-description').value,
+      document.getElementById('edit-curriculum-unit').value,
+      selectedStudents
+    );
+    populateLessonsList(calendar.selectedDay);
+    editModal.style.display = 'none';
     uiController.editLessonByIndex(
       lessonIndex,
       document.getElementById('edit-topic').value,
@@ -258,6 +335,7 @@ editForm.onsubmit = (event) => {
 
 // Función para eliminar una lección
 function handleDeleteLesson(id) {
+  const lesson = uiController.getLessonsById(id);
   const lesson = uiController.getLessonsById(id);
   if (lesson) {
 <<<<<<< HEAD
@@ -287,15 +365,18 @@ loadAlumnos();
       '¿Estás seguro de que quieres eliminar este plan de clase?'
     );
     const buttonCancelar = createElement(
+    const buttonCancelar = createElement(
       'button',
       { type: 'button', textContent: 'CANCELAR' },
       ['btn', 'btn-primary']
     );
     const buttonDelete = createElement(
+    const buttonDelete = createElement(
       'button',
       { type: 'button', textContent: 'ACEPTAR' },
       ['btn', 'btn-primary']
     );
+    const divButton = createElement('div', {}, [
     const divButton = createElement('div', {}, [
       'd-flex',
       'justify-content-between',
@@ -311,17 +392,22 @@ loadAlumnos();
     buttonDelete.onclick = () => {
       uiController.deleteLesson(lesson);
       populateLessonsList(calendar.selectedDay);
+      uiController.deleteLesson(lesson);
+      populateLessonsList(calendar.selectedDay);
       ContErrorOConfirm.style.display = 'none';
     };
   }
 }
 
 // Función para mostrar mensajes de error
+// Función para mostrar mensajes de error
 function showErrorMessage(message) {
   ContErrorOConfirm.style.display = 'flex';
   errorOConfirm.innerHTML = message;
 }
 
+// Función para crear un elemento del DOM
+function createElement(tagElem, atributos = {}, clas = []) {
 // Función para crear un elemento del DOM
 function createElement(tagElem, atributos = {}, clas = []) {
   const element = document.createElement(tagElem);
