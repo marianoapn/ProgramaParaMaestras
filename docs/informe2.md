@@ -10,13 +10,7 @@
 - **UsuMaestra4:** El sistema debe permitir a los usuarios maestra vincular una clase a las unidades curriculares correspondientes de ANEP. Prioridad (""Alta"")
 - **UsuMaestra5:** El sistema debe permitir a los usuarios maestra agregar a un calendario los planes de clase. Prioridad (""Alta"")
 - **UsuMaestra7:** El sistema debe permitir a las maestras asignar unidades curriculares personalizadas para cada alumno. Prioridad (""Media"")
-### Clases del Dominio
 
-- **Clase Calendar:** la diseñamos para gestionar todo lo relacionado con el calendario. Su función principal es generar los días del mes, actualizar el calendario cuando seleccionamos un día y reflejar esos cambios en la interfaz de usuario. La ventaja de tener esta lógica dentro de una clase es que centraliza el manejo del calendario en un solo lugar, evitando que tengamos que repetir código en distintas partes de la aplicación. Además, al pasarle un renderCallback, podemos agregar funcionalidad extra cada vez que seleccionamos un día, como cargar las lecciones correspondientes. Esto le otorga flexibilidad y nos facilita adaptarla a nuevas necesidades. Así, si necesitamos modificar o ampliar el calendario en el futuro, podemos hacerlo sin complicaciones.
-
-- **Clase Lesson:** la creamos con el fin de organizar las lecciones de manera estructurada. Cada lección tiene propiedades definidas, como el tema, la descripción, la unidad curricular y un identificador único (id). Esto facilita el manejo de las lecciones y nos permite acceder a ellas de manera ordenada. Además, dentro de la clase tenemos métodos como editLesson y deleteLesson que nos permiten modificar o eliminar lecciones sin necesidad de modificar los datos directamente. Esto nos ayuda a mantener el código limpio y organizado, y a evitar duplicación de lógica en otras partes de la aplicación. Si en el futuro necesitamos agregar nuevas funcionalidades a las lecciones, podemos hacerlo sin afectar el resto del sistema.
-
-- **Archivo main.js:** actúa como el punto central que integra todas las partes del sistema. Es el encargado de gestionar los eventos de la interfaz de usuario: la selección de días en el calendario, la adición y edición de lecciones, y la carga de datos externos, como las unidades curriculares. Este archivo se encarga de hacer que las clases Calendar y Lesson se comuniquen con la UI de manera eficiente, sin que estén directamente acopladas entre sí. Si no tuviéramos este archivo, el código se dispersaría y sería difícil de mantener. Gracias a main.js, podemos manejar todos los eventos y actualizaciones de la interfaz de forma organizada y asegurarnos de que cada acción se ejecute correctamente.
 
 ### Librerías externas
 
@@ -95,16 +89,68 @@ captura de wave, texto introductorio
 ## Codificación
 
 clases del domi, con mas introduccion
+### Clases del Dominio
 
-### Estándares de codificación -- juntar
+- **Clase Calendar:** la diseñamos para gestionar todo lo relacionado con el calendario. Su función principal es generar los días del mes, actualizar el calendario cuando seleccionamos un día y reflejar esos cambios en la interfaz de usuario. La ventaja de tener esta lógica dentro de una clase es que centraliza el manejo del calendario en un solo lugar, evitando que tengamos que repetir código en distintas partes de la aplicación. Además, al pasarle un renderCallback, podemos agregar funcionalidad extra cada vez que seleccionamos un día, como cargar las lecciones correspondientes. Esto le otorga flexibilidad y nos facilita adaptarla a nuevas necesidades. Así, si necesitamos modificar o ampliar el calendario en el futuro, podemos hacerlo sin complicaciones.
 
+- **Clase Lesson:** la creamos con el fin de organizar las lecciones de manera estructurada. Cada lección tiene propiedades definidas, como el tema, la descripción, la unidad curricular y un identificador único (id). Esto facilita el manejo de las lecciones y nos permite acceder a ellas de manera ordenada. Además, dentro de la clase tenemos métodos como editLesson y deleteLesson que nos permiten modificar o eliminar lecciones sin necesidad de modificar los datos directamente. Esto nos ayuda a mantener el código limpio y organizado, y a evitar duplicación de lógica en otras partes de la aplicación. Si en el futuro necesitamos agregar nuevas funcionalidades a las lecciones, podemos hacerlo sin afectar el resto del sistema.
+
+- **Archivo main.js:** actúa como el punto central que integra todas las partes del sistema. Es el encargado de gestionar los eventos de la interfaz de usuario: la selección de días en el calendario, la adición y edición de lecciones, y la carga de datos externos, como las unidades curriculares. Este archivo se encarga de hacer que las clases Calendar y Lesson se comuniquen con la UI de manera eficiente, sin que estén directamente acopladas entre sí. Si no tuviéramos este archivo, el código se dispersaría y sería difícil de mantener. Gracias a main.js, podemos manejar todos los eventos y actualizaciones de la interfaz de forma organizada y asegurarnos de que cada acción se ejecute correctamente.
+
+### Estándares de codificación y Análisis estático de código 
+
+#### Estandares de ESLint (análisis de calidad del código) 
+- Advertencia por variables no utilizadas: Genera una advertencia cuando se definen variables que no se usan en el código.
+
+- Advertencia por variables no definidas: Genera una advertencia cuando se hace referencia a variables no definidas en el código.
+
+- Punto y coma al final de las declaraciones: Exige que todas las declaraciones terminen con un punto y coma.
+
+- Comillas simples en lugar de comillas dobles: Exige que se usen comillas simples para las cadenas de texto, en lugar de comillas dobles.
+
+- Uso de llaves en todas las estructuras de control: Exige que todas las estructuras de control (como if, for, etc.) usen llaves, incluso si tienen solo una línea.
+
+- Advertencia por uso de console.log(): Genera una advertencia si se utiliza console.log(), que debe evitarse en producción.
+
+- Advertencia por uso de debugger: Genera una advertencia si se utiliza la declaración debugger, que debe evitarse en producción.
+
+- Indentación de 2 espacios: Exige una indentación de 2 espacios para el código, evitando el uso de tabulaciones o más espacios.
+
+- Advertencia por números mágicos: Genera una advertencia si se usan números "mágicos" (números sin un significado claro), exceptuando los números 0, 1 y 2.
+
+- Uso de const en lugar de let: Exige que se use const para las variables que no se reasignan, para mayor claridad.
+
+- Valor de retorno consistente en funciones: Exige que las funciones tengan un valor de retorno consistente (o siempre devuelvan algo, o nunca lo hagan).
+
+- Prohibición de espacios al final de las líneas: Genera un error si hay espacios innecesarios al final de una línea.
+
+- Uso de notación camelCase: Exige que las variables y funciones se escriban en notación camelCase (la primera palabra en minúsculas y las siguientes con mayúsculas).
+
+- Prohibición del uso de var: Prohíbe el uso de var para declarar variables, en favor de let o const.
+
+#### Estandares de Prettier (formateo de código) 
+- Punto y coma al final de las declaraciones: Exige que se usen puntos y coma al final de cada declaración.
+
+- Comillas simples en lugar de comillas dobles: Exige que se utilicen comillas simples en las cadenas de texto, en lugar de comillas dobles.
+
+- Comas finales en objetos y arrays (solo en ES5+): Exige que se pongan comas al final de los elementos en objetos y arrays, pero solo si la versión de ECMAScript soporta esta característica (ES5+).
+
+- Paréntesis alrededor de los parámetros de funciones flecha: Exige que las funciones flecha tengan paréntesis alrededor de sus parámetros, incluso si solo tienen uno.
+
+#### Estandares generales  (convenciones de nomenclatura y estilo) 
+
+- Código en inglés: Se debe escribir todo el código en inglés para garantizar la comprensión global y facilitar la colaboración.
+
+- Funciones, variables y constantes en JavaScript:
+	 - Las funciones, variables y constantes deben escribirse en camelCase. Esto significa que la primera palabra debe estar en minúscula y, en caso de que haya más de una palabra, la primera letra de la siguiente palabra debe ir en mayúscula
+
+	- Nombre de IDs y clases HTML: Las palabras deben separarse por guiones medios (-), y todo debe estar en minúscula 
 
 
 ### Buenas prácticas de OOP
 
 separar interfaz, explicarlo
 
-### Análisis estático de código --juntar
 
 ## Test unitario
 

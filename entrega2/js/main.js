@@ -150,7 +150,7 @@ function populateCurriculumDropdown() {
 
   const emptyOption = createElemento('option', {
     value: '',
-    textContent: 'Seleccione una unidad curricular',
+    textContent: 'Seleccione una unidad curricular'
   });
   curriculumSelect.appendChild(emptyOption);
 
@@ -455,8 +455,7 @@ function populateEditForm(id) {
 =======
     document.getElementById('edit-topic').value = lesson.topic;
     document.getElementById('edit-description').value = lesson.description;
-    document.getElementById('edit-curriculum-unit').value =
-      lesson.curriculumUnit;
+    document.getElementById('edit-curriculum-unit').value = lesson.curriculumUnit;
     populateStudentsDropdown('edit-students-asignados');
 
     editModal.style.display = 'flex';
