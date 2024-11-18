@@ -30,11 +30,11 @@
           <h3 id="selected-date" class="text-center"></h3>
           <form id="class-form" class="form-group">
             <div class="mb-3">
-              <label for="topic">Tema</label>
+              <label for="topic">Tema*</label>
               <input type="text" id="topic" class="form-control" required />
             </div>
             <div class="mb-3">
-              <label for="description">Descripción</label>
+              <label for="description">Descripción*</label>
               <textarea
                 id="description"
                 class="form-control"
@@ -43,49 +43,61 @@
               ></textarea>
             </div>
             <div class="mb-3">
-              <label for="edit-curriculum-unit">Unidad Curricular</label>
-              <select
-                id="edit-curriculum-unit"
-                class="form-control"
-                required
-              ></select>
+              <label for="curriculum-unit">Unidad Curricular*</label>
+              <select id="curriculum-unit" class="form-control" required></select>
             </div>
             <div class="mb-3">
-              <label for="edit-students-asignados">Estudiantes asignados</label>
-              <div class="dropdown">
-                <button
-                  class="btn btn-secondary dropdown-toggle"
-                  type="button"
-                  id="edit-dropdownMenuButton"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Seleccione los estudiantes
-                </button>
-                <ul
-                  class="dropdown-menu"
-                  aria-labelledby="dropdownMenuButton"
-                  id="edit-students-asignados"
-                >
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      <div class="form-check">
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          value=""
-                          required
-                          id="edit-select-all"
-                        />
-                        <label class="form-check-label" for="select-all"
-                          >Seleccionar Todos</label
-                        >
-                      </div>
-                    </a>
-                  </li>
-                  <li><hr class="dropdown-divider" /></li>
-                </ul>
+              <span for="students-asignados">Estudiantes asignados*</span>
+              <div
+                  id="students-asignados"
+                  class="checkbox-dropdown"
+                  aria-labelledby="students-asignados"
+                ></div>
               </div>
+            <button type="submit" class="btn btn-primary">Agregar Plan</button>
+          </form>
+        </div>
+      </div>
+      <div id="container-lesson"></div>
+      <div id="edit-modal" class="modal" style="display: none">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <span class="close-button buttom-cursor">&times;</span>
+            <h3 class="text-center">Editar Plan de Clase</h3>
+            <form id="edit-form" class="form-group">
+              <div class="mb-3">
+                <label for="edit-topic">Tema</label>
+                <input
+                  type="text"
+                  id="edit-topic"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="edit-description">Descripción</label>
+                <textarea
+                  id="edit-description"
+                  class="form-control"
+                  rows="8"
+                  required
+                ></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="edit-curriculum-unit">Unidad Curricular</label>
+                <select
+                  id="edit-curriculum-unit"
+                  class="form-control"
+                  required
+                ></select>
+              </div>
+              <div class="mb-3">
+                <span for="edit-students-asignados">Estudiantes asignados</span>
+                <div
+                id="edit-students-asignados"
+                class="checkbox-dropdown"
+                aria-labelledby="edit-students-asignados"
+              ></div>
             </div>
 
             <button type="submit" class="btn btn-primary">

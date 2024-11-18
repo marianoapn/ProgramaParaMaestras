@@ -8,6 +8,30 @@ class Lesson {
     this.studentAsignado = studentAsignado;
   }
 
+  getId() {
+    return this.id;
+  }
+
+  getDate() {
+    return this.date;
+  }
+
+  getTopic() {
+    return this.topic;
+  }
+
+  getDescription() {
+    return this.description;
+  }
+
+  getCurriculumUnit() {
+    return this.curriculumUnit;
+  }
+
+  getStudentAsignado() {
+    return this.studentAsignado;
+  }
+
   // Método para editar una lección
   editLesson(topic, description, curriculumUnit, studentAsignado) {
     this.topic = topic;
