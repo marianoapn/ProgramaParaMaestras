@@ -18,7 +18,7 @@ class Lesson {
 
   // Método para eliminar una lección
   deleteLesson(lessonsArray) {
-      return lessonsArray.filter((lesson) => lesson.id !== this.id);
+    return lessonsArray.filter((lesson) => lesson.id !== this.id);
   }
 }
 

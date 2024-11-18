@@ -14,144 +14,103 @@
   </head>
 
   <body>
-    <div class="container mt-5 bg-white p-4 shadow-sm rounded">
-      <h1 class="text-center">Planificación de Clases</h1>
-      <div class="d-flex justify-content-between align-items-center mb-3">
-        <button id="prev-month" class="btn btn-primary">Anterior</button>
-        <h2 id="calendar-title" class="text-center"></h2>
-        <button id="next-month" class="btn btn-primary">Siguiente</button>
-      </div>
-      <div id="calendar" class="calendar-container mb-4"></div>
-      <div id="form-section" style="display: none">
-        <h3 id="selected-date" class="text-center"></h3>
-        <form id="class-form" class="form-group">
-          <div class="mb-3">
-            <label for="topic">Tema</label>
-            <input type="text" id="topic" class="form-control" required />
-          </div>
-          <div class="mb-3">
-            <label for="description">Descripción</label>
-            <textarea
-              id="description"
-              class="form-control"
-              rows="8"
-              required
-            ></textarea>
-          </div>
-          <div class="mb-3">
-            <label for="curriculum-unit">Unidad Curricular</label>
-            <select id="curriculum-unit" class="form-control" required></select>
-          </div>
-
-          <div class="mb-3">
-            <label for="students-asignados">Estudiantes asignados</label>
-            <div class="dropdown">
-              <button
-                class="btn btn-primary"
-                type="button"
-                id="dropdownMenuButton"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Seleccione los estudiantes
-              </button>
-              <ul
-                class="dropdown-menu"
-                aria-labelledby="dropdownMenuButton"
-                id="students-asignados"
-              ></ul>
-            </div>
-          </div>
-
-          <button type="submit" class="btn btn-primary">Agregar Plan</button>
-        </form>
-      </div>
-    </div>
-    <div id="container-lesson"></div>
-    <div id="edit-modal" class="modal" style="display: none">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <span class="close-button buttom-cursor">&times;</span>
-          <h3 class="text-center">Editar Plan de Clase</h3>
-          <form id="edit-form" class="form-group">
+    <main>
+      <div class="container mt-5 bg-white p-4 shadow-sm rounded">
+        <h1 class="text-center">Planificación de Clases</h1>
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <button id="prev-month" class="btn btn-primary">Anterior</button>
+          <h2 id="calendar-title" class="text-center"></h2>
+          <button id="next-month" class="btn btn-primary">Siguiente</button>
+        </div>
+        <div id="calendar" class="calendar-container mb-4"></div>
+        <div id="form-section" style="display: none">
+          <h3 id="selected-date" class="text-center"></h3>
+          <form id="class-form" class="form-group">
             <div class="mb-3">
-              <label for="edit-topic">Tema</label>
-              <input
-                type="text"
-                id="edit-topic"
-                class="form-control"
-                required
-              />
+              <label for="topic">Tema</label>
+              <input type="text" id="topic" class="form-control" required />
             </div>
             <div class="mb-3">
-              <label for="edit-description">Descripción</label>
+              <label for="description">Descripción</label>
               <textarea
-                id="edit-description"
+                id="description"
                 class="form-control"
                 rows="8"
                 required
               ></textarea>
             </div>
             <div class="mb-3">
-              <label for="edit-curriculum-unit">Unidad Curricular</label>
-              <select
-                id="edit-curriculum-unit"
-                class="form-control"
-                required
-              ></select>
+              <label for="curriculum-unit">Unidad Curricular</label>
+              <select id="curriculum-unit" class="form-control" required></select>
             </div>
-
             <div class="mb-3">
-              <label for="edit-students-asignados">Estudiantes asignados</label>
-              <div class="dropdown">
-                <button
-                  class="btn btn-primary"
-                  type="button"
-                  id="edit-dropdownMenuButton"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Seleccione los estudiantes
-                </button>
-                <ul
-                  class="dropdown-menu"
-                  aria-labelledby="dropdownMenuButton"
-                  id="edit-students-asignados"
-                >
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      <div class="form-check">
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          value=""
-                          required
-                          id="edit-select-all"
-                        />
-                        <label class="form-check-label" for="select-all"
-                          >Seleccionar Todos</label
-                        >
-                      </div>
-                    </a>
-                  </li>
-                  <li><hr class="dropdown-divider" /></li>
-                </ul>
+              <span for="students-asignados">Estudiantes asignados</span>
+              <div
+                  id="students-asignados"
+                  class="checkbox-dropdown"
+                  aria-labelledby="students-asignados"
+                ></div>
               </div>
-            </div>
-
-            <button type="submit" class="btn btn-primary">
-              Actualizar Plan
-            </button>
+            <button type="submit" class="btn btn-primary">Agregar Plan</button>
           </form>
         </div>
       </div>
-    </div>
-    <div id="container-error-confirm" class="modal" style="display: none">
-      <div class="w-50 m-4 bg-white p-3 shadow-sm rounded">
-        <span class="close-button-error buttom-cursor">&times;</span>
-        <div class="text-center" id="error-confirm"></div>
+      <div id="container-lesson"></div>
+      <div id="edit-modal" class="modal" style="display: none">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <span class="close-button buttom-cursor">&times;</span>
+            <h3 class="text-center">Editar Plan de Clase</h3>
+            <form id="edit-form" class="form-group">
+              <div class="mb-3">
+                <label for="edit-topic">Tema</label>
+                <input
+                  type="text"
+                  id="edit-topic"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="edit-description">Descripción</label>
+                <textarea
+                  id="edit-description"
+                  class="form-control"
+                  rows="8"
+                  required
+                ></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="edit-curriculum-unit">Unidad Curricular</label>
+                <select
+                  id="edit-curriculum-unit"
+                  class="form-control"
+                  required
+                ></select>
+              </div>
+              <div class="mb-3">
+                <span for="edit-students-asignados">Estudiantes asignados</span>
+                <div
+                id="edit-students-asignados"
+                class="checkbox-dropdown"
+                aria-labelledby="edit-students-asignados"
+              ></div>
+            </div>
+              <button type="submit" class="btn btn-primary">
+                Actualizar Plan
+              </button>
+            </form>
+          </div>
+        </div>
       </div>
-    </div>
+      <div id="container-error-confirm" class="modal" style="display: none">
+        <div class="w-50 m-4 bg-white p-3 shadow-sm rounded">
+          <span class="close-button-error buttom-cursor">&times;</span>
+          <div class="text-center" id="error-confirm"></div>
+        </div>
+      </div>
+    </main>
+     
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
