@@ -47,8 +47,7 @@ fetch('data/curriculum_units.json')
   .then((data) => {
     curriculumUnits = data;
     populateCurriculumDropdown();
-  })
-  .catch((error) => console.error('Error al cargar las unidades:', error));
+  });
 
 // Cargar alumnos desde un archivo JSON
 function loadAlumnos() {
@@ -57,8 +56,7 @@ function loadAlumnos() {
     .then((data) => {
       studentList = data;
       populateStudentsDropdown('students-asignados');
-    })
-    .catch((error) => console.error('Error al cargar los estudiantes', error));
+    });
 }
 
 function getSelectedStudents(id) {
@@ -282,9 +280,9 @@ editForm.onsubmit = (event) => {
   const lessonIndex = lessons.findIndex((l) => l.id === id);
 
   const selectedStudents = getSelectedStudents('edit-students-asignados');
-
+  const validIndex = -1;
   if (selectedStudents.length > 0) {
-    if (lessonIndex !== -1) {
+    if (lessonIndex !== validIndex) {
       lessons[lessonIndex].editLesson(
         document.getElementById('edit-topic').value,
         document.getElementById('edit-description').value,
