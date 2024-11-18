@@ -95,61 +95,22 @@ function populateDropdown(selectId, items, getItemLabel, getItemValue) {
 
 // Función para poblar el dropdown de unidades curriculares
 function populateCurriculumDropdown() {
-  const curriculumUnits = uiController.getCurriculumUnits();
-  populateDropdown(
-    'curriculum-unit',
-    curriculumUnits,
-    (unit) => unit.name,
-    (unit) => unit.id
-  );
-  populateDropdown(
-    'edit-curriculum-unit',
-    curriculumUnits,
-    (unit) => unit.name,
-    (unit) => unit.id
-  );
-}
+  const curriculumSelect = document.getElementById('curriculum-unit');
+  const editCurriculumSelect = document.getElementById('edit-curriculum-unit');
 
-// Función para poblar el dropdown de estudiantes
-function populateStudentsDropdown(id) {
-  const students = uiController.getStudentsList();
+  curriculumSelect.innerHTML = '';
+  editCurriculumSelect.innerHTML = '';
 
-  // Crear checkbox para "Seleccionar Todos"
-  const selectAllCheckbox = createElement('input', {
-    type: 'checkbox',
-    id: `${id}-select-all`,
+  const emptyOption = createElemento('option', {
+    value: '',
+    textContent: 'Seleccione una unidad curricular'
   });
-  const selectAllLabel = createElement('label', {
-    for: `${id}-select-all`,
-    textContent: 'Toda la clase',
-  });
+  curriculumSelect.appendChild(emptyOption);
 
-  const selectAllContainer = createElement('div', {}, [
-    'checkbox-dropdown-item',
-  ]);
-  selectAllContainer.appendChild(selectAllCheckbox);
-  selectAllContainer.appendChild(selectAllLabel);
-
-  const studentSelect = document.getElementById(id);
-  studentSelect.innerHTML = '';
-  studentSelect.appendChild(selectAllContainer);
-
-  // Evento para manejar "Seleccionar Todos"
-  selectAllCheckbox.addEventListener('change', () => {
-    const checkboxes = studentSelect.querySelectorAll(
-      'input[type="checkbox"]:not(#' + `${id}-select-all` + ')'
-    );
-    checkboxes.forEach((checkbox) => {
-      checkbox.checked = selectAllCheckbox.checked;
-    });
-  });
-
-  // Crear checkbox para cada estudiante
-  students.forEach((student) => {
-    const studentCheckbox = createElement('input', {
-      id: `${id}-student-${student.id}`,
-      type: 'checkbox',
-      value: student.id,
+  curriculumUnits.forEach((unit) => {
+    const option = createElemento('option', {
+      value: unit.id,
+      textContent: unit.name,
     });
     const studentLabel = createElement('label', {
       for: `${id}-student-${student.id}`,
@@ -246,10 +207,9 @@ classForm.onsubmit = (event) => {
 function populateEditForm(id) {
   const lesson = uiController.getLessonsById(id);
   if (lesson) {
-    document.getElementById('edit-topic').value = lesson.getTopic();
-    document.getElementById('edit-description').value = lesson.getDescription();
-    document.getElementById('edit-curriculum-unit').value =
-      lesson.getCurriculumUnit();
+    document.getElementById('edit-topic').value = lesson.topic;
+    document.getElementById('edit-description').value = lesson.description;
+    document.getElementById('edit-curriculum-unit').value = lesson.curriculumUnit;
     populateStudentsDropdown('edit-students-asignados');
 
     editModal.style.display = 'flex';
