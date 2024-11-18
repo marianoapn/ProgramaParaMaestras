@@ -34,7 +34,6 @@ class Calendar {
     }
   }
 
-
   // Método para seleccionar un día
   selectDay(day) {
     this.selectedDay = day;
@@ -50,4 +49,3 @@ class Calendar {
 }
 // Exporta la clase Calendar para poder usarla en otro archivo
 export default Calendar;
-

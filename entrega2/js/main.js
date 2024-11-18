@@ -61,7 +61,6 @@ function loadAlumnos() {
     .catch((error) => console.error('Error al cargar los estudiantes', error));
 }
 
-//returna
 function getSelectedStudents(id) {
   const selectedStudents = Array.from(
     document.querySelectorAll('#' + id + ' input[type="checkbox"]:checked')
@@ -113,13 +112,17 @@ function populateLessonsList(day) {
         ? lesson.description.substring(0, maxDescriptionLength) + '...'
         : lesson.description;
 
-    // Obtener los nombres de los estudiantes asignados
-    const studentNames = lesson.studentAsignado
+    let studentNames = lesson.studentAsignado
       .map((studentId) => {
         const student = studentList.find((s) => s.id == studentId);
         return student ? student.name : 'Desconocido';
       })
       .join(', ');
+
+    // Verificar si contiene 'Desconocido' y asignar 'Toda la clase' si es el caso
+    if (studentNames.includes('Desconocido')) {
+      studentNames = 'Toda la clase';
+    }
 
     const div = createElemento('div', { id: 'lesson-list' }, [
       'container',
@@ -151,81 +154,59 @@ function populateLessonsList(day) {
   });
 }
 
-// Función para llenar el menú de estudiantes
 function populateStudentsDropdown(id) {
   const studentSelect = document.getElementById(id);
 
   // Limpiar el dropdown antes de agregar los nuevos elementos
   studentSelect.innerHTML = '';
 
-  //checkbox de seleccion todos
-  const selectAllLi = createElemento('li');
+  // Agregar el checkbox de "Seleccionar Todos"
   const selectAllCheckbox = createElemento('input', {
     type: 'checkbox',
-    id: 'select-all',
+    id: `${id}-select-all`,
   });
   const selectAllLabel = createElemento('label', {
-    for: 'select-all',
-    textContent: 'Seleccionar Todos',
+    for: `${id}-select-all`,
+    textContent: 'Toda la clase',
   });
 
-  allCheckStudents(selectAllCheckbox, id);
+  const selectAllContainer = createElemento('div', {}, [
+    'checkbox-dropdown-item',
+  ]);
+  selectAllContainer.appendChild(selectAllCheckbox);
+  selectAllContainer.appendChild(selectAllLabel);
 
-  const selectAllContainer = createElemento('a', {}, ['dropdown-item']);
+  studentSelect.appendChild(selectAllContainer);
 
-  const selectAllFormCheck = createElemento('div', {}, ['form-check']);
-
-  selectAllFormCheck.appendChild(selectAllCheckbox);
-  selectAllFormCheck.appendChild(selectAllLabel);
-  selectAllContainer.appendChild(selectAllFormCheck);
-  selectAllLi.appendChild(selectAllContainer);
-  studentSelect.appendChild(selectAllLi);
+  // Evento para manejar "Seleccionar Todos"
+  selectAllCheckbox.addEventListener('change', () => {
+    const checkboxes = studentSelect.querySelectorAll(
+      'input[type="checkbox"]:not(#' + `${id}-select-all` + ')'
+    );
+    checkboxes.forEach((checkbox) => {
+      checkbox.checked = selectAllCheckbox.checked;
+    });
+  });
 
   // Crear los checkboxes para los estudiantes
-  const liElements = checkboxeStudents();
-
-  liElements.forEach((li) => {
-    studentSelect.appendChild(li);
-  });
-}
-
-//funcion para seleccionar todos los estudiantes
-function allCheckStudents(elementbox, id) {
-  elementbox.addEventListener('change', () =>
-    toggleSelectAll(elementbox.checked, id)
-  );
-}
-
-// Crear los checkboxes para los estudiantes
-function checkboxeStudents() {
-  return studentList.map((student) => {
-    const li = createElemento('li', {}, ['dropdown-item']);
-    const checkbox = createElemento('input', {
-      id: `student-${student.id}`,
+  studentList.forEach((student) => {
+    const studentCheckbox = createElemento('input', {
+      id: `${id}-student-${student.id}`,
       type: 'checkbox',
-      name: 'students',
       value: student.id,
     });
-    const label = createElemento('label', {
-      for: `student-${student.id}`,
+    const studentLabel = createElemento('label', {
+      for: `${id}-student-${student.id}`,
       textContent: student.name,
     });
 
-    // Añadir el checkbox y el label al li
-    li.appendChild(checkbox);
-    li.appendChild(label);
+    const studentContainer = createElemento('div', {}, [
+      'checkbox-dropdown-item',
+    ]);
+    studentContainer.appendChild(studentCheckbox);
+    studentContainer.appendChild(studentLabel);
 
-    return li;
-  });
-}
-
-// Función para manejar el comportamiento de 'Seleccionar Todos'
-function toggleSelectAll(selectAllChecked, id) {
-  const checkboxes = document.querySelectorAll(
-    '#' + id + ' input[type="checkbox"]'
-  );
-  checkboxes.forEach((checkbox) => {
-    checkbox.checked = selectAllChecked;
+    studentSelect.appendChild(studentContainer);
   });
 }
 
@@ -322,10 +303,24 @@ editForm.onsubmit = (event) => {
 function handleDeleteLesson(id) {
   const lesson = lessons.find((lesson) => lesson.id === id);
   if (lesson) {
-    showErrorMessage('¿Estás seguro de que quieres eliminar este plan de clase?');
-    const buttonCancelar = createElemento('button' , {type: 'button', textContent: 'CANCELAR'} , ['btn', 'btn-primary']);
-    const buttonDelete = createElemento('button' , {type: 'button', textContent: 'ACEPTAR'} , ['btn', 'btn-primary']);
-    const divButton = createElemento('div', {}, ['d-flex' , 'justify-content-between' ,'mt-4']);
+    showErrorMessage(
+      '¿Estás seguro de que quieres eliminar este plan de clase?'
+    );
+    const buttonCancelar = createElemento(
+      'button',
+      { type: 'button', textContent: 'CANCELAR' },
+      ['btn', 'btn-primary']
+    );
+    const buttonDelete = createElemento(
+      'button',
+      { type: 'button', textContent: 'ACEPTAR' },
+      ['btn', 'btn-primary']
+    );
+    const divButton = createElemento('div', {}, [
+      'd-flex',
+      'justify-content-between',
+      'mt-4',
+    ]);
     errorOConfirm.appendChild(divButton);
     divButton.appendChild(buttonCancelar);
     divButton.appendChild(buttonDelete);
@@ -341,12 +336,6 @@ function handleDeleteLesson(id) {
         populateLessonsList(calendar.selectedDay);
       }
       ContErrorOConfirm.style.display = 'none';
-      /*const updatedLessons = lesson.deleteLesson(lessons);
-      // Solo actualiza la lista si la longitud cambia, lo que indica que se eliminó un elemento
-      if (updatedLessons.length !== lessons.length) {
-        lessons = updatedLessons;
-        populateLessonsList(calendar.selectedDay);
-      }*/
     };
   }
 }

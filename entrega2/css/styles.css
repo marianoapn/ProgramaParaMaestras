@@ -36,7 +36,7 @@ h3 {
 
 .selected-day {
   background: #007bff;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 #form-section {
@@ -64,4 +64,35 @@ h3 {
 
 .buttom-cursor {
   cursor: pointer;
+}
+
+.checkbox-label {
+  margin-left: 10px;
+}
+
+/* Estilo para el contenedor del dropdown */
+.checkbox-dropdown {
+  border: 1px solid #ced4da;
+  border-radius: 0.375rem;
+  background-color: #fff;
+  padding: 5px;
+  max-height: 200px; /* Altura máxima para la lista */
+  overflow-y: auto; /* Barra de desplazamiento si es necesario */
+}
+
+/* Estilo para cada elemento de la lista */
+.checkbox-dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.checkbox-dropdown-item:hover {
+  background-color: #f8f9fa;
+}
+
+/* Estilo para los checkboxes */
+.checkbox-dropdown input[type="checkbox"] {
+  margin-right: 10px;
 }
