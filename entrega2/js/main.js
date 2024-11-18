@@ -1,7 +1,10 @@
 import Calendar from './calendar.js'; // Importa la clase Calendar
 import Controller from './uiController.js'; // Importa el Controller
+<<<<<<< HEAD
 import Calendar from './calendar.js'; // Importa la clase Calendar
 import Controller from './uiController.js'; // Importa el Controller
+=======
+>>>>>>> 0d67d21 (Cambios finales en el codigo)
 
 // Instanciación de elementos de la UI
 const calendarElement = document.getElementById('calendar');
@@ -19,16 +22,22 @@ const containerLesson = document.getElementById('container-lesson');
 const uiController = new Controller();
 
 // Inicializar el calendario
+<<<<<<< HEAD
 // Instanciación del Controller
 const uiController = new Controller();
 
 // Inicializar el calendario
+=======
+>>>>>>> 0d67d21 (Cambios finales en el codigo)
 const calendar = new Calendar(
   calendarElement,
   selectedDateElement,
   (selectedDay) => {
     populateLessonsList(selectedDay); // Poblar la lista de lecciones al seleccionar un día
+<<<<<<< HEAD
     populateLessonsList(selectedDay); // Poblar la lista de lecciones al seleccionar un día
+=======
+>>>>>>> 0d67d21 (Cambios finales en el codigo)
   }
 );
 calendar.renderCalendar();
@@ -44,6 +53,7 @@ async function init() {
 
 init();
 
+<<<<<<< HEAD
 // Cargar datos de unidades curriculares y alumnos
 async function init() {
   await uiController.loadUnits(); // Cargar unidades curriculares
@@ -59,22 +69,36 @@ init();
 document.getElementById('prev-month').onclick = () => {
   calendar.currentDate.setMonth(calendar.currentDate.getMonth() - 1); // Retroceder un mes
   calendar.currentDate.setMonth(calendar.currentDate.getMonth() - 1); // Retroceder un mes
+=======
+// Controladores de los botones de navegación de mes
+document.getElementById('prev-month').onclick = () => {
+  calendar.currentDate.setMonth(calendar.currentDate.getMonth() - 1); // Retroceder un mes
+>>>>>>> 0d67d21 (Cambios finales en el codigo)
   calendar.renderCalendar();
 };
 
 document.getElementById('next-month').onclick = () => {
   calendar.currentDate.setMonth(calendar.currentDate.getMonth() + 1); // Avanzar un mes
+<<<<<<< HEAD
   calendar.currentDate.setMonth(calendar.currentDate.getMonth() + 1); // Avanzar un mes
+=======
+>>>>>>> 0d67d21 (Cambios finales en el codigo)
   calendar.renderCalendar();
 };
 
 // Función para obtener los estudiantes seleccionados
+<<<<<<< HEAD
 // Función para obtener los estudiantes seleccionados
 function getSelectedStudents(id) {
   return Array.from(
     document.querySelectorAll(`#${id} input[type="checkbox"]:checked`)
   return Array.from(
     document.querySelectorAll(`#${id} input[type="checkbox"]:checked`)
+=======
+function getSelectedStudents(id) {
+  return Array.from(
+    document.querySelectorAll(`#${id} input[type="checkbox"]:checked`)
+>>>>>>> 0d67d21 (Cambios finales en el codigo)
   ).map((checkbox) => checkbox.value);
 }
 
@@ -82,6 +106,7 @@ function getSelectedStudents(id) {
 function populateDropdown(selectId, items, getItemLabel, getItemValue) {
   const selectElement = document.getElementById(selectId);
   selectElement.innerHTML = '';
+<<<<<<< HEAD
 
   // Opción predeterminada
   const emptyOption = createElement('option', {
@@ -103,21 +128,86 @@ function populateDropdown(selectId, items, getItemLabel, getItemValue) {
 function populateCurriculumDropdown() {
   const curriculumSelect = document.getElementById('curriculum-unit');
   const editCurriculumSelect = document.getElementById('edit-curriculum-unit');
+=======
+>>>>>>> 0d67d21 (Cambios finales en el codigo)
 
-  curriculumSelect.innerHTML = '';
-  editCurriculumSelect.innerHTML = '';
-
-  const emptyOption = createElemento('option', {
+  // Opción predeterminada
+  const emptyOption = createElement('option', {
     value: '',
     textContent: 'Seleccione una unidad curricular'
   });
-  curriculumSelect.appendChild(emptyOption);
+  selectElement.appendChild(emptyOption);
 
-  curriculumUnits.forEach((unit) => {
-    const option = createElemento('option', {
-      value: unit.id,
-      textContent: unit.name,
+  items.forEach((item) => {
+    const option = createElement('option', {
+      value: getItemValue(item),
+      textContent: getItemLabel(item),
     });
+<<<<<<< HEAD
+=======
+    selectElement.appendChild(option);
+  });
+}
+
+// Función para poblar el dropdown de unidades curriculares
+function populateCurriculumDropdown() {
+  const curriculumUnits = uiController.getCurriculumUnits();
+  populateDropdown(
+    'curriculum-unit',
+    curriculumUnits,
+    (unit) => unit.name,
+    (unit) => unit.id
+  );
+  populateDropdown(
+    'edit-curriculum-unit',
+    curriculumUnits,
+    (unit) => unit.name,
+    (unit) => unit.id
+  );
+}
+
+// Función para poblar el dropdown de estudiantes
+function populateStudentsDropdown(id) {
+  const students = uiController.getStudentsList();
+
+  // Crear checkbox para "Seleccionar Todos"
+  const selectAllCheckbox = createElement('input', {
+    type: 'checkbox',
+    id: `${id}-select-all`,
+  });
+  const selectAllLabel = createElement('label', {
+    for: `${id}-select-all`,
+    textContent: 'Toda la clase',
+  });
+
+  const selectAllContainer = createElement('div', {}, [
+    'checkbox-dropdown-item',
+  ]);
+  selectAllContainer.appendChild(selectAllCheckbox);
+  selectAllContainer.appendChild(selectAllLabel);
+
+  const studentSelect = document.getElementById(id);
+  studentSelect.innerHTML = '';
+  studentSelect.appendChild(selectAllContainer);
+
+  // Evento para manejar "Seleccionar Todos"
+  selectAllCheckbox.addEventListener('change', () => {
+    const checkboxes = studentSelect.querySelectorAll(
+      'input[type="checkbox"]:not(#' + `${id}-select-all` + ')'
+    );
+    checkboxes.forEach((checkbox) => {
+      checkbox.checked = selectAllCheckbox.checked;
+    });
+  });
+
+  // Crear checkbox para cada estudiante
+  students.forEach((student) => {
+    const studentCheckbox = createElement('input', {
+      id: `${id}-student-${student.id}`,
+      type: 'checkbox',
+      value: student.id,
+    });
+>>>>>>> 0d67d21 (Cambios finales en el codigo)
     const studentLabel = createElement('label', {
       for: `${id}-student-${student.id}`,
       textContent: student.name,
@@ -195,8 +285,11 @@ classForm.onsubmit = (event) => {
   if (getSelectedStudents('students-asignados').length > 0) {
     uiController.createLesson(
       uiController.getLessons().length + 1,
+<<<<<<< HEAD
     uiController.createLesson(
       uiController.getLessons().length + 1,
+=======
+>>>>>>> 0d67d21 (Cambios finales en el codigo)
       calendar.selectedDay,
       document.getElementById('topic').value,
       document.getElementById('description').value,
@@ -213,11 +306,19 @@ classForm.onsubmit = (event) => {
 // Función para llenar el formulario de edición
 function populateEditForm(id) {
   const lesson = uiController.getLessonsById(id);
+<<<<<<< HEAD
   const lesson = uiController.getLessonsById(id);
   if (lesson) {
     document.getElementById('edit-topic').value = lesson.topic;
     document.getElementById('edit-description').value = lesson.description;
     document.getElementById('edit-curriculum-unit').value = lesson.curriculumUnit;
+=======
+  if (lesson) {
+    document.getElementById('edit-topic').value = lesson.getTopic();
+    document.getElementById('edit-description').value = lesson.getDescription();
+    document.getElementById('edit-curriculum-unit').value =
+      lesson.getCurriculumUnit();
+>>>>>>> 0d67d21 (Cambios finales en el codigo)
     populateStudentsDropdown('edit-students-asignados');
 
     editModal.style.display = 'flex';
@@ -231,7 +332,6 @@ closeButton.onclick = () => {
 };
 
 // Cerrar error
-// Cerrar error
 closeButtonError.onclick = () => {
   ContErrorOConfirm.style.display = 'none';
 };
@@ -242,19 +342,9 @@ editForm.onsubmit = (event) => {
 
   const id = parseInt(editModal.dataset.id);
   const lessonIndex = uiController.getLessonIndexById(id);
-  const lessonIndex = uiController.getLessonIndexById(id);
 
   const selectedStudents = getSelectedStudents('edit-students-asignados');
   if (selectedStudents.length > 0) {
-    uiController.editLessonByIndex(
-      lessonIndex,
-      document.getElementById('edit-topic').value,
-      document.getElementById('edit-description').value,
-      document.getElementById('edit-curriculum-unit').value,
-      selectedStudents
-    );
-    populateLessonsList(calendar.selectedDay);
-    editModal.style.display = 'none';
     uiController.editLessonByIndex(
       lessonIndex,
       document.getElementById('edit-topic').value,
@@ -272,24 +362,20 @@ editForm.onsubmit = (event) => {
 // Función para eliminar una lección
 function handleDeleteLesson(id) {
   const lesson = uiController.getLessonsById(id);
-  const lesson = uiController.getLessonsById(id);
   if (lesson) {
     showErrorMessage(
       '¿Estás seguro de que quieres eliminar este plan de clase?'
     );
-    const buttonCancelar = createElement(
     const buttonCancelar = createElement(
       'button',
       { type: 'button', textContent: 'CANCELAR' },
       ['btn', 'btn-primary']
     );
     const buttonDelete = createElement(
-    const buttonDelete = createElement(
       'button',
       { type: 'button', textContent: 'ACEPTAR' },
       ['btn', 'btn-primary']
     );
-    const divButton = createElement('div', {}, [
     const divButton = createElement('div', {}, [
       'd-flex',
       'justify-content-between',
@@ -305,22 +391,17 @@ function handleDeleteLesson(id) {
     buttonDelete.onclick = () => {
       uiController.deleteLesson(lesson);
       populateLessonsList(calendar.selectedDay);
-      uiController.deleteLesson(lesson);
-      populateLessonsList(calendar.selectedDay);
       ContErrorOConfirm.style.display = 'none';
     };
   }
 }
 
 // Función para mostrar mensajes de error
-// Función para mostrar mensajes de error
 function showErrorMessage(message) {
   ContErrorOConfirm.style.display = 'flex';
   errorOConfirm.innerHTML = message;
 }
 
-// Función para crear un elemento del DOM
-function createElement(tagElem, atributos = {}, clas = []) {
 // Función para crear un elemento del DOM
 function createElement(tagElem, atributos = {}, clas = []) {
   const element = document.createElement(tagElem);
