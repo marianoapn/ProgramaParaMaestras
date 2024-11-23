@@ -23,7 +23,7 @@ describe('Lesson', () => {
     expect(lesson.getTopic()).toBe("Ciencias");
     expect(lesson.getDescription()).toBe("Nueva descripción");
     expect(lesson.getCurriculumUnit()).toBe("Unidad 2");
-    expect(lesson.getCurriculumUnit()).toBe("Pedro Almodovar");
+    expect(lesson.getStudentAsignado()).toBe("Pedro Almodovar");
   });
 
   test('debe eliminar correctamente una lección', () => {

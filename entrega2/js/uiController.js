@@ -11,12 +11,15 @@ class Controller {
     this.setStudentsList([]);
   }
 
-  // Cargar unidades curriculares desde un archivo JSON
   loadUnits() {
     return fetch("data/curriculum_units.json")
       .then((response) => response.json())
       .then((data) => {
         this.#curriculumUnits = data;
+      })
+      .catch((error) => {
+        console.error("Error cargando unidades curriculares:", error);
+        this.#curriculumUnits = [];
       });
   }
 
@@ -24,14 +27,18 @@ class Controller {
     return this.#curriculumUnits;
   }
 
-  // Cargar alumnos desde un archivo JSON
   loadAlumnos() {
     return fetch("data/students.json")
       .then((response) => response.json())
       .then((data) => {
         this.#studentList = data;
-      });
+      })
+      .catch((error) => {
+        console.error("Error cargando unidades curriculares:", error);
+        this.#studentList = [];
+      })
   }
+     
   setStudentsList(studentList) {
     this.#studentList = studentList;
   }
