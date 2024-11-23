@@ -52,7 +52,7 @@ class Controller {
   }
 
   getLessonsByDay(day) {
-    return this.getLessons().filter((lesson) => lesson.date === day);
+    return this.getLessons().filter((lesson) => lesson.getDate() === day);
   }
 
   createLesson(id, date, topic, description, curriculumUnit, studentAsignado) {
@@ -68,12 +68,12 @@ class Controller {
   }
 
   getLessonsById(id) {
-    const lesson = this.getLessons().find((l) => l.id === id);
+    const lesson = this.getLessons().find((l) => l.getId() === id);
     return lesson;
   }
 
   getLessonIndexById(id) {
-    const lessonIndex = this.getLessons().findIndex((l) => l.id === id);
+    const lessonIndex = this.getLessons().findIndex((l) => l.getId() === id);
     return lessonIndex;
   }
 
