@@ -1,5 +1,6 @@
 import Lesson from './lesson.js'; // Importa la clase Lesson desde lesson.js
 
+
 class Controller {
   constructor() {
     this.lessons = [];

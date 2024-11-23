@@ -1,10 +1,5 @@
 import Calendar from './calendar.js'; // Importa la clase Calendar
 import Controller from './uiController.js'; // Importa el Controller
-<<<<<<< HEAD
-import Calendar from './calendar.js'; // Importa la clase Calendar
-import Controller from './uiController.js'; // Importa el Controller
-=======
->>>>>>> 0d67d21 (Cambios finales en el codigo)
 
 // Instanciación de elementos de la UI
 const calendarElement = document.getElementById('calendar');
@@ -22,22 +17,11 @@ const containerLesson = document.getElementById('container-lesson');
 const uiController = new Controller();
 
 // Inicializar el calendario
-<<<<<<< HEAD
-// Instanciación del Controller
-const uiController = new Controller();
-
-// Inicializar el calendario
-=======
->>>>>>> 0d67d21 (Cambios finales en el codigo)
 const calendar = new Calendar(
   calendarElement,
   selectedDateElement,
   (selectedDay) => {
     populateLessonsList(selectedDay); // Poblar la lista de lecciones al seleccionar un día
-<<<<<<< HEAD
-    populateLessonsList(selectedDay); // Poblar la lista de lecciones al seleccionar un día
-=======
->>>>>>> 0d67d21 (Cambios finales en el codigo)
   }
 );
 calendar.renderCalendar();
@@ -53,52 +37,21 @@ async function init() {
 
 init();
 
-<<<<<<< HEAD
-// Cargar datos de unidades curriculares y alumnos
-async function init() {
-  await uiController.loadUnits(); // Cargar unidades curriculares
-  populateCurriculumDropdown(); // Llenar el dropdown de unidades curriculares
-
-  await uiController.loadAlumnos(); // Cargar estudiantes
-  populateStudentsDropdown('students-asignados'); // Llenar el dropdown de estudiantes
-}
-
-init();
-
 // Controladores de los botones de navegación de mes
 document.getElementById('prev-month').onclick = () => {
   calendar.currentDate.setMonth(calendar.currentDate.getMonth() - 1); // Retroceder un mes
-  calendar.currentDate.setMonth(calendar.currentDate.getMonth() - 1); // Retroceder un mes
-=======
-// Controladores de los botones de navegación de mes
-document.getElementById('prev-month').onclick = () => {
-  calendar.currentDate.setMonth(calendar.currentDate.getMonth() - 1); // Retroceder un mes
->>>>>>> 0d67d21 (Cambios finales en el codigo)
   calendar.renderCalendar();
 };
 
 document.getElementById('next-month').onclick = () => {
   calendar.currentDate.setMonth(calendar.currentDate.getMonth() + 1); // Avanzar un mes
-<<<<<<< HEAD
-  calendar.currentDate.setMonth(calendar.currentDate.getMonth() + 1); // Avanzar un mes
-=======
->>>>>>> 0d67d21 (Cambios finales en el codigo)
   calendar.renderCalendar();
 };
 
 // Función para obtener los estudiantes seleccionados
-<<<<<<< HEAD
-// Función para obtener los estudiantes seleccionados
 function getSelectedStudents(id) {
   return Array.from(
     document.querySelectorAll(`#${id} input[type="checkbox"]:checked`)
-  return Array.from(
-    document.querySelectorAll(`#${id} input[type="checkbox"]:checked`)
-=======
-function getSelectedStudents(id) {
-  return Array.from(
-    document.querySelectorAll(`#${id} input[type="checkbox"]:checked`)
->>>>>>> 0d67d21 (Cambios finales en el codigo)
   ).map((checkbox) => checkbox.value);
 }
 
@@ -106,7 +59,6 @@ function getSelectedStudents(id) {
 function populateDropdown(selectId, items, getItemLabel, getItemValue) {
   const selectElement = document.getElementById(selectId);
   selectElement.innerHTML = '';
-<<<<<<< HEAD
 
   // Opción predeterminada
   const emptyOption = createElement('option', {
@@ -120,31 +72,6 @@ function populateDropdown(selectId, items, getItemLabel, getItemValue) {
       value: getItemValue(item),
       textContent: getItemLabel(item),
     });
-    selectElement.appendChild(option);
-  });
-}
-
-// Función para poblar el dropdown de unidades curriculares
-function populateCurriculumDropdown() {
-  const curriculumSelect = document.getElementById('curriculum-unit');
-  const editCurriculumSelect = document.getElementById('edit-curriculum-unit');
-=======
->>>>>>> 0d67d21 (Cambios finales en el codigo)
-
-  // Opción predeterminada
-  const emptyOption = createElement('option', {
-    value: '',
-    textContent: 'Seleccione una unidad curricular'
-  });
-  selectElement.appendChild(emptyOption);
-
-  items.forEach((item) => {
-    const option = createElement('option', {
-      value: getItemValue(item),
-      textContent: getItemLabel(item),
-    });
-<<<<<<< HEAD
-=======
     selectElement.appendChild(option);
   });
 }
@@ -207,7 +134,6 @@ function populateStudentsDropdown(id) {
       type: 'checkbox',
       value: student.id,
     });
->>>>>>> 0d67d21 (Cambios finales en el codigo)
     const studentLabel = createElement('label', {
       for: `${id}-student-${student.id}`,
       textContent: student.name,
@@ -285,11 +211,6 @@ classForm.onsubmit = (event) => {
   if (getSelectedStudents('students-asignados').length > 0) {
     uiController.createLesson(
       uiController.getLessons().length + 1,
-<<<<<<< HEAD
-    uiController.createLesson(
-      uiController.getLessons().length + 1,
-=======
->>>>>>> 0d67d21 (Cambios finales en el codigo)
       calendar.selectedDay,
       document.getElementById('topic').value,
       document.getElementById('description').value,
@@ -306,19 +227,11 @@ classForm.onsubmit = (event) => {
 // Función para llenar el formulario de edición
 function populateEditForm(id) {
   const lesson = uiController.getLessonsById(id);
-<<<<<<< HEAD
-  const lesson = uiController.getLessonsById(id);
   if (lesson) {
-    document.getElementById('edit-topic').value = lesson.topic;
-    document.getElementById('edit-description').value = lesson.description;
-    document.getElementById('edit-curriculum-unit').value = lesson.curriculumUnit;
-=======
-  if (lesson) {
+
     document.getElementById('edit-topic').value = lesson.getTopic();
     document.getElementById('edit-description').value = lesson.getDescription();
-    document.getElementById('edit-curriculum-unit').value =
-      lesson.getCurriculumUnit();
->>>>>>> 0d67d21 (Cambios finales en el codigo)
+    document.getElementById('edit-curriculum-unit').value = lesson.getCurriculumUnit();
     populateStudentsDropdown('edit-students-asignados');
 
     editModal.style.display = 'flex';

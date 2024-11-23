@@ -95,6 +95,9 @@ clases del domi, con mas introduccion
 
 - **Clase Lesson:** la creamos con el fin de organizar las lecciones de manera estructurada. Cada lección tiene propiedades definidas, como el tema, la descripción, la unidad curricular y un identificador único (id). Esto facilita el manejo de las lecciones y nos permite acceder a ellas de manera ordenada. Además, dentro de la clase tenemos métodos como editLesson y deleteLesson que nos permiten modificar o eliminar lecciones sin necesidad de modificar los datos directamente. Esto nos ayuda a mantener el código limpio y organizado, y a evitar duplicación de lógica en otras partes de la aplicación. Si en el futuro necesitamos agregar nuevas funcionalidades a las lecciones, podemos hacerlo sin afectar el resto del sistema.
 
+- **Clase System:**
+    - # Terminar cuando este
+
 - **Archivo main.js:** actúa como el punto central que integra todas las partes del sistema. Es el encargado de gestionar los eventos de la interfaz de usuario: la selección de días en el calendario, la adición y edición de lecciones, y la carga de datos externos, como las unidades curriculares. Este archivo se encarga de hacer que las clases Calendar y Lesson se comuniquen con la UI de manera eficiente, sin que estén directamente acopladas entre sí. Si no tuviéramos este archivo, el código se dispersaría y sería difícil de mantener. Gracias a main.js, podemos manejar todos los eventos y actualizaciones de la interfaz de forma organizada y asegurarnos de que cada acción se ejecute correctamente.
 
 ### Estándares de codificación y Análisis estático de código 
