@@ -1,7 +1,7 @@
 // Importamos el módulo `Lesson` desde su archivo correspondiente
-import Lesson from "../lesson";
+import Lesson from '../lesson';
 
-describe("Lesson", () => {
+describe('Lesson', () => {
   let lesson; // Instancia de la clase `Lesson`
   let lessonsArray; // Array que contendrá las lecciones
 

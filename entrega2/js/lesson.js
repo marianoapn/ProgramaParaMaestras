@@ -4,7 +4,7 @@ class Lesson {
   #topic;
   #description;
   #curriculumUnit;
-  #studentAsignado
+  #studentAsignado;
 
   constructor(id, date, topic, description, curriculumUnit, studentAsignado) {
     this.setId(id);
@@ -61,7 +61,6 @@ class Lesson {
   setStudentAsignado(studentAsignado) {
     this.#studentAsignado = studentAsignado;
   }
-
 
   // Método para editar una lección
   editLesson(topic, description, curriculumUnit, studentAsignado) {
