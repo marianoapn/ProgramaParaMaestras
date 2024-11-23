@@ -12,10 +12,6 @@ class Calendar {
     this.setCurrentDate(new Date());
   }
 
-  setCalendarElement(calendarElement) {
-    this.#calendarElement = calendarElement;
-  }
-
   setSelectedDateElement(selectedDateElement) {
     this.#selectedDateElement = selectedDateElement;
   }
@@ -51,27 +47,53 @@ class Calendar {
   renderCalendar() {
     const year = this.getCurrentDate().getFullYear();
     const month = this.getCurrentDate().getMonth();
+    const daysInMonth = this.getDaysInMonth(year, month);
+  
+    this.updateCalendarTitle(year, month);
+    this.clearCalendar();
+  
+    const dayElements = this.createDayElements(daysInMonth, month);
+    this.appendDaysToCalendar(dayElements);
+  }
+  
+  getDaysInMonth(year, month) {
+    return new Date(year, month + 1, 0).getDate();
+  }
+  
+  updateCalendarTitle(year, month) {
     const firstDay = new Date(year, month, 1);
-    const lastDay = new Date(year, month + 1, 0).getDate();
-
-    this.getCalendarElement().innerHTML = ""; // Limpiar calendario actual
-
     document.getElementById("calendar-title").innerText =
       `${firstDay.toLocaleString("es-ES", { month: "long" })} ${year}`;
+  }
+  
+  clearCalendar() {
+    this.getCalendarElement().innerHTML = "";
+  }
+  
+  createDayElements(daysInMonth, month) {
+    if (daysInMonth <= 0 || daysInMonth > 31) {
+      throw new Error("Invalid number of days");
+    }
 
-    // Crear los días del mes en el calendario
-    for (let i = 1; i <= lastDay; i++) {
+    const dayElements = [];
+    for (let i = 1; i <= daysInMonth; i++) {
       const dayElement = document.createElement("div");
       dayElement.classList.add("calendar-day");
       dayElement.innerText = i;
-      dayElement.onclick = () => this.selectDay(i); // Asignar la selección del día
-
+      dayElement.onclick = () => this.selectDay(i);
+  
       if (this.getSelectedDay() === i && this.getCurrentDate().getMonth() === month) {
         dayElement.classList.add("selected-day");
       }
-
-      this.getCalendarElement().appendChild(dayElement);
+      dayElements.push(dayElement);
     }
+    return dayElements;
+  }
+  
+  appendDaysToCalendar(dayElements) {
+    dayElements.forEach((dayElement) => {
+      this.getCalendarElement().appendChild(dayElement);
+    });
   }
 
   // Método para seleccionar un día
@@ -86,6 +108,7 @@ class Calendar {
     this.renderCallback(day); // Llamar al callback para cargar las lecciones del día
     this.renderCalendar(); // Renderizar el calendario para mostrar el día seleccionado
   }
+
 }
 // Exporta la clase Calendar para poder usarla en otro archivo
 export default Calendar;

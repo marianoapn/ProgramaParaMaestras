@@ -22,6 +22,9 @@ const calendar = new Calendar(
   selectedDateElement,
   (selectedDay) => {
     populateLessonsList(selectedDay); // Poblar la lista de lecciones al seleccionar un día
+    console.log(selectedDay);
+    console.log(calendarElement);
+    console.log(selectedDateElement);
   }
 );
 calendar.renderCalendar();
