@@ -9,34 +9,45 @@ describe('Lesson', () => {
   beforeEach(() => {
     lesson = new Lesson(
       1,
-      '2024-11-11',
-      'Matemáticas',
-      'Descripción de la lección',
-      'Unidad 1'
+      "2024-11-11",
+      "Matemáticas",
+      "Descripción de la lección",
+      "Unidad 1",
+      "Juan Gomez"
     );
     lessonsArray = [lesson];
   });
 
-  // Primera prueba: verificar que los detalles de la lección se editan correctamente
-  test('debe editar correctamente los detalles de la lección', () => {
-    lesson.editLesson('Ciencias', 'Nueva descripción', 'Unidad 2');
-    expect(lesson.topic).toBe('Ciencias');
-    expect(lesson.description).toBe('Nueva descripción');
-    expect(lesson.curriculumUnit).toBe('Unidad 2');
+  test("debe editar correctamente los detalles de la lección", () => {
+    lesson.editLesson("Ciencias", "Nueva descripción", "Unidad 2", "Pedro Almodovar" );
+    expect(lesson.getTopic()).toBe("Ciencias");
+    expect(lesson.getDescription()).toBe("Nueva descripción");
+    expect(lesson.getCurriculumUnit()).toBe("Unidad 2");
   });
 
-  // Segunda prueba: verificar que una lección se elimina correctamente cuando el usuario confirma
-  test('debe eliminar correctamente una lección cuando se confirma', () => {
-    global.confirm = jest.fn(() => true); // Simula la confirmación
+  test('debe eliminar correctamente una lección', () => {
     const updatedLessons = lesson.deleteLesson(lessonsArray);
     expect(updatedLessons).toHaveLength(0);
   });
 
-  // Tercera prueba: verificar que la lección no se elimina cuando el usuario cancela la confirmación
-  test('no debe eliminar la lección cuando se cancela la confirmación', () => {
-    global.confirm = jest.fn(() => false); // Simula la cancelación
-    const updatedLessons = lesson.deleteLesson(lessonsArray);
-    expect(updatedLessons).toHaveLength(1);
-    expect(updatedLessons[0]).toBe(lesson);
+  test("Función getDate", () => {
+    expect(lesson.getDate()).toBe("2024-11-11");
   });
+
+  test("Función getTopic", () => {
+    expect(lesson.getTopic()).toBe("Matemáticas");
+  });
+
+  test( "Función getDescription", () => {
+    expect(lesson.getDescription()).toBe("Descripción de la lección");
+  });
+
+  test("Función getCurriculumUnit", () => {
+    expect(lesson.getCurriculumUnit()).toBe("Unidad 1");
+  });
+
+  test("Función getStudentAsignado", () => {
+    expect(lesson.getStudentAsignado()).toBe(  "Juan Gomez");
+  });
+
 });
