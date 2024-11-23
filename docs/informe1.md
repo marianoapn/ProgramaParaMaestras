@@ -55,10 +55,12 @@ Estas son algunas buenas prácticas para el control de versionado en git:
 Podemos acceder a la entrevista realizada, y a su resumen en los siguientes apartados:
 
 <<<<<<< HEAD
+
 - [Transcripción](Entrevista_transcripcion.md)
 - [Entrevista resumen](Entrevista_resumen.md)
 
 =======
+
 - [Transcripción Entrevista Maestra](Entrevista_transcripcion.md)
 
 - [Entrevista Maestra resumen](Entrevista_resumen.md)
@@ -67,10 +69,10 @@ Podemos acceder a la entrevista realizada, y a su resumen en los siguientes apar
 
 - [Entrevista ChatGPT resumen](Entrevista_GPT_resumen.md)
 
->>>>>>> 5a5bdd4a035bc5949026dbeb7ae5919bfbf71cad
-Además se puede ver el relevamiento de la herramienta existente Guri en el siguiente apartado [Relevamiento Guri](Relevamiento_Herramientas_Mercado.md)
-y las imágenes de esa aplicación en este otro
-[Imágenes Guri](ImagenesRelevamientoMercado)
+> > > > > > > 5a5bdd4a035bc5949026dbeb7ae5919bfbf71cad
+> > > > > > > Además se puede ver el relevamiento de la herramienta existente Guri en el siguiente apartado [Relevamiento Guri](Relevamiento_Herramientas_Mercado.md)
+> > > > > > > y las imágenes de esa aplicación en este otro
+> > > > > > > [Imágenes Guri](ImagenesRelevamientoMercado)
 
 ### Técnicas aplicadas y aprendizajes
 

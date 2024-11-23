@@ -14,7 +14,6 @@
   </head>
 
   <body>
-<<<<<<< HEAD
     <div class="container mt-5 bg-white p-4 shadow-sm rounded">
       <header>
         <h1 class="text-center">Planificación de Clases</h1>
@@ -44,68 +43,72 @@
             </div>
             <div class="mb-3">
               <label for="curriculum-unit">Unidad Curricular*</label>
-              <select id="curriculum-unit" class="form-control" required></select>
+              <select
+                id="curriculum-unit"
+                class="form-control"
+                required
+              ></select>
             </div>
             <div class="mb-3">
-              <span for="students-asignados">Estudiantes asignados*</span>
+              <span>Estudiantes asignados*</span>
               <div
-                  id="students-asignados"
-                  class="checkbox-dropdown"
-                  aria-labelledby="students-asignados"
-                ></div>
-              </div>
+                id="students-asignados"
+                class="checkbox-dropdown"
+                aria-labelledby="students-asignados"
+              ></div>
+            </div>
             <button type="submit" class="btn btn-primary">Agregar Plan</button>
           </form>
         </div>
-      </div>
-      <div id="container-lesson"></div>
-      <div id="edit-modal" class="modal" style="display: none">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <span class="close-button buttom-cursor">&times;</span>
-            <h3 class="text-center">Editar Plan de Clase</h3>
-            <form id="edit-form" class="form-group">
-              <div class="mb-3">
-                <label for="edit-topic">Tema</label>
-                <input
-                  type="text"
-                  id="edit-topic"
-                  class="form-control"
-                  required
-                />
-              </div>
-              <div class="mb-3">
-                <label for="edit-description">Descripción</label>
-                <textarea
-                  id="edit-description"
-                  class="form-control"
-                  rows="8"
-                  required
-                ></textarea>
-              </div>
-              <div class="mb-3">
-                <label for="edit-curriculum-unit">Unidad Curricular</label>
-                <select
-                  id="edit-curriculum-unit"
-                  class="form-control"
-                  required
-                ></select>
-              </div>
-              <div class="mb-3">
-                <span for="edit-students-asignados">Estudiantes asignados</span>
-                <div
-                id="edit-students-asignados"
-                class="checkbox-dropdown"
-                aria-labelledby="edit-students-asignados"
-              ></div>
+        <div id="container-lesson"></div>
+        <div id="edit-modal" class="modal" style="display: none">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <span class="close-button buttom-cursor">&times;</span>
+              <h3 class="text-center">Editar Plan de Clase</h3>
+              <form id="edit-form" class="form-group">
+                <div class="mb-3">
+                  <label for="edit-topic">Tema</label>
+                  <input
+                    type="text"
+                    id="edit-topic"
+                    class="form-control"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="edit-description">Descripción</label>
+                  <textarea
+                    id="edit-description"
+                    class="form-control"
+                    rows="8"
+                    required
+                  ></textarea>
+                </div>
+                <div class="mb-3">
+                  <label for="edit-curriculum-unit">Unidad Curricular</label>
+                  <select
+                    id="edit-curriculum-unit"
+                    class="form-control"
+                    required
+                  ></select>
+                </div>
+                <div class="mb-3">
+                  <span>Estudiantes asignados</span>
+                  <div
+                    id="edit-students-asignados"
+                    class="checkbox-dropdown"
+                    aria-labelledby="edit-students-asignados"
+                  ></div>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                  Actualizar Plan
+                </button>
+              </form>
             </div>
-
-            <button type="submit" class="btn btn-primary">
-              Actualizar Plan
-            </button>
-          </form>
+          </div>
         </div>
-      </div>
+      </main>
     </div>
 
     <script
@@ -113,8 +116,8 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script src="js/lesson.js"></script>
-    <script src="js/calendar.js"></script>
-    <script src="js/main.js"></script>
+    <script type="module" src="js/lesson.js"></script>
+    <script type="module" src="js/calendar.js"></script>
+    <script type="module" src="js/main.js"></script>
   </body>
 </html>

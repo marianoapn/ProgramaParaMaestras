@@ -36,11 +36,7 @@ h3 {
 
 .selected-day {
   background: #007bff;
-<<<<<<< HEAD
-  color: white;
-=======
   color: rgb(0, 0, 0);
->>>>>>> entrega3
 }
 
 #form-section {
@@ -63,22 +59,6 @@ h3 {
   background: white;
   padding: 20px;
   border-radius: 8px;
-<<<<<<< HEAD
-  width: 400px;
-}
-
-.dropdown-menu {
-  max-height: 300px;
-  overflow-y: auto;
-}
-
-.dropdown-item {
-  display: flex;
-  align-items: center;
-}
-
-.dropdown-item input {
-=======
   width: 80%;
 }
 
@@ -114,6 +94,5 @@ h3 {
 
 /* Estilo para los checkboxes */
 .checkbox-dropdown input[type="checkbox"] {
->>>>>>> entrega3
   margin-right: 10px;
 }

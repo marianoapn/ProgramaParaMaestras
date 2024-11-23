@@ -1,5 +1,4 @@
-import Lesson from './lesson.js'; // Importa la clase Lesson desde lesson.js
-
+import Lesson from "./lesson.js"; // Importa la clase Lesson desde lesson.js
 
 class Controller {
   constructor() {
@@ -10,7 +9,7 @@ class Controller {
 
   // Cargar unidades curriculares desde un archivo JSON
   loadUnits() {
-    return fetch('data/curriculum_units.json')
+    return fetch("data/curriculum_units.json")
       .then((response) => response.json())
       .then((data) => {
         this.curriculumUnits = data;
@@ -23,7 +22,7 @@ class Controller {
 
   // Cargar alumnos desde un archivo JSON
   loadAlumnos() {
-    return fetch('data/students.json')
+    return fetch("data/students.json")
       .then((response) => response.json())
       .then((data) => {
         this.studentList = data;
@@ -49,7 +48,7 @@ class Controller {
       topic,
       description,
       curriculumUnit,
-      studentAsignado
+      studentAsignado,
     );
     this.lessons.push(newLesson);
   }
@@ -69,13 +68,13 @@ class Controller {
     topic,
     description,
     curriculumUnit,
-    studentAsignado
+    studentAsignado,
   ) {
     this.lessons[index].editLesson(
       topic,
       description,
       curriculumUnit,
-      studentAsignado
+      studentAsignado,
     );
   }
 
