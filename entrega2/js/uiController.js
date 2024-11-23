@@ -8,7 +8,7 @@ class Controller {
   constructor() {
     this.setLessons([]);
     this.setCurriculumUnits([]);
-    this.setStudentsList([]) 
+    this.setStudentsList([]);
   }
 
   // Cargar unidades curriculares desde un archivo JSON
@@ -32,17 +32,18 @@ class Controller {
         this.#studentList = data;
       });
   }
-  setStudentsList(studentList){
+  setStudentsList(studentList) {
     this.#studentList = studentList;
   }
 
-  setCurriculumUnits(curriculumUnits){
+  setCurriculumUnits(curriculumUnits) {
     this.#curriculumUnits = curriculumUnits;
   }
 
-  setLessons(lessons){
+  setLessons(lessons) {
     this.#lessons = lessons;
   }
+
   getStudentsList() {
     return this.#studentList;
   }
