@@ -4,16 +4,6 @@ import Calendar from './calendar.js'; // Importa la clase Calendar
 import Controller from './uiController.js'; // Importa el Controller
 
 // Instanciación de elementos de la UI
-<<<<<<< HEAD
-const calendarElement = document.getElementById("calendar");
-const selectedDateElement = document.getElementById("selected-date");
-//const lessonItemsElement = document.getElementById('lesson-items');
-const classForm = document.getElementById("class-form");
-const editForm = document.getElementById("edit-form");
-const editModal = document.getElementById("edit-modal");
-const closeButton = document.querySelector(".close-button");
-const containerLesson = document.getElementById("container-lesson");
-=======
 const calendarElement = document.getElementById('calendar');
 const selectedDateElement = document.getElementById('selected-date');
 const classForm = document.getElementById('class-form');
@@ -40,7 +30,6 @@ const calendar = new Calendar(
     populateLessonsList(selectedDay); // Poblar la lista de lecciones al seleccionar un día
     populateLessonsList(selectedDay); // Poblar la lista de lecciones al seleccionar un día
   }
->>>>>>> entrega3
 );
 calendar.renderCalendar();
 
@@ -67,18 +56,12 @@ async function init() {
 init();
 
 // Controladores de los botones de navegación de mes
-<<<<<<< HEAD
-document.getElementById("prev-month").onclick = () => {
-=======
 document.getElementById('prev-month').onclick = () => {
   calendar.currentDate.setMonth(calendar.currentDate.getMonth() - 1); // Retroceder un mes
   calendar.currentDate.setMonth(calendar.currentDate.getMonth() - 1); // Retroceder un mes
   calendar.renderCalendar();
 };
 
-<<<<<<< HEAD
-document.getElementById("next-month").onclick = () => {
-=======
 document.getElementById('next-month').onclick = () => {
   calendar.currentDate.setMonth(calendar.currentDate.getMonth() + 1); // Avanzar un mes
   calendar.currentDate.setMonth(calendar.currentDate.getMonth() + 1); // Avanzar un mes
@@ -264,7 +247,6 @@ classForm.onsubmit = (event) => {
   } else {
     showErrorMessage('Error, por favor seleccione al menos un estudiante');
   }
->>>>>>> entrega3
 };
 
 // Función para llenar el formulario de edición
@@ -279,16 +261,12 @@ function populateEditForm(id) {
     populateStudentsDropdown('edit-students-asignados');
 
     editModal.style.display = 'flex';
->>>>>>> entrega3
     editModal.dataset.id = id;
   }
 }
 
 // Cerrar modal de edición
 closeButton.onclick = () => {
-<<<<<<< HEAD
-  editModal.style.display = "none";
-=======
   editModal.style.display = 'none';
 };
 
@@ -296,7 +274,6 @@ closeButton.onclick = () => {
 // Cerrar error
 closeButtonError.onclick = () => {
   ContErrorOConfirm.style.display = 'none';
->>>>>>> entrega3
 };
 
 // Manejar el envío del formulario de edición
@@ -329,7 +306,6 @@ editForm.onsubmit = (event) => {
     editModal.style.display = 'none';
   } else {
     showErrorMessage('Error, por favor seleccione al menos un estudiante');
->>>>>>> entrega3
   }
 };
 
@@ -338,29 +314,6 @@ function handleDeleteLesson(id) {
   const lesson = uiController.getLessonsById(id);
   const lesson = uiController.getLessonsById(id);
   if (lesson) {
-<<<<<<< HEAD
-    const updatedLessons = lesson.deleteLesson(lessons);
-    // Solo actualiza la lista si la longitud cambia, lo que indica que se eliminó un elemento
-    if (updatedLessons.length !== lessons.length) {
-      lessons = updatedLessons;
-      populateLessonsList(calendar.selectedDay);
-    }
-  }
-}
-
-function createElemento(tagElem, id = "", ...clas) {
-  const element = document.createElement(tagElem);
-  if (id) {
-    element.id = id;
-  }
-  if (clas.length > 0) {
-    element.classList.add(...clas);
-  }
-  return element;
-}
-
-loadAlumnos();
-=======
     showErrorMessage(
       '¿Estás seguro de que quieres eliminar este plan de clase?'
     );
@@ -427,4 +380,3 @@ function createElement(tagElem, atributos = {}, clas = []) {
 
 window.populateEditForm = populateEditForm;
 window.handleDeleteLesson = handleDeleteLesson;
->>>>>>> entrega3
