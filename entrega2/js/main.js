@@ -159,7 +159,7 @@ function populateLessonsList(day) {
   let lessonsHTML = "";
   filteredLessons.forEach((lesson) => {
     const curriculumUnitName = curriculumUnits.find(
-      (unit) => unit.id == lesson.getCurriculumUnit(),
+      (unit) => unit.id == lesson.getCurriculumUnit()
     ).name;
     let studentNames = lesson
       .getStudentAsignado()
@@ -262,7 +262,7 @@ editForm.onsubmit = (event) => {
       document.getElementById("edit-topic").value,
       document.getElementById("edit-description").value,
       document.getElementById("edit-curriculum-unit").value,
-      selectedStudents,
+      selectedStudents
     );
     populateLessonsList(calendar.selectedDay);
     editModal.style.display = "none";
