@@ -144,7 +144,6 @@ function populateStudentsDropdown(id) {
     ]);
     studentContainer.appendChild(studentCheckbox);
     studentContainer.appendChild(studentLabel);
-
     studentSelect.appendChild(studentContainer);
   });
 }

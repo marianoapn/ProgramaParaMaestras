@@ -1,10 +1,14 @@
 import Lesson from "./lesson.js"; // Importa la clase Lesson desde lesson.js
 
 class Controller {
+  #lessons;
+  #curriculumUnits;
+  #studentList;
+
   constructor() {
-    this.lessons = [];
-    this.curriculumUnits = [];
-    this.studentList = [];
+    this.setLessons([]);
+    this.setCurriculumUnits([]);
+    this.setStudentsList([]) 
   }
 
   // Cargar unidades curriculares desde un archivo JSON
@@ -12,12 +16,12 @@ class Controller {
     return fetch("data/curriculum_units.json")
       .then((response) => response.json())
       .then((data) => {
-        this.curriculumUnits = data;
+        this.#curriculumUnits = data;
       });
   }
 
   getCurriculumUnits() {
-    return this.curriculumUnits;
+    return this.#curriculumUnits;
   }
 
   // Cargar alumnos desde un archivo JSON
@@ -25,20 +29,30 @@ class Controller {
     return fetch("data/students.json")
       .then((response) => response.json())
       .then((data) => {
-        this.studentList = data;
+        this.#studentList = data;
       });
   }
+  setStudentsList(studentList){
+    this.#studentList = studentList;
+  }
 
+  setCurriculumUnits(curriculumUnits){
+    this.#curriculumUnits = curriculumUnits;
+  }
+
+  setLessons(lessons){
+    this.#lessons = lessons;
+  }
   getStudentsList() {
-    return this.studentList;
+    return this.#studentList;
   }
 
   getLessons() {
-    return this.lessons;
+    return this.#lessons;
   }
 
   getLessonsByDay(day) {
-    return this.lessons.filter((lesson) => lesson.date === day);
+    return this.getLessons().filter((lesson) => lesson.date === day);
   }
 
   createLesson(id, date, topic, description, curriculumUnit, studentAsignado) {
@@ -50,16 +64,16 @@ class Controller {
       curriculumUnit,
       studentAsignado,
     );
-    this.lessons.push(newLesson);
+    this.getLessons().push(newLesson);
   }
 
   getLessonsById(id) {
-    const lesson = this.lessons.find((l) => l.id === id);
+    const lesson = this.getLessons().find((l) => l.id === id);
     return lesson;
   }
 
   getLessonIndexById(id) {
-    const lessonIndex = this.lessons.findIndex((l) => l.id === id);
+    const lessonIndex = this.getLessons().findIndex((l) => l.id === id);
     return lessonIndex;
   }
 
@@ -70,7 +84,7 @@ class Controller {
     curriculumUnit,
     studentAsignado,
   ) {
-    this.lessons[index].editLesson(
+    this.getLessons()[index].editLesson(
       topic,
       description,
       curriculumUnit,
@@ -79,7 +93,7 @@ class Controller {
   }
 
   deleteLesson(lesson) {
-    this.lessons = lesson.deleteLesson(this.lessons);
+    this.setLessons(lesson.deleteLesson(this.getLessons()));
   }
 }
 export default Controller;
