@@ -1,8 +1,8 @@
-import Controller from '../uiController';
-import Lesson from '../lesson'
+import Controller from "../uiController";
+import Lesson from "../lesson";
 
-describe('Controller', () => {
-  let controller; 
+describe("Controller", () => {
+  let controller;
 
   beforeEach(() => {
     controller = new Controller();
@@ -26,7 +26,7 @@ describe('Controller', () => {
   ];
 
   afterEach(() => {
-    jest.restoreAllMocks(); 
+    jest.restoreAllMocks();
   });
 
   test("debe asignar y obtener correctamente la lista de estudiantes", () => {
@@ -52,7 +52,7 @@ describe('Controller', () => {
       "Ciencias",
       "Biología",
       "Unidad 2",
-      [{ id: 2, name: "María López" }]
+      [{ id: 2, name: "María López" }],
     );
     const lessons = controller.getLessons();
     expect(lessons).toHaveLength(1);
@@ -86,7 +86,7 @@ describe('Controller', () => {
       "Historia",
       "Descripción editada",
       "Unidad 3",
-      mockStudents
+      mockStudents,
     );
 
     const editedLesson = controller.getLessons()[0];
@@ -100,7 +100,7 @@ describe('Controller', () => {
     controller.deleteLesson(mockLessons[0]);
     expect(controller.getLessons()).toHaveLength(0);
   });
-  
+
   test("debe cargar unidades curriculares desde JSON correctamente", async () => {
     const mockUnits = [
       { id: 1, name: "Matemáticas" },
@@ -109,8 +109,8 @@ describe('Controller', () => {
     global.fetch = jest.fn(() =>
       Promise.resolve({
         json: () => Promise.resolve(mockUnits),
-      })
-     );
+      }),
+    );
     await controller.loadUnits();
     expect(fetch).toHaveBeenCalledWith("data/curriculum_units.json");
     expect(controller.getCurriculumUnits()).toEqual(mockUnits);
@@ -131,7 +131,7 @@ describe('Controller', () => {
     global.fetch = jest.fn(() =>
       Promise.resolve({
         json: () => Promise.resolve(mockStudents),
-      })
+      }),
     );
     await controller.loadAlumnos();
     expect(controller.getStudentsList()).toEqual(mockStudents);
@@ -143,5 +143,4 @@ describe('Controller', () => {
     await expect(controller.loadAlumnos()).resolves.not.toThrow();
     expect(controller.getStudentsList()).toEqual([]);
   });
-
 });

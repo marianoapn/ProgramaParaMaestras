@@ -1,7 +1,7 @@
 // Importamos el módulo `Lesson` desde su archivo correspondiente
-import Lesson from '../lesson';
+import Lesson from "../lesson";
 
-describe('Lesson', () => {
+describe("Lesson", () => {
   let lesson; // Instancia de la clase `Lesson`
   let lessonsArray; // Array que contendrá las lecciones
 
@@ -13,20 +13,25 @@ describe('Lesson', () => {
       "Matemáticas",
       "Descripción de la lección",
       "Unidad 1",
-      "Juan Gomez"
+      "Juan Gomez",
     );
     lessonsArray = [lesson];
   });
 
   test("debe editar correctamente los detalles de la lección", () => {
-    lesson.editLesson("Ciencias", "Nueva descripción", "Unidad 2", "Pedro Almodovar" );
+    lesson.editLesson(
+      "Ciencias",
+      "Nueva descripción",
+      "Unidad 2",
+      "Pedro Almodovar",
+    );
     expect(lesson.getTopic()).toBe("Ciencias");
     expect(lesson.getDescription()).toBe("Nueva descripción");
     expect(lesson.getCurriculumUnit()).toBe("Unidad 2");
     expect(lesson.getStudentAsignado()).toBe("Pedro Almodovar");
   });
 
-  test('debe eliminar correctamente una lección', () => {
+  test("debe eliminar correctamente una lección", () => {
     const updatedLessons = lesson.deleteLesson(lessonsArray);
     expect(updatedLessons).toHaveLength(0);
   });
@@ -39,7 +44,7 @@ describe('Lesson', () => {
     expect(lesson.getTopic()).toBe("Matemáticas");
   });
 
-  test( "Función getDescription", () => {
+  test("Función getDescription", () => {
     expect(lesson.getDescription()).toBe("Descripción de la lección");
   });
 
@@ -48,7 +53,6 @@ describe('Lesson', () => {
   });
 
   test("Función getStudentAsignado", () => {
-    expect(lesson.getStudentAsignado()).toBe(  "Juan Gomez");
+    expect(lesson.getStudentAsignado()).toBe("Juan Gomez");
   });
-
 });

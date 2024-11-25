@@ -48,28 +48,28 @@ class Calendar {
     const year = this.getCurrentDate().getFullYear();
     const month = this.getCurrentDate().getMonth();
     const daysInMonth = this.getDaysInMonth(year, month);
-  
+
     this.updateCalendarTitle(year, month);
     this.clearCalendar();
-  
+
     const dayElements = this.createDayElements(daysInMonth, month);
     this.appendDaysToCalendar(dayElements);
   }
-  
+
   getDaysInMonth(year, month) {
     return new Date(year, month + 1, 0).getDate();
   }
-  
+
   updateCalendarTitle(year, month) {
     const firstDay = new Date(year, month, 1);
     document.getElementById("calendar-title").innerText =
       `${firstDay.toLocaleString("es-ES", { month: "long" })} ${year}`;
   }
-  
+
   clearCalendar() {
     this.getCalendarElement().innerHTML = "";
   }
-  
+
   createDayElements(daysInMonth, month) {
     const dayElements = [];
     for (let i = 1; i <= daysInMonth; i++) {
@@ -79,15 +79,18 @@ class Calendar {
       dayElement.onclick = () => {
         this.selectDay(i);
       };
-  
-      if (this.getSelectedDay() === i && this.getCurrentDate().getMonth() === month) {
+
+      if (
+        this.getSelectedDay() === i &&
+        this.getCurrentDate().getMonth() === month
+      ) {
         dayElement.classList.add("selected-day");
       }
       dayElements.push(dayElement);
     }
     return dayElements;
   }
-  
+
   appendDaysToCalendar(dayElements) {
     dayElements.forEach((dayElement) => {
       this.getCalendarElement().appendChild(dayElement);
