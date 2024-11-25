@@ -123,7 +123,7 @@ describe('Controller', () => {
     global.fetch = jest.fn(() =>
       Promise.resolve({
         json: () => Promise.resolve(mockStudents),
-      }),
+      })
     );
     await controller.loadAlumnos();
     expect(controller.getStudentsList()).toEqual(mockStudents);
@@ -136,4 +136,3 @@ describe('Controller', () => {
     expect(controller.getStudentsList()).toEqual([]);
   });
 });
-

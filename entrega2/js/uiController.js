@@ -1,4 +1,4 @@
-import Lesson from "./lesson.js"; // Importa la clase Lesson desde lesson.js
+import Lesson from './lesson.js'; // Importa la clase Lesson desde lesson.js
 
 class Controller {
   #lessons;
@@ -11,14 +11,15 @@ class Controller {
     this.setStudentsList([]);
   }
 
+  // Método para cargar unidades curriculares desde un archivo JSON
   loadUnits() {
-    return fetch("data/curriculum_units.json")
+    return fetch('data/curriculum_units.json')
       .then((response) => response.json())
       .then((data) => {
         this.#curriculumUnits = data;
       })
       .catch((error) => {
-        console.error("Error cargando unidades curriculares:", error);
+        console.error('Error cargando unidades curriculares:', error);
         this.#curriculumUnits = [];
       });
   }
@@ -27,14 +28,15 @@ class Controller {
     return this.#curriculumUnits;
   }
 
+  // Método para cargar la lista de estudiantes desde un archivo JSON
   loadAlumnos() {
-    return fetch("data/students.json")
+    return fetch('data/students.json')
       .then((response) => response.json())
       .then((data) => {
         this.#studentList = data;
       })
       .catch((error) => {
-        console.error("Error cargando unidades curriculares:", error);
+        console.error('Error cargando unidades curriculares:', error);
         this.#studentList = [];
       });
   }
@@ -70,7 +72,7 @@ class Controller {
       topic,
       description,
       curriculumUnit,
-      studentAsignado,
+      studentAsignado
     );
     this.getLessons().push(newLesson);
   }
@@ -90,13 +92,13 @@ class Controller {
     topic,
     description,
     curriculumUnit,
-    studentAsignado,
+    studentAsignado
   ) {
     this.getLessons()[index].editLesson(
       topic,
       description,
       curriculumUnit,
-      studentAsignado,
+      studentAsignado
     );
   }
 

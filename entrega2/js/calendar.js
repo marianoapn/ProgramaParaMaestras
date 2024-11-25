@@ -62,19 +62,19 @@ class Calendar {
 
   updateCalendarTitle(year, month) {
     const firstDay = new Date(year, month, 1);
-    document.getElementById("calendar-title").innerText =
-      `${firstDay.toLocaleString("es-ES", { month: "long" })} ${year}`;
+    document.getElementById('calendar-title').innerText =
+      `${firstDay.toLocaleString('es-ES', { month: 'long' })} ${year}`;
   }
 
   clearCalendar() {
-    this.getCalendarElement().innerHTML = "";
+    this.getCalendarElement().innerHTML = '';
   }
 
   createDayElements(daysInMonth, month) {
     const dayElements = [];
     for (let i = 1; i <= daysInMonth; i++) {
-      const dayElement = document.createElement("div");
-      dayElement.classList.add("calendar-day");
+      const dayElement = document.createElement('div');
+      dayElement.classList.add('calendar-day');
       dayElement.innerText = i;
       dayElement.onclick = () => {
         this.selectDay(i);
@@ -84,7 +84,7 @@ class Calendar {
         this.getSelectedDay() === i &&
         this.getCurrentDate().getMonth() === month
       ) {
-        dayElement.classList.add("selected-day");
+        dayElement.classList.add('selected-day');
       }
       dayElements.push(dayElement);
     }
@@ -101,10 +101,10 @@ class Calendar {
   selectDay(day) {
     this.setSelectedDay(day);
 
-    this.getSelectedDateElement().innerText = `Planes para el ${day} de ${this.getCurrentDate().toLocaleString("es-ES", { month: "long" })} de ${this.getCurrentDate().getFullYear()}`;
+    this.getSelectedDateElement().innerText = `Planes para el ${day} de ${this.getCurrentDate().toLocaleString('es-ES', { month: 'long' })} de ${this.getCurrentDate().getFullYear()}`;
 
     // Mostrar el formulario para agregar un nuevo plan
-    document.getElementById("form-section").style.display = "block"; // Mostrar formulario
+    document.getElementById('form-section').style.display = 'block'; // Mostrar formulario
 
     this.renderCallback(day); // Llamar al callback para cargar las lecciones del día
     this.renderCalendar(); // Renderizar el calendario para mostrar el día seleccionado
