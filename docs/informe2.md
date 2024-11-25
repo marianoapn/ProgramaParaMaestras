@@ -72,17 +72,13 @@ Usamos las heurísticas de usabilidad de Jakob Nielsen para diseñar y desarroll
 
   - **Aplicación:** Los campos del formulario (Tema, Descripción, Unidad Curricular) están visibles y etiquetados claramente, lo que permite a los usuarios reconocer fácilmente qué deben llenar sin tener que recordar información de otras partes de la interfaz.
 
-- **Flexibilidad y eficiencia de uso:** Los aceleradores, que pueden ser invisibles para el usuario novato, pueden a menudo acelerar la interacción para el
-  usuario experto, permitiendo a los usuarios personalizar acciones frecuentes. - **Aplicación:** El sistema permite a los usuarios editar y eliminar planes con facilidad. La funcionalidad de eliminar un plan está accesible directamente desde la interfaz, lo que aumenta la eficiencia del proceso. Los usuarios también pueden elegir unidades curriculares desde un menú desplegable, agilizando la interacción.
+- **Estética y diseño minimalista:** Las interfaces no deben contener información irrelevante o rara vez necesaria. Cada unidad de información adicional en una pantalla compite con las unidades relevantes de información y reduce su visibilidad.
 
-- **Estética y diseño minimalista:** Las interfaces no deben contener información irrelevante o rara vez necesaria. Cada unidad de información adicional en una
-  pantalla compite con las unidades relevantes de información y reduce su visibilidad. - **Aplicación:** El diseño es limpio y simple, con los elementos esenciales (calendario, formulario de planificación y botones de acción) bien distribuidos. No hay elementos innecesarios que distraigan al usuario de la tarea principal, que es agregar o editar un plan.
+  - **Aplicación:** El diseño es limpio y simple, con los elementos esenciales (calendario, formulario de planificación y botones de acción) bien distribuidos. No hay elementos innecesarios que distraigan al usuario de la tarea principal, que es agregar o editar un plan.
 
-- **Ayuda a los usuarios a reconocer, diagnosticar y recuperarse de errores:** Los mensajes de error deben expresarse en un lenguaje claro (sin códigos),
-  indicar precisamente el problema y sugerir una solución. - **Aplicación:** Cuando el usuario intenta eliminar un plan, el sistema le muestra una ventana de confirmación, asegurando que el usuario sepa lo que está a punto de hacer. Esto evita errores como la eliminación accidental de planes importantes.
+- **Ayuda y documentación:** Aunque es mejor si el sistema se puede usar sin documentación, puede ser necesario proporcionar ayuda y documentación. Esta información debe ser fácil de buscar, centrarse en la tarea del usuario y listar los pasos concretos a seguir.
 
-- **Ayuda y documentación:** Aunque es mejor si el sistema se puede usar sin documentación, puede ser necesario proporcionar ayuda y documentación. Esta información debe ser fácil de buscar, centrarse en la
-  tarea del usuario y listar los pasos concretos a seguir. - **Aplicación:** La simpleza de los elementos y su disposición hace que el sistema sea fácil de usar sin necesidad de documentación adicional. Los términos utilizados son claros y el flujo es intuitivo.
+  - **Aplicación:** La simpleza de los elementos y su disposición hace que el sistema sea fácil de usar sin necesidad de documentación adicional. Los términos utilizados son claros y el flujo es intuitivo.
 
 ### Accesibilidad
 
@@ -108,71 +104,53 @@ clases del domi, con mas introduccion
 
 #### Estandares de ESLint (análisis de calidad del código)
 
-- Advertencia por variables no utilizadas: Genera una advertencia cuando se definen variables que no se usan en el código.
+- **Advertencia por variables no utilizadas:** Genera una advertencia cuando se definen variables que no se usan en el código.
 
-- Advertencia por variables no definidas: Genera una advertencia cuando se hace referencia a variables no definidas en el código.
+- **Advertencia por variables no definidas:** Genera una advertencia cuando se hace referencia a variables no definidas en el código.
 
-- Punto y coma al final de las declaraciones: Exige que todas las declaraciones terminen con un punto y coma.
+- **Punto y coma al final de las declaraciones:** Exige que todas las declaraciones terminen con un punto y coma.
 
-- Comillas simples en lugar de comillas dobles: Exige que se usen comillas simples para las cadenas de texto, en lugar de comillas dobles.
+- **Comillas simples en lugar de comillas dobles:** Exige que se usen comillas simples para las cadenas de texto, en lugar de comillas dobles.
 
-- Uso de llaves en todas las estructuras de control: Exige que todas las estructuras de control (como if, for, etc.) usen llaves, incluso si tienen solo una línea.
+- **Uso de llaves en todas las estructuras de control:** Exige que todas las estructuras de control (como if, for, etc.) usen llaves, incluso si tienen solo una línea.
 
-- Advertencia por uso de console.log(): Genera una advertencia si se utiliza console.log(), que debe evitarse en producción.
+- **Indentación de 2 espacios:** Exige una indentación de 2 espacios para el código, evitando el uso de tabulaciones o más espacios.
 
-- Advertencia por uso de debugger: Genera una advertencia si se utiliza la declaración debugger, que debe evitarse en producción.
+- **Advertencia por números mágicos:** Genera una advertencia si se usan números "mágicos" (números sin un significado claro), exceptuando los números 0, 1 y 2.
 
-- Indentación de 2 espacios: Exige una indentación de 2 espacios para el código, evitando el uso de tabulaciones o más espacios.
+- **Uso de const en lugar de let:** Exige que se use const para las variables que no se reasignan, para mayor claridad.
 
-- Advertencia por números mágicos: Genera una advertencia si se usan números "mágicos" (números sin un significado claro), exceptuando los números 0, 1 y 2.
+- **Valor de retorno consistente en funciones:** Exige que las funciones tengan un valor de retorno consistente (o siempre devuelvan algo, o nunca lo hagan).
 
-- Uso de const en lugar de let: Exige que se use const para las variables que no se reasignan, para mayor claridad.
+- **Prohibición de espacios al final de las líneas:** Genera un error si hay espacios innecesarios al final de una línea.
 
-- Valor de retorno consistente en funciones: Exige que las funciones tengan un valor de retorno consistente (o siempre devuelvan algo, o nunca lo hagan).
+- **Uso de notación camelCase:** Exige que las variables y funciones se escriban en notación camelCase (la primera palabra en minúsculas y las siguientes con mayúsculas).
 
-- Prohibición de espacios al final de las líneas: Genera un error si hay espacios innecesarios al final de una línea.
-
-- Uso de notación camelCase: Exige que las variables y funciones se escriban en notación camelCase (la primera palabra en minúsculas y las siguientes con mayúsculas).
-
-- Prohibición del uso de var: Prohíbe el uso de var para declarar variables, en favor de let o const.
+- **Prohibición del uso de var:** Prohíbe el uso de var para declarar variables, en favor de let o const.
 
 #### Estandares de Prettier (formateo de código)
 
-- Punto y coma al final de las declaraciones: Exige que se usen puntos y coma al final de cada declaración.
+- **Punto y coma al final de las declaraciones:** Exige que se usen puntos y coma al final de cada declaración.
 
-- Comillas simples en lugar de comillas dobles: Exige que se utilicen comillas simples en las cadenas de texto, en lugar de comillas dobles.
+- **Comillas simples en lugar de comillas dobles:** Exige que se utilicen comillas simples en las cadenas de texto, en lugar de comillas dobles.
 
-- Comas finales en objetos y arrays (solo en ES5+): Exige que se pongan comas al final de los elementos en objetos y arrays, pero solo si la versión de ECMAScript soporta esta característica (ES5+).
+- **Comas finales en objetos y arrays:** Exige que se pongan comas al final de los elementos en objetos y arrays.
 
-- Paréntesis alrededor de los parámetros de funciones flecha: Exige que las funciones flecha tengan paréntesis alrededor de sus parámetros, incluso si solo tienen uno.
+- **Paréntesis alrededor de los parámetros de funciones flecha:** Exige que las funciones flecha tengan paréntesis alrededor de sus parámetros, incluso si solo tienen uno.
 
 #### Estandares generales (convenciones de nomenclatura y estilo)
 
-- Código en inglés: Se debe escribir todo el código en inglés para garantizar la comprensión global y facilitar la colaboración.
+- **Código en inglés:** Se debe escribir todo el código en inglés para garantizar la comprensión global y facilitar la colaboración.
 
-- Funciones, variables y constantes en JavaScript:
+- **Funciones, variables y constantes en JavaScript:** Las funciones, variables y constantes deben escribirse en camelCase. Esto significa que la primera palabra debe estar en minúscula y, en caso de que haya más de una palabra, la primera letra de la siguiente palabra debe ir en mayúscula
 
-  - Las funciones, variables y constantes deben escribirse en camelCase. Esto significa que la primera palabra debe estar en minúscula y, en caso de que haya más de una palabra, la primera letra de la siguiente palabra debe ir en mayúscula
-
-  - Nombre de IDs y clases HTML: Las palabras deben separarse por guiones medios (-), y todo debe estar en minúscula
+- **Nombre de IDs y clases HTML:** Las palabras deben separarse por guiones medios (-), y todo debe estar en minúscula
 
 ### Buenas prácticas de OOP
 
 separar interfaz, explicarlo
 
 ## Test unitario
-
-- **Prueba 1:** Debe editar correctamente los detalles de la lección:
-
-  - **Qué probamos:** Verificamos que, al usar el método editLesson para modificar el plan, los valores de sus atributos se actualicen correctamente.
-
-- **Prueba 2:** Debe eliminar correctamente una lección cuando se confirma:
-
-  - **Qué probamos:** Simulamos que el usuario confirma la eliminación de la lección y verificamos que la lección sea eliminada del array de lecciones.
-
-- **Prueba 3:** No debe eliminar la lección cuando se cancela la confirmación:
-
-  - **Qué probamos:** Simulamos que el usuario cancela la eliminación de la lección y verificamos que la lección no se elimine.
 
 ### Buenas prácticas
 
