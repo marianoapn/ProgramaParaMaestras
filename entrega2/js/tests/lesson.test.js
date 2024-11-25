@@ -1,7 +1,7 @@
 // Importamos el módulo `Lesson` desde su archivo correspondiente
-import Lesson from '../lesson';
+import Lesson from "../lesson";
 
-describe('Lesson', () => {
+describe("Lesson", () => {
   let lesson; // Instancia de la clase `Lesson`
   let lessonsArray; // Array que contendrá las lecciones
 
@@ -31,7 +31,7 @@ describe('Lesson', () => {
     expect(lesson.getStudentAsignado()).toBe('Pedro Almodovar');
   });
 
-  test('debe eliminar correctamente una lección', () => {
+  test("debe eliminar correctamente una lección", () => {
     const updatedLessons = lesson.deleteLesson(lessonsArray);
     expect(updatedLessons).toHaveLength(0);
   });

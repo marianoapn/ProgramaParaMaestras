@@ -36,9 +36,9 @@ class Controller {
       .catch((error) => {
         console.error("Error cargando unidades curriculares:", error);
         this.#studentList = [];
-      })
+      });
   }
-     
+
   setStudentsList(studentList) {
     this.#studentList = studentList;
   }

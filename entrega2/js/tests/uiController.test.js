@@ -27,6 +27,7 @@ describe('Controller', () => {
 
   afterEach(() => {
     jest.restoreAllMocks();
+    jest.restoreAllMocks();
   });
 
   test('debe asignar y obtener correctamente la lista de estudiantes', () => {
@@ -122,7 +123,7 @@ describe('Controller', () => {
     global.fetch = jest.fn(() =>
       Promise.resolve({
         json: () => Promise.resolve(mockStudents),
-      })
+      }),
     );
     await controller.loadAlumnos();
     expect(controller.getStudentsList()).toEqual(mockStudents);
@@ -135,3 +136,4 @@ describe('Controller', () => {
     expect(controller.getStudentsList()).toEqual([]);
   });
 });
+
