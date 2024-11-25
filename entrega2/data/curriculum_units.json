@@ -1,0 +1,20 @@
+[
+  { "id": 1, "name": "Matemática" },
+  { "id": 2, "name": "Física y Química" },
+  { "id": 3, "name": "Ciencias Biológicas" },
+  { "id": 4, "name": "Ciencias de la tierra y el espacio" },
+  { "id": 5, "name": "Lengua Española" },
+  { "id": 6, "name": "Segundas Lenguas y Lenguas Extranjeras" },
+  { "id": 7, "name": "Historia" },
+  { "id": 8, "name": "Formación para la ciudadanía" },
+  { "id": 9, "name": "Geografía" },
+  { "id": 10, "name": "Artes visuales y plásticas" },
+  { "id": 11, "name": "Música" },
+  { "id": 12, "name": "Literatura" },
+  { "id": 13, "name": "Teatro" },
+  { "id": 14, "name": "Danza" },
+  { "id": 15, "name": "Conciencia y conocimiento corporal" },
+  { "id": 16, "name": "Educación Física" },
+  { "id": 17, "name": "Ciencias de la computación y Tecnología Educativa" },
+  { "id": 18, "name": "Talleres" }
+]
