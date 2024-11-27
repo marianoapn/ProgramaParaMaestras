@@ -225,6 +225,12 @@ separar interfaz, explicarlo
 <img src="Imagenes/CoberturaTests.png" alt="CoberturaTests">
 
 ## Reflexión
+Mariano:
+
+En esta segunda parte del obligatorio, aprendí mucho en varios aspectos. Por un lado, adquirí conocimientos sobre herramientas como ESLint y Prettier, que nos ayudaron a mantener el código limpio y estandarizado. También exploré temas como las pruebas funcionales y exploratorias, que fueron clave para garantizar la calidad de nuestra aplicación.
+Trabajar en equipo fue otra gran experiencia. Aprendimos a tomar decisiones en conjunto, priorizando funcionalidades y resolviendo errores según su impacto en el proyecto. Fue interesante identificar qué problemas podían esperar y enfocarnos en lo más importante para avanzar eficientemente.
+Además, la dinámica de equipo nos permitió complementarnos, cubriendo las falencias de cada uno y aprendiendo mutuamente. Esta experiencia fue una excelente práctica para entender cómo se trabaja en un proyecto colaborativo en un entorno profesional. Disfruté mucho tanto del proceso de desarrollo como de los aprendizajes obtenidos.
+Por último, quiero destacar el apoyo constante de Isaac y Roxana, quienes estuvieron siempre disponibles para resolver nuestras dudas y guiarnos en los momentos necesarios.
 
 ### Detalle del trabajo individual
 
