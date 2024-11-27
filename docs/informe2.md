@@ -86,19 +86,69 @@ captura de wave, texto introductorio
 
 ## Codificación
 
-clases del domi, con mas introduccion
-
 ### Clases del Dominio
 
-- **Clase Calendar:** la diseñamos para gestionar todo lo relacionado con el calendario. Su función principal es generar los días del mes, actualizar el calendario cuando seleccionamos un día y reflejar esos cambios en la interfaz de usuario. La ventaja de tener esta lógica dentro de una clase es que centraliza el manejo del calendario en un solo lugar, evitando que tengamos que repetir código en distintas partes de la aplicación. Además, al pasarle un renderCallback, podemos agregar funcionalidad extra cada vez que seleccionamos un día, como cargar las lecciones correspondientes. Esto le otorga flexibilidad y nos facilita adaptarla a nuevas necesidades. Así, si necesitamos modificar o ampliar el calendario en el futuro, podemos hacerlo sin complicaciones.
+#### Clase Calendar
+La clase Calendar es la que se encarga de mostrar y gestionar el calendario dentro de la aplicación. Es la responsable de dibujar el calendario de un mes específico, permitir que el usuario seleccione un día, y reflejar esas elecciones para cargar las lecciones asociadas a cada fecha.
 
-- **Clase Lesson:** la creamos con el fin de organizar las lecciones de manera estructurada. Cada lección tiene propiedades definidas, como el tema, la descripción, la unidad curricular y un identificador único (id). Esto facilita el manejo de las lecciones y nos permite acceder a ellas de manera ordenada. Además, dentro de la clase tenemos métodos como editLesson y deleteLesson que nos permiten modificar o eliminar lecciones sin necesidad de modificar los datos directamente. Esto nos ayuda a mantener el código limpio y organizado, y a evitar duplicación de lógica en otras partes de la aplicación. Si en el futuro necesitamos agregar nuevas funcionalidades a las lecciones, podemos hacerlo sin afectar el resto del sistema.
+**Atributos privados:**
 
-- **Clase System:**
+- **#calendarElement:** El elemento HTML donde se va a renderizar todo el calendario.
+- **#selectedDateElement:** Este es el elemento donde se va a mostrar el día seleccionado.
+- **#selectedDay:** Guarda el día seleccionado en el calendario para que se pueda usar más adelante.
+- **#currentDate:** La fecha actual. Esto se usa para saber qué mes y año debemos mostrar.
 
-  - # Terminar cuando este
+**Métodos clave:**
 
-- **Archivo main.js:** actúa como el punto central que integra todas las partes del sistema. Es el encargado de gestionar los eventos de la interfaz de usuario: la selección de días en el calendario, la adición y edición de lecciones, y la carga de datos externos, como las unidades curriculares. Este archivo se encarga de hacer que las clases Calendar y Lesson se comuniquen con la UI de manera eficiente, sin que estén directamente acopladas entre sí. Si no tuviéramos este archivo, el código se dispersaría y sería difícil de mantener. Gracias a main.js, podemos manejar todos los eventos y actualizaciones de la interfaz de forma organizada y asegurarnos de que cada acción se ejecute correctamente.
+- **constructor:** Inicializa los elementos de la interfaz, como el calendario visual, el día seleccionado, y la función de callback que se llama cuando se selecciona un día (esto es para cargar las lecciones).
+- **renderCalendar():** Este método es el que se encarga de generar el calendario con los días del mes actual y mostrarlo. También actualiza el título del mes.
+- **selectDay(day):** Permite seleccionar un día específico. Cuando se hace esto, actualiza la interfaz y llama a renderCallback para cargar las lecciones asociadas con ese día.
+- **updateCalendarTitle():** Se encarga de actualizar el título del calendario para que siempre muestre el mes y el año correctos.
+- **createDayElements():** Crea los elementos HTML para cada día del mes y los hace interactivos, es decir, permite que el usuario pueda seleccionarlos.
+- **clearCalendar():** Este método limpia el calendario actual para poder redibujarlo si es necesario.
+
+
+#### Clase Lesson
+La clase Lesson está destinada a gestionar las lecciones dentro del sistema. Cada lección tiene un montón de atributos importantes como el tema, la fecha, el estudiante asignado, y demás. Es básicamente la unidad básica del sistema, y cada una está relacionada con un día específico.
+
+**Atributos privados:**
+
+- **#id:** El identificador único de la lección, para que no haya confusión con otras.
+- **#date:** La fecha en que se lleva a cabo la lección.
+- **#topic:** El tema de la lección.
+- **#description:** La descripción de la lección, lo que se va a ver en esa clase.
+- **#curriculumUnit:** La unidad curricular a la que pertenece esta lección.
+- **#studentAsignado:** El estudiante asignado a la lección.
+
+**Métodos clave:**
+
+- **constructor:** Inicializa los atributos con la información de la lección. Se le pasan todos los parámetros cuando se crea una lección.
+- **editLesson():** Permite editar una lección ya existente. Puedes cambiar el tema, la descripción, la unidad curricular, o el estudiante asignado.
+- **deleteLesson():** Elimina la lección del array de lecciones usando su ID, para mantener todo en orden.
+
+
+#### Clase uiController
+El uiController es la clase intermediaria que coordina todo lo que está pasando entre el sistema de lecciones, los estudiantes y las unidades curriculares. Se encarga de manejar la carga, modificación y eliminación de información en el sistema.
+
+**Atributos privados:**
+
+- **#lessons:** La lista completa de las lecciones en el sistema.
+- **#curriculumUnits:** Las unidades curriculares cargadas desde un archivo JSON.
+- **#studentList:** La lista de estudiantes cargada desde un archivo JSON.
+
+**Métodos clave:**
+
+- **loadUnits():** Carga las unidades curriculares desde un archivo JSON y las guarda en el atributo #curriculumUnits.
+- **loadAlumnos():** Carga los estudiantes desde un archivo JSON y los guarda en #studentList.
+- **getCurriculumUnits():** Devuelve las unidades curriculares.
+- **getStudentsList():** Devuelve la lista de estudiantes.
+- **getLessons():** Devuelve todas las lecciones.
+- **getLessonsByDay(day):** Filtra las lecciones que ocurren en un día específico.
+- **createLesson():** Crea una nueva lección y la agrega a la lista de lecciones.
+- **getLessonsById(id):** Busca una lección usando su ID.
+- **getLessonIndexById(id):** Devuelve el índice de la lección en la lista usando su ID.
+- **editLessonByIndex(index, topic, description, curriculumUnit, studentAsignado):** Modifica una lección en la lista usando su índice.
+- **deleteLesson(lesson):** Elimina una lección usando el método deleteLesson() de la clase Lesson.
 
 ### Estándares de codificación y Análisis estático de código
 
