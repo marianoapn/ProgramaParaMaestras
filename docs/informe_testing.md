@@ -1,6 +1,6 @@
 # Informe de testing
 
-Proyecto asignado: [link]
+Proyecto asignado: [[link](https://github.com/IngSoft-FIS-2024-2/proyecto-n3a-rocco-tosar-caceres)]
 
 ## Test de sistema
 
