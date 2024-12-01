@@ -2,8 +2,6 @@
 
 ## Construcción
 
-### Implementación de funciones principales
-
 ### Alcance establecido
 
 - **UsuMaestra1:** El sistema debe permitir a los usuarios maestra crear los planes de clase. Prioridad (""Alta"")
@@ -82,23 +80,105 @@ Usamos las heurísticas de usabilidad de Jakob Nielsen para diseñar y desarroll
 
 ### Accesibilidad
 
-captura de wave, texto introductorio
+Nos guiamos por las directrices de accesibilidad para contenido web (WCAG) para asegurar que la aplicación pueda ser usada por la mayor cantidad de personas posible.
+Los principales principios de accesibilidad son:
+
+- **Perceptible:** La información debe ser presentada de manera que los usuarios puedan percibirla.
+
+  - **Aplicación:** Usamos elementos de alto contraste entre el texto y el fondo.
+
+- **Operable:** La interfaz debe ser navegable y usable con diferentes métodos de entrada.
+
+  - **Aplicación:** No tenemos animaciones intermitentes o molestas para el usuario, los formularios tienen etiquetas para la entrada de datos
+
+- **Comprensible:** Los usuarios deben entender el contenido y la interfaz.
+
+  - **Aplicación:** Usamos un lenguaje simple y directo, la aplicación proporciona mensajes de error claros y sugerencias para corregir problemas en los formularios. La navegación es consistente.
+
+- **Robusto:** El contenido debe ser compatible con tecnologías asistivas actuales y futuras.
+
+  - **Aplicación:** El código HTML utilizado es adecuado y está correctamente organizado. Seguimos estándares ARIA
+
+- **WAVE**
+Utilizamos WAVE (Web Accesibility Evaluation Tool) para garantizar que la aplicación cumpla con los estándares de accesibilidad web. Esto nos ayuda a identificar y corregir problemas para que todos los usuarios puedan usarla sin dificultades.
+
+Al validar con la herramienta no surgen errores para corregir, lo cual podemos ver en la siguiente imagen:
+
+<img src="Imagenes/WaveTest.png" alt="WAVE">
 
 ## Codificación
 
-clases del domi, con mas introduccion
+### Buenas prácticas de OOP
+
+Al inicio del desarrollo del proyecto, no se implementaron buenas prácticas de programación orientada a objetos.
+Esto resultó en un archivo principal excesivamente extenso, donde no se diferenciaba el dominio de la interfaz de usuario.
+Como consecuencia, el código era difícil de comprender, mantener y escalar.
+En determinado momento, identificamos que continuar trabajando de esa manera era insostenible, por lo que se llevó a cabo una refactorización del código.
+Este proceso implicó la división del mismo en varias clases, separando claramente la lógica de negocio de la interfaz de usuario.
 
 ### Clases del Dominio
 
-- **Clase Calendar:** la diseñamos para gestionar todo lo relacionado con el calendario. Su función principal es generar los días del mes, actualizar el calendario cuando seleccionamos un día y reflejar esos cambios en la interfaz de usuario. La ventaja de tener esta lógica dentro de una clase es que centraliza el manejo del calendario en un solo lugar, evitando que tengamos que repetir código en distintas partes de la aplicación. Además, al pasarle un renderCallback, podemos agregar funcionalidad extra cada vez que seleccionamos un día, como cargar las lecciones correspondientes. Esto le otorga flexibilidad y nos facilita adaptarla a nuevas necesidades. Así, si necesitamos modificar o ampliar el calendario en el futuro, podemos hacerlo sin complicaciones.
+#### Clase Calendar
+La clase Calendar es la que se encarga de mostrar y gestionar el calendario dentro de la aplicación. Es la responsable de dibujar el calendario de un mes específico, permitir que el usuario seleccione un día, y reflejar esas elecciones para cargar las lecciones asociadas a cada fecha.
 
-- **Clase Lesson:** la creamos con el fin de organizar las lecciones de manera estructurada. Cada lección tiene propiedades definidas, como el tema, la descripción, la unidad curricular y un identificador único (id). Esto facilita el manejo de las lecciones y nos permite acceder a ellas de manera ordenada. Además, dentro de la clase tenemos métodos como editLesson y deleteLesson que nos permiten modificar o eliminar lecciones sin necesidad de modificar los datos directamente. Esto nos ayuda a mantener el código limpio y organizado, y a evitar duplicación de lógica en otras partes de la aplicación. Si en el futuro necesitamos agregar nuevas funcionalidades a las lecciones, podemos hacerlo sin afectar el resto del sistema.
+**Atributos privados:**
 
-- **Clase System:**
+- **#calendarElement:** El elemento HTML donde se va a renderizar todo el calendario.
+- **#selectedDateElement:** Este es el elemento donde se va a mostrar el día seleccionado.
+- **#selectedDay:** Guarda el día seleccionado en el calendario para que se pueda usar más adelante.
+- **#currentDate:** La fecha actual. Esto se usa para saber qué mes y año debemos mostrar.
 
-  - # Terminar cuando este
+**Métodos clave:**
 
-- **Archivo main.js:** actúa como el punto central que integra todas las partes del sistema. Es el encargado de gestionar los eventos de la interfaz de usuario: la selección de días en el calendario, la adición y edición de lecciones, y la carga de datos externos, como las unidades curriculares. Este archivo se encarga de hacer que las clases Calendar y Lesson se comuniquen con la UI de manera eficiente, sin que estén directamente acopladas entre sí. Si no tuviéramos este archivo, el código se dispersaría y sería difícil de mantener. Gracias a main.js, podemos manejar todos los eventos y actualizaciones de la interfaz de forma organizada y asegurarnos de que cada acción se ejecute correctamente.
+- **constructor:** Inicializa los elementos de la interfaz, como el calendario visual, el día seleccionado, y la función de callback que se llama cuando se selecciona un día (esto es para cargar las lecciones).
+- **renderCalendar():** Este método es el que se encarga de generar el calendario con los días del mes actual y mostrarlo. También actualiza el título del mes.
+- **selectDay(day):** Permite seleccionar un día específico. Cuando se hace esto, actualiza la interfaz y llama a renderCallback para cargar las lecciones asociadas con ese día.
+- **updateCalendarTitle():** Se encarga de actualizar el título del calendario para que siempre muestre el mes y el año correctos.
+- **createDayElements():** Crea los elementos HTML para cada día del mes y los hace interactivos, es decir, permite que el usuario pueda seleccionarlos.
+- **clearCalendar():** Este método limpia el calendario actual para poder redibujarlo si es necesario.
+
+
+#### Clase Lesson
+La clase Lesson está destinada a gestionar las lecciones dentro del sistema. Cada lección tiene un montón de atributos importantes como el tema, la fecha, el estudiante asignado, y demás. Es básicamente la unidad básica del sistema, y cada una está relacionada con un día específico.
+
+**Atributos privados:**
+
+- **#id:** El identificador único de la lección, para que no haya confusión con otras.
+- **#date:** La fecha en que se lleva a cabo la lección.
+- **#topic:** El tema de la lección.
+- **#description:** La descripción de la lección, lo que se va a ver en esa clase.
+- **#curriculumUnit:** La unidad curricular a la que pertenece esta lección.
+- **#studentAsignado:** El estudiante asignado a la lección.
+
+**Métodos clave:**
+
+- **constructor:** Inicializa los atributos con la información de la lección. Se le pasan todos los parámetros cuando se crea una lección.
+- **editLesson():** Permite editar una lección ya existente. Puedes cambiar el tema, la descripción, la unidad curricular, o el estudiante asignado.
+- **deleteLesson():** Elimina la lección del array de lecciones usando su ID, para mantener todo en orden.
+
+
+#### Clase uiController
+El uiController es la clase intermediaria que coordina todo lo que está pasando entre el sistema de lecciones, los estudiantes y las unidades curriculares. Se encarga de manejar la carga, modificación y eliminación de información en el sistema.
+
+**Atributos privados:**
+
+- **#lessons:** La lista completa de las lecciones en el sistema.
+- **#curriculumUnits:** Las unidades curriculares cargadas desde un archivo JSON.
+- **#studentList:** La lista de estudiantes cargada desde un archivo JSON.
+
+**Métodos clave:**
+
+- **loadUnits():** Carga las unidades curriculares desde un archivo JSON y las guarda en el atributo #curriculumUnits.
+- **loadAlumnos():** Carga los estudiantes desde un archivo JSON y los guarda en #studentList.
+- **getCurriculumUnits():** Devuelve las unidades curriculares.
+- **getStudentsList():** Devuelve la lista de estudiantes.
+- **getLessons():** Devuelve todas las lecciones.
+- **getLessonsByDay(day):** Filtra las lecciones que ocurren en un día específico.
+- **createLesson():** Crea una nueva lección y la agrega a la lista de lecciones.
+- **getLessonsById(id):** Busca una lección usando su ID.
+- **getLessonIndexById(id):** Devuelve el índice de la lección en la lista usando su ID.
+- **editLessonByIndex(index, topic, description, curriculumUnit, studentAsignado):** Modifica una lección en la lista usando su índice.
+- **deleteLesson(lesson):** Elimina una lección usando el método deleteLesson() de la clase Lesson.
 
 ### Estándares de codificación y Análisis estático de código
 
@@ -146,11 +226,7 @@ clases del domi, con mas introduccion
 
 - **Nombre de IDs y clases HTML:** Las palabras deben separarse por guiones medios (-), y todo debe estar en minúscula
 
-### Buenas prácticas de OOP
-
-separar interfaz, explicarlo
-
-## Test unitario
+## Testing unitario
 
 ### Buenas prácticas
 
@@ -176,9 +252,32 @@ separar interfaz, explicarlo
 
 ## Reflexión
 
+**Mariano:** En esta segunda parte del obligatorio, aprendí mucho en varios aspectos. Por un lado, adquirí conocimientos sobre herramientas como ESLint y Prettier, que nos ayudaron a mantener el código limpio y estandarizado. También exploré temas como las pruebas funcionales y exploratorias, que fueron clave para garantizar la calidad de nuestra aplicación.
+Trabajar en equipo fue otra gran experiencia. Aprendimos a tomar decisiones en conjunto, priorizando funcionalidades y resolviendo errores según su impacto en el proyecto. Fue interesante identificar qué problemas podían esperar y enfocarnos en lo más importante para avanzar eficientemente.
+Además, la dinámica de equipo nos permitió complementarnos, cubriendo las falencias de cada uno y aprendiendo mutuamente. Esta experiencia fue una excelente práctica para entender cómo se trabaja en un proyecto colaborativo en un entorno profesional. Disfruté mucho tanto del proceso de desarrollo como de los aprendizajes obtenidos.
+Por último, quiero destacar el apoyo constante de Isaac y Roxana, quienes estuvieron siempre disponibles para resolver nuestras dudas y guiarnos en los momentos necesarios.
+
+**Magdalena:** Creo que a pesar de haber sido un obligatorio bastante largo era necesario para poder poner en práctica muchos de los conceptos que vimos en clase.
+Poder involucrarnos de lleno en un proyecto hace que nos encontremos con dificultares que luego nos hace aprender de forma mejor y no solamente teórica.
+En cuanto al equipo trabajamos super bien juntos, con buena comunicación y complementándonos con las fortalezas y debilidades de cada uno.
+
+**Manuel:** Disfrute mucho haciendo esta segunda parte del obligatorio, me gusto mucho el desafio de tener que hacer un parte de la aplicacion, siento que pusimos en practica conocimientos no solo aprendidos en esta materia si no que de materias anteriores.
+Creo que hacemos un muy buen equipo con Mariano y Magdalena, cada uno con sus virtudes y defectos pero nos complementamos muy bien, espero poder hacer equipo con ellos mas adelante en la carrera.
+Si tengo que quedarme con algo de todo lo que aprendi en este proyecto es con la importancia de aplicar desde el principio las buenas practicas de programacion orientada a objetos.
+
 ### Detalle del trabajo individual
 
-Detallar: fecha, actividad, horas, responsable
-Incluir totales de esfuerzo
-
-### Técnicas aplicadas y aprendizajes
+- **Buenas prácticas de UI:** Manuel - 2 horas
+- **Buenas prácticas de Usabilidad:** Manuel - 2 horas
+- **Buenas prácticas de Test:** Manuel - 2 horas
+- **Buenas prácticas de OOP:** Mariano - 4 horas
+- **Modelo conceptual del problema:** Mariano - 2 horas
+- **Creación de clases:** Manuel - 5 horas
+- **Creación de tests: Main** Manuel - 2 horas
+- **Creación de tests: Calendar** Mariano - 2 horas
+- **Creación de tests: Lesson y uiController** Magui - 4 horas
+- **Validaciones de prettier y eslint:** Manuel 2 horas
+- **Actualización del informe:** Mariano 3 horas
+- **Actualización del informe: técnicas de accesibilidad:** Magui 2 horas
+- **Actualización del informe: imágenes, wave** Magui 1 hora
+- **Detalle del trabajo individual:** Magui - 1/2 hora
