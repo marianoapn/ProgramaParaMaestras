@@ -31,9 +31,9 @@ Incluye los siguientes puntos:
 
 3. **Pasos para Reproducir**
 Proporciona instrucciones detalladas para replicar el bug:
-1. Detalla cada acción específica que debe realizarse.
-2. Menciona cualquier configuración o requisito previo.
-3. Describe el momento en que el problema aparece.
+  - Detalla cada acción específica que debe realizarse.
+  - Menciona cualquier configuración o requisito previo.
+  - Describe el momento en que el problema aparece.
 
 4. **Entorno del Sistema**
 Incluye información sobre el entorno donde ocurre el problema:
@@ -64,9 +64,6 @@ Incluye información sobre el entorno donde ocurre el problema:
 Proporciona cualquier información adicional relevante:
 - Condiciones específicas bajo las cuales ocurre el problema.
 - Cambios recientes en el sistema o aplicación que podrían estar relacionados.
-
-9. **Sugerencias o Soluciones (Opcional)**
-Si consideras que puedes aportar ideas sobre la causa o solución del problema, inclúyelas de forma clara y objetiva.
 
 ### Clasificación
 
@@ -121,7 +118,7 @@ La clasificación está basada en el impacto en la funcionalidad del sistema y l
 
 ### Evaluación global de calidad
 
-Como equipo nos parecio que el proyecto que nos toco testear tenia una calidad bastante aceptable teniendo en cuenta las limitaciones de tiempo. Dejamos reportados los bugs que encontramos con el fin de poder mejorar la calidad del producto.
+Como equipo, consideramos que el proyecto evaluado presenta una calidad aceptable, especialmente considerando las limitaciones de tiempo disponibles para su desarrollo. Durante el proceso de prueba, identificamos y reportamos los errores encontrados con el objetivo de contribuir a la mejora continua del producto y garantizar su calidad. 
 
 ## Reflexión
 
