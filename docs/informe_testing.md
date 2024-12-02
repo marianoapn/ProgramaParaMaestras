@@ -14,6 +14,8 @@ Proyecto asignado: [[link](https://github.com/IngSoft-FIS-2024-2/proyecto-n3a-ro
 
 [Mariano Perez](MarianoTestingExploratorio.md)
 
+[Magdalena Danese](SesionDeTestingExploratorio-MagdalenaDanese)
+
 ## Reporte de issues
 
 ### Buenas prácticas de reporte
@@ -74,47 +76,41 @@ La clasificación está basada en el impacto en la funcionalidad del sistema y l
 ### Resumen de issues por tipo y severidad
 
 ## **Alta Severidad**
-- **BUG-PLAN001** - El sistema permite crear un plan con el campo "Nombre" vacío.
-- **BUG-PLAN002** - El sistema permite crear un plan con una fecha en formato inválido.
-- **BUG-PLAN003** - El sistema permite crear un plan con el campo "Objetivo" vacío.
-- **BUG-PLAN004** - El sistema permite crear un plan sin seleccionar competencias.
-- **BUG-PLAN005** - El sistema permite crear un plan sin seleccionar actividades.
-- **BUG-PLAN006** - El sistema permite crear un plan sin seleccionar un grupo.
-- **BUG-PLAN008** - Creación de planificación al apretar la tecla Enter.
-- **BUG-ANUAL001** - Falta de implementación de la funcionalidad de planificación anual.
-- **BUG-GROUP001** - Grupos eliminados afectan a las planificaciones asociadas.
-- **ID: BUG-NIV001**  
-  **Título:** El sistema acepta un espacio como nombre.
-- **ID: BUG-NIV002**  
-  **Título:** El sistema permite crear un nivel con un nombre vacío.
-- **ID: BUG-NIV003**  
-  **Título:** El sistema acepta un espacio como criterio pedagógico.
-- **ID: BUG-NIV004**  
-  **Título:** El sistema permite crear un nivel con el criterio pedagógico vacío.
-- **ID: BUG-GRP001**  
-  **Título:** El sistema permite crear un grupo con un nombre que solo contiene un espacio.
-- **ID: BUG-GRP002**  
-  **Título:** El sistema permite crear un grupo con un nombre vacío pero muestra un mensaje de error incorrecto.
+- **ID: BUG-PLAN001** - El sistema permite crear un plan con el campo "Nombre" vacío.
+- **ID: BUG-PLAN002** - El sistema permite crear un plan con una fecha en formato inválido.
+- **ID: BUG-PLAN003** - El sistema permite crear un plan con el campo "Objetivo" vacío.
+- **ID: BUG-PLAN004** - El sistema permite crear un plan sin seleccionar competencias.
+- **ID: BUG-PLAN005** - El sistema permite crear un plan sin seleccionar actividades.
+- **ID: BUG-PLAN006** - El sistema permite crear un plan sin seleccionar un grupo.
+- **ID: BUG-PLAN008** - Creación de planificación al apretar la tecla Enter.
+- **ID: BUG-ANUAL001** - Falta de implementación de la funcionalidad de planificación anual.
+- **ID: BUG-GROUP001** - Grupos eliminados afectan a las planificaciones asociadas.
+- **ID: BUG-NIV001** - El sistema acepta un espacio como nombre.
+- **ID: BUG-NIV002** - El sistema permite crear un nivel con un nombre vacío.
+- **ID: BUG-NIV003** - El sistema acepta un espacio como criterio pedagógico.
+- **ID: BUG-NIV004** - El sistema permite crear un nivel con el criterio pedagógico vacío.
+- **ID: BUG-GRP001** - El sistema permite crear un grupo con un nombre que solo contiene un espacio.
+- **ID: BUG-GRP002** - El sistema permite crear un grupo con un nombre vacío pero muestra un mensaje de error incorrecto.
+- **ID: BUG-ACT001** - El sistema permite crear una actividad con un nombre con solamente un espacio y no muestra mensaje de error
 
 ## **Media Severidad**
-- **BUG-PERSIST002** - Los campos persisten tras la creación de una planificación.
-- **BUG-PERSIST001** - Los campos persisten tras la creación de una nueva actividad.
-- **BUG-WARN001** - Advertencias de campos obligatorios aparecen prematuramente.
-- **ID: BUG-GRP003**  
-  **Título:** El sistema permite crear un grupo con una descripción que contiene solo un espacio.
-- **ID: BUG-GRP004**  
-  **Título:** El sistema permite crear un grupo con el campo de descripción vacío pero genera un mensaje genérico de error.
-- **ID: BUG-GRP005**  
-  **Título:** El sistema permite crear un grupo sin seleccionar el grado pero muestra un mensaje de error genérico.
-- **ID: BUG-GRP006**  
-  **Título:** Sin selección de Turno.
+- **ID: BUG-PERSIST002** - Los campos persisten tras la creación de una planificación.
+- **ID: BUG-PERSIST001** - Los campos persisten tras la creación de una nueva actividad.
+- **ID: BUG-WARN001** - Advertencias de campos obligatorios aparecen prematuramente.
+- **ID: BUG-GRP003** - El sistema permite crear un grupo con una descripción que contiene solo un espacio.
+- **ID: BUG-GRP004** - El sistema permite crear un grupo con el campo de descripción vacío pero genera un mensaje genérico de error.
+- **ID: BUG-GRP005** - El sistema permite crear un grupo sin seleccionar el grado pero muestra un mensaje de error genérico.
+- **ID: BUG-GRP006** - Sin selección de Turno.
+- **ID: BUG-ACT002** - El sistema permite crear una actividad con una descripción que solo contiene un espacio y no muestra mensaje de error
 
  ## **Baja Severidad**
- - **BUG-PLAN007** - El sistema no permite editar un plan existente.
- - **BUG-EDIT001** - Falta de funcionalidad para editar elementos.
-- **BUG-DEL001** - Falta de funcionalidad para eliminar elementos.
-- **ID: BUG-GRP007**  
-  **Título:** Actualizar Grupo.
+ - **ID: BUG-PLAN007** - El sistema no permite editar un plan existente.
+ - **ID: BUG-EDIT001** - Falta de funcionalidad para editar elementos.
+- **ID: BUG-DEL001** - Falta de funcionalidad para eliminar elementos.
+- **ID: BUG-GRP007** - Actualizar Grupo.
+- **ID: BUG-ACT003** - El sistema no permite editar una actividad existente
+- **ID: BUG-ACT004** - El sistema no permite eliminar una actividad existente
+- **ID: BUG-ACT005** - El sistema no redirige a ver la lista de actividades luego de crear una actividad
 
 ### Evaluación global de calidad
 
@@ -125,6 +121,8 @@ Como equipo, consideramos que el proyecto evaluado presenta una calidad aceptabl
 **Manuel:** En mi caso me parecio mucho mas valioso hacer testing exploratorio ya que el no restringirme a seguir los pasos de un caso de prueba me permitio encontrar mas bugs.
 
 **Mariano:** Aprendi testing funcional y exploratorio fue tremenda experiencia. Me ayudó a entender mejor los sistemas, a encontrar detalles clave y a reportar problemas claros. Ahora valoro mucho más la calidad en el desarrollo.
+
+**Magdalena:** Creo que fue interesante aprender de testing funcional y exploratorio, en lo personal centrarme en los requerimientos y crear los pasos de prueba sentí que fue lo más objetivo y ordenado para corroborar el correcto funcionamiento. Puedo ver luego de trabajar en esto que el testing es una parte fundamental del proceso de desarrollo.
 
 ### Detalle del trabajo individual
 

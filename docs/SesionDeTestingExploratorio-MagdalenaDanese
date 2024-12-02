@@ -1,0 +1,52 @@
+# Sesión de Testing Exploratorio
+
+### Misión
+
+Sesión de pruebas exploratorias en las que el objetivo es probar el flujo completo de la sección actividades de la aplicación y revisar su funcionamiento así como reportar los errores que se encuentren en el camino.
+
+### Tester
+
+**Magdalena Danese**
+
+### Inicio | Fin
+
+**02-12-2024 13:13 - 13:32**
+
+### División de Tareas
+
+- **Diseño y ejecución de pruebas:** 30%
+- **Reporte de investigación de defectos:** 68%
+- **Armado de la sesión:** 2%
+
+### Misión vs Oportunidad
+
+**40% / 60%**
+
+### Notas de Pruebas
+- Crear una nueva actividad.
+- Probar si el sistema acepta campos vacíos
+- Probar si se ve la actividad correctamente luego de creada
+- Probar si se puede modificar una actividad
+- Eliminar actividades creadas
+
+### Riesgos:
+- Se corre el riesgo de sobrecargar al sistema si se agregan actividades sin poder eliminar las anteriores, lo mismo con no poder modificarlas, esto lleva a que queden actividades con datos erróneos que puedan haber quedado creadas por equivocación.
+
+
+### Incidentes
+
+1. **Redirección después de crear una actividad**:
+   - Más que un bug podría ser una mejora de usabilidad, luego de crear una nueva actividad, el sistema no redirige automáticamente a la lista correspondiente de actividades y queda en la pantalla de crear actividad, teniendo que seleccionar nuevamente "Actividad" del menú aunque ya está seleccionado
+
+2. **Permite crear actividades con campos con espacios como nombre**:
+   - Se permite la creación de actividades tanto con el nombre como la descripción con un espacio como texto lo cual queda como si estuviese vacío
+
+3. **No permite modificar actividades**:
+    - No permite la modificación de actividades aunque tiene un ícono que aparentemente es de editar lo cual es confuso
+
+4. **No permite eliminar actividades**:
+    - No permite la eliminación de actividades lo cual puede recargar al sistema eventualmente y ser confuso al mostrar actividades que puedan haber sido creadas por error
+
+
+### Inconvenientes
+Ninguno.
