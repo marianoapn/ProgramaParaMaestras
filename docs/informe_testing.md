@@ -133,8 +133,8 @@ Como equipo nos parecio que el proyecto que nos toco testear tenia una calidad b
 
 Nos dividimos el testeo por funcionalidad:
 
-**RF_005 Planificaciones** - Manuel 3 horas
-**RF_006 Niveles**	- Mariano 3 horas
-**RF_010 Actividad** - Magdalena 3 horas
-**RF_011 Grupos** - Mariano 2 horas
-**RF_014 Planificación anual** - Manuel 30 min
+- **RF_005 Planificaciones** - Manuel 3 horas
+- **RF_006 Niveles**	- Mariano 3 horas
+- **RF_010 Actividad** - Magdalena 3 horas
+- **RF_011 Grupos** - Mariano 2 horas
+- **RF_014 Planificación anual** - Manuel 30 min
