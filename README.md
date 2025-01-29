@@ -1,6 +1,82 @@
-[![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=15811329)
+# 📌 Proyecto Botija(Programa para Maestras ANEP)
 
-# Proyecto 2024 S2
+Este proyecto fue desarrollado en equipo por **tres personas** como parte de un trabajo académico. Abarcó desde la planificación y documentación inicial hasta la codificación, pruebas y validación del sistema.
+
+## 📂 Estructura del Proyecto
+
+### 📝 Primera Parte: Documentación
+
+En esta fase realizamos un análisis profundo de los requerimientos del sistema utilizando diversas metodologías:
+
+- **Requerimientos:**
+  - Entrevistas con usuarios potenciales
+  - Ingeniería inversa de programas existentes
+  - Análisis de documentos relevantes
+  - Creación de perfiles de usuario (*User Persona*)
+- **Modelo Conceptual:** Diseño de la estructura de datos y relaciones.
+- **Boceto Inicial:** Primeras ideas sobre la interfaz de usuario.
+- **Validación y Verificación:** Evaluación y ajuste de los requerimientos según las necesidades del usuario.
+
+---
+
+### 📌 Segunda Parte: Desarrollo y Codificación
+
+Tras definir los requerimientos, avanzamos con la implementación del sistema siguiendo buenas prácticas de desarrollo:
+
+- **Definición del Alcance:** Objetivos claros y funcionalidades establecidas.
+- **Librerías Externas:** Documentación de las herramientas utilizadas.
+- **Interfaz de Usuario Final:** Implementación de la UI basada en los bocetos iniciales.
+- **Buenas Prácticas Aplicadas:**
+  - Principios de Programación Orientada a Objetos (OOP)
+  - Estándares de codificación
+  - Análisis estático del código
+- **Usabilidad y Accesibilidad:**
+  - Aplicación de buenas prácticas para mejorar la experiencia del usuario.
+  - Evaluación con **WAVE (Web Accessibility Evaluation Tool)** para garantizar el cumplimiento de estándares de accesibilidad web.
+
+---
+
+### 🔍 Segunda Parte (2.5): Pruebas y Validación
+
+Para garantizar la calidad del software, realizamos pruebas en distintas etapas:
+
+- **Testing Unitario:** Cobertura del **100%** de las unidades del código.
+- **Testing Funcional y Exploratorio:**
+  - Evaluación del proyecto de otro grupo para detectar posibles fallos y mejoras.
+
+---
+
+## 🚀 Cómo Ejecutar el Proyecto
+
+Este proyecto utiliza datos precargados en formato JSON, ya que no se requería persistencia de datos ni carga dinámica en tiempo real. Para ejecutarlo correctamente, es necesario abrirlo desde un entorno que soporte rutas HTTP.
+
+### ✅ Ejecución desde Visual Studio Code
+
+1. Abrí el proyecto en **Visual Studio Code**.
+2. Usá una extensión como **Live Server** o copiate la ruta generada al abrir el archivo `index.html` desde el explorador de archivos del editor.
+
+### 🛠 Notas Importantes
+
+- Si intentás abrir el archivo directamente desde el navegador sin un servidor HTTP, no funcionará debido a las restricciones del método `fetch()` al acceder a archivos locales.
+
+---
+
+## 👥 Equipo de Desarrollo
+
+Este proyecto fue desarrollado por:
+
+- **Mariano Pérez**
+- **Manuel Pérez**
+- **Magdalena Danese**
+
+📌 *Para más información, revisá la documentación en este repositorio.*
+
+
+
+---
+
+
+# Parte escrita por los profesores ORT Uruguay/ Proyecto 2024 S2
 
 ## Objetivos del proyecto
 
@@ -34,14 +110,4 @@ Checkpoints. Durante el desarrollo del proyecto se realizan entregas y revisione
 | Codificación y test unitarios                            | 13     |
 | 3 Code freeze                                            | 15     |
 | Testing funcional (proyecto asignado)                    | 16     |
-| **Entrega Informe académico 2**                          |
 
-En cada entrega se realiza un informe académico que debe dar evidencia de las actividades realizadas y explicar la aplicación de buenas prácticas de ingeniería de software.
-
-## Trabajo individual
-
-En el informe se deben detallar las actividades realizadas por cada integrante del equipo: fecha, actividad, responsable, esfuerzo en horas. Cada integrante del equipo debe realizar actividades en todas las áreas indicadas en la rúbrica de cada entrega.
-
-## Defensa oral
-
-Se seleccionarán equipos para realizar una defensa del proyecto. Se debe realizar una presentación oral de 10 minutos que presente las principales técnicas aplicadas y aprendizajes. Se realizarán preguntas individuales de profundización y autoría.
