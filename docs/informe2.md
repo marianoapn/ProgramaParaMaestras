@@ -326,19 +326,3 @@ En cuanto al equipo trabajamos super bien juntos, con buena comunicación y comp
 Creo que hacemos un muy buen equipo con Mariano y Magdalena, cada uno con sus virtudes y defectos pero nos complementamos muy bien, espero poder hacer equipo con ellos mas adelante en la carrera.
 Si tengo que quedarme con algo de todo lo que aprendi en este proyecto es con la importancia de aplicar desde el principio las buenas practicas de programacion orientada a objetos.
 
-### Detalle del trabajo individual
-
-- **Buenas prácticas de UI:** Manuel - 2 horas
-- **Buenas prácticas de Usabilidad:** Manuel - 2 horas
-- **Buenas prácticas de Test:** Manuel - 2 horas
-- **Buenas prácticas de OOP:** Mariano - 4 horas
-- **Modelo conceptual del problema:** Mariano - 2 horas
-- **Creación de clases:** Manuel - 5 horas
-- **Creación de tests: Main** Manuel - 2 horas
-- **Creación de tests: Calendar** Mariano - 2 horas
-- **Creación de tests: Lesson y uiController** Magui - 4 horas
-- **Validaciones de prettier y eslint:** Manuel 2 horas
-- **Actualización del informe:** Mariano 3 horas
-- **Actualización del informe: técnicas de accesibilidad:** Magui 2 horas
-- **Actualización del informe: imágenes, wave** Magui 1 hora
-- **Detalle del trabajo individual:** Magui - 1/2 hora
